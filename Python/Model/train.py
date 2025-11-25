@@ -13,13 +13,16 @@ from data_loader import load_and_process_data, build_graph
 # ==========================================
 # HYPERPARAMÈTRES (MLE-Ops Responsibility)
 # ==========================================
-CSV_FILE = 'synthetic_travel_data_daily_cost_coherent.csv'
-HIDDEN_CHANNELS = 64
+CSV_FILE = 'Travel_details_ready.csv'
+HIDDEN_CHANNELS = 128
 OUT_CHANNELS = 32
-LEARNING_RATE = 0.001
-EPOCHS = 500  # On peut augmenter à 100
-BETA = 0  # Poids du Information Bottleneck (KL Divergence)
-ARTIFACTS_DIR = "artifacts"  # Dossier où on sauvegarde le modèle
+LEARNING_RATE = 0.0001
+EPOCHS = 1000
+BETA = 0.001
+ARTIFACTS_DIR = "artifacts"
+
+# Seuil de tolérance pour l'arrêt (Delta)
+EARLY_STOPPING_DELTA = 0.01  # Si val_loss > min_val_loss + 0.3, on arrête
 
 
 def train_one_epoch(model, train_data, optimizer):
@@ -51,7 +54,6 @@ def train_one_epoch(model, train_data, optimizer):
 
 @torch.no_grad()
 def evaluate(model, val_data):
-    """Validation simple pour vérifier que la loss descend aussi sur les données inconnues"""
     model.eval()
     pred, mu, logstd = model(val_data)
     target = val_data['user', 'visits', 'destination'].edge_label
@@ -67,7 +69,7 @@ def main():
     if not os.path.exists(ARTIFACTS_DIR):
         os.makedirs(ARTIFACTS_DIR)
 
-    # 2. Chargement des données (Appel au Data Engineer / PL)
+    # 2. Chargement des données
     if not os.path.exists(CSV_FILE):
         print(f"ERREUR: Fichier {CSV_FILE} introuvable.")
         return
@@ -85,15 +87,13 @@ def main():
     )
     train_data, val_data, test_data = transform(data)
 
-    # Transfert sur GPU si dispo
     train_data = train_data.to(device)
     val_data = val_data.to(device)
 
-    # 4. Initialisation du Modèle (Appel au MLE-Core)
+    # 4. Initialisation du Modèle
     num_acc = len(mappings['Accommodation type'])
     num_trans = len(mappings['Transportation type'])
     num_season = len(mappings['season'])
-    # --- AJOUTS ICI ---
     num_users = data['user'].num_nodes
     num_dests = data['destination'].num_nodes
 
@@ -110,34 +110,58 @@ def main():
 
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
-    # 5. Boucle d'Entraînement
+    # 5. Boucle d'Entraînement avec Early Stopping
     print(f"--- Début de l'entraînement pour {EPOCHS} époques ---")
+    print(f"--- Critère d'arrêt : Val Loss > Min Val Loss + {EARLY_STOPPING_DELTA} ---")
+
+    min_val_loss = float('inf')
+    best_model_state = None  # Pour garder le meilleur cerveau en mémoire
 
     for epoch in range(1, EPOCHS + 1):
         train_loss, recons_loss = train_one_epoch(model, train_data, optimizer)
         val_loss = evaluate(model, val_data)
 
+        # --- LOGIQUE EARLY STOPPING ---
+
+        # Cas 1 : On trouve un nouveau record (le modèle s'améliore)
+        if val_loss < min_val_loss:
+            min_val_loss = val_loss
+            best_model_state = model.state_dict()  # On sauvegarde cet état précieux
+            # On pourrait afficher un petit message de "Nouveau record" ici si on veut
+
+        # Cas 2 : Le modèle diverge trop (Critère d'arrêt demandé)
+        elif val_loss > min_val_loss + EARLY_STOPPING_DELTA:
+            print(f"\n🛑 ARRÊT ANTICIPÉ (Epoch {epoch})")
+            print(
+                f"   Raison : Val Loss ({val_loss:.4f}) a explosé de +{val_loss - min_val_loss:.4f} par rapport au minimum ({min_val_loss:.4f}).")
+            break
+
         if epoch % 10 == 0:
-            print(f"Epoch {epoch:03d} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
+            print(
+                f"Epoch {epoch:03d} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f} (Min: {min_val_loss:.4f})")
 
     print("--- Entraînement terminé ---")
 
-    # 6. Sauvegarde des Artefacts (CRUCIAL pour la semaine 3 et l'API)
-    print("--- Sauvegarde du modèle et des mappings ---")
+    # 6. Sauvegarde des Artefacts
+    print("--- Sauvegarde du MEILLEUR modèle et des mappings ---")
 
-    # Sauvegarde des poids du modèle
+    # IMPORTANT : On recharge le meilleur état (celui du minimum) avant de sauvegarder
+    # Sinon on sauvegarderait le modèle "cassé" qui vient d'exploser
+    if best_model_state is not None:
+        model.load_state_dict(best_model_state)
+        print(f"✅ Meilleur modèle restauré (Val Loss: {min_val_loss:.4f})")
+    else:
+        print("⚠️ Attention : Aucun meilleur modèle trouvé (bizarre).")
+
     model_path = os.path.join(ARTIFACTS_DIR, "hgib_model.pth")
     torch.save(model.state_dict(), model_path)
     print(f"Modèle sauvegardé : {model_path}")
 
-    # Sauvegarde des mappings (nécessaire pour l'API pour traduire les ID)
-    # On ne peut pas sauvegarder tout le dataframe, juste les dictionnaires
     mappings_path = os.path.join(ARTIFACTS_DIR, "mappings.pkl")
     with open(mappings_path, 'wb') as f:
         pickle.dump(mappings, f)
     print(f"Mappings sauvegardés : {mappings_path}")
 
-    # Sauvegarde des dimensions (pour réinitialiser le modèle dans l'API)
     config = {
         "hidden_channels": HIDDEN_CHANNELS,
         "out_channels": OUT_CHANNELS,
