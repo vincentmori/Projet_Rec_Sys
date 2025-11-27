@@ -5,3 +5,5 @@ scikit-learn
 torch
 torch-geometric
 pytest
+sqlalchemy
+psycopg2-binary
