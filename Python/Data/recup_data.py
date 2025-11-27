@@ -52,7 +52,7 @@ def recup_travel() -> pd.DataFrame:
     return _execute_query_and_get_df(query, table_name)
 
 
-# --- EXEMPLE D'UTILISATION (pour vos collègues) ---
+# --- EXEMPLE D'UTILISATION ---
 if __name__ == '__main__':
     print("=========================================================")
     print("             TEST DES FONCTIONS D'EXTRACTION             ")
