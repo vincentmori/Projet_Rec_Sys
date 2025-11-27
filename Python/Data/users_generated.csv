@@ -1,0 +1,1501 @@
+User ID,Traveler name,Traveler age,Traveler gender,Traveler nationality,Profile Type,Climate Pref,Primary Dest Type,Acc Pref,Transport Core Modes,Traveler Continent
+U0001,Rajesh,37,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture (si isolé);Randonnée;Scooter,Asia
+U0002,Fatima,35,Female,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bus;Tuk-Tuk;Transports Publics,Africa
+U0003,Seo-Jun,42,Male,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture;Tuk-Tuk;Bus,Asia
+U0004,Alice,20,Female,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Métro;Tuk-Tuk;Voiture,South America
+U0005,Riccardo,61,Male,Italian,Exotique/Budget,Hot,Cultural/Nature,Villa,Vélo;Marche;Randonnée,Europe
+U0006,Mostafa,33,Male,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,4x4;Vélo;Tuk-Tuk,Africa
+U0007,Saud,43,Male,Saudi,Exotique/Budget,Hot,Cultural/Nature,Hostel,Taxi;Vélo;Voiture,Asia
+U0008,Neha,23,Female,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Tuk-Tuk;Voiture (si isolé);Marche,Asia
+U0009,Sofia,40,Female,Brazilian,Culturel/Histoire,Temperate,City,Villa,Tuk-Tuk;Taxi;Bateau,South America
+U0010,Ingrid,22,Female,German,Urbain/Luxe/Shopping,Temperate,City,Villa,Métro;Scooter;Bateau,Europe
+U0011,Emma,63,Female,Canadian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Scooter;Randonnée;Taxi,North America
+U0012,Kunle,36,Male,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Scooter;Bus;Vélo,Africa
+U0013,Priya,67,Female,Indian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;Métro;Bateau,Asia
+U0014,Maha,28,Female,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bus;Transports Publics;Randonnée,Asia
+U0015,Seo-Yeon,48,Female,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Tuk-Tuk;Scooter;Marche,Asia
+U0016,Olu,18,Male,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Taxi;Voiture (si isolé);Métro,Africa
+U0017,Beatrice,61,Female,Italian,Urbain/Luxe/Shopping,Temperate,City,Villa,Tuk-Tuk;Métro;Bateau,Europe
+U0018,Sultan,69,Male,Saudi,Culturel/Histoire,Temperate,City,Airbnb,Marche;Transports Publics;Métro,Asia
+U0019,Klaus,21,Male,German,Urbain/Luxe/Shopping,Temperate,City,Villa,Voiture;Bus;Marche,Europe
+U0020,Leon,62,Male,German,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Vélo;Transports Publics;Tuk-Tuk,Europe
+U0021,Nkosi,29,Male,South African,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Transports Publics;Taxi;Randonnée,Africa
+U0022,Isabella,58,Female,Colombian,Culturel/Histoire,Temperate,City,Hotel,Randonnée;Bateau;4x4,South America
+U0023,Sara,51,Female,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Villa,Transports Publics;Scooter;Marche,Africa
+U0024,Seo-Jun,68,Male,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Scooter;Taxi;Bateau,Asia
+U0025,Gabriel,18,Male,Colombian,Culturel/Histoire,Temperate,City,Hostel,Transports Publics;Bateau;Taxi,South America
+U0026,Zainab,40,Female,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bateau;Randonnée;Vélo,Africa
+U0027,Funke,39,Female,Nigerian,Culturel/Histoire,Temperate,City,Airbnb,Bus;Bateau;Métro,Africa
+U0028,Zainab,22,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Marche;Scooter;Vélo,Africa
+U0029,Mikhail,19,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Vélo;Bus;Voiture,Europe
+U0030,James,48,Male,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bateau;Scooter;4x4,North America
+U0031,Hugo,43,Male,Spanish,Urbain/Luxe/Shopping,Temperate,City,Hostel,Taxi;Transports Publics;Voiture,Europe
+U0032,Alexandre,53,Male,French,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture;Métro;Scooter,Europe
+U0033,Trang,33,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,4x4;Scooter;Bateau,Asia
+U0034,Arjun,47,Male,Indian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Vélo;Voiture;Bus,Asia
+U0035,Nicolás,42,Male,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bateau;Randonnée;Taxi,South America
+U0036,Amr,41,Male,Egyptian,Culturel/Histoire,Temperate,City,Villa,Bateau;Transports Publics;Marche,Africa
+U0037,Đức,61,Male,Vietnamese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Taxi;Métro;Marche,Asia
+U0038,Alexander,33,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Vélo;Métro;Transports Publics,Europe
+U0039,Heidi,30,Female,German,Urbain/Luxe/Shopping,Temperate,City,Hotel,Transports Publics;Randonnée;Taxi,Europe
+U0040,Đức,65,Male,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Hostel,Scooter;Voiture (si isolé);Bateau,Asia
+U0041,Benjamin,63,Male,Canadian,Culturel/Histoire,Temperate,City,Villa,Scooter;Bus;Transports Publics,North America
+U0042,Javier,33,Male,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bateau;Marche;Métro,North America
+U0043,Elena,43,Female,Russian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Tuk-Tuk;Vélo;Voiture (si isolé),Europe
+U0044,Yui,51,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Voiture;Marche;Scooter,Asia
+U0045,Chiamaka,32,Female,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Voiture (si isolé);Voiture;Métro,Africa
+U0046,Mariam,54,Female,Egyptian,Plage/Détente,Hot,Beach,Hotel,Métro;Marche;Vélo,Africa
+U0047,Hugo,20,Male,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Taxi;Randonnée;4x4,Europe
+U0048,Olivia,49,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture;Randonnée;4x4,North America
+U0049,Valeria,60,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,4x4;Scooter;Métro,North America
+U0050,Erik,59,Male,Swedish,Urbain/Luxe/Shopping,Temperate,City,Hostel,Scooter;Transports Publics;4x4,Europe
+U0051,Axel,22,Male,Swedish,Culturel/Histoire,Temperate,City,Guesthouse,Métro;Tuk-Tuk;Transports Publics,Europe
+U0052,Koharu,40,Female,Japanese,Exotique/Budget,Hot,Cultural/Nature,Hotel,4x4;Tuk-Tuk;Scooter,Asia
+U0053,Ximena,58,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Villa,Voiture (si isolé);Transports Publics;Bus,North America
+U0054,Evelyn,28,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture (si isolé);Bus;Métro,North America
+U0055,Sato,23,Male,Japanese,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Randonnée;Voiture;Tuk-Tuk,Asia
+U0056,Linnéa,49,Female,Swedish,Plage/Détente,Hot,Beach,Villa,Bateau;4x4;Transports Publics,Europe
+U0057,Francesco,37,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Vélo;Bus;Randonnée,Europe
+U0058,Thomas,65,Male,French,Plage/Détente,Hot,Beach,Villa,Randonnée;Tuk-Tuk;Bus,Europe
+U0059,Inès,52,Female,French,Exotique/Budget,Hot,Cultural/Nature,Hotel,Tuk-Tuk;Vélo;Bateau,Europe
+U0060,Marc,45,Male,French,Culturel/Histoire,Temperate,City,Airbnb,4x4;Marche;Voiture (si isolé),Europe
+U0061,Tolu,33,Female,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Bateau;Scooter,Africa
+U0062,Francesco,33,Male,Italian,Plage/Détente,Hot,Beach,Airbnb,Voiture (si isolé);Marche;Taxi,Europe
+U0063,William,50,Male,Australian,Culturel/Histoire,Temperate,City,Hotel,Bus;Tuk-Tuk;Voiture (si isolé),Oceania
+U0064,Lily,44,Female,Australian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Scooter;Tuk-Tuk;Voiture (si isolé),Oceania
+U0065,Emily,56,Female,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture;Marche;Métro,North America
+U0066,Alex,49,Male,American,Culturel/Histoire,Temperate,City,Hostel,Bateau;Marche;Tuk-Tuk,North America
+U0067,Yulia,57,Female,Russian,Culturel/Histoire,Temperate,City,Hotel,Vélo;Randonnée;Taxi,Europe
+U0068,Ksenia,32,Female,Russian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Scooter;Randonnée;Marche,Europe
+U0069,Simon,43,Male,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture;Scooter;Randonnée,Europe
+U0070,Deepa,34,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Métro;Scooter;Voiture,Asia
+U0071,Daniela,61,Female,Colombian,Plage/Détente,Hot,Beach,Hostel,Randonnée;Voiture;Tuk-Tuk,South America
+U0072,Ji-Min,59,Female,South Korean,Urbain/Luxe/Shopping,Temperate,City,Villa,Taxi;Randonnée;Vélo,Asia
+U0073,Bảo,54,Male,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Randonnée;4x4;Marche,Asia
+U0074,Isabella,40,Female,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,4x4;Taxi;Bus,South America
+U0075,Klaus,34,Male,German,Culturel/Histoire,Temperate,City,Hostel,Voiture (si isolé);Bateau;Voiture,Europe
+U0076,William,52,Male,Swedish,Culturel/Histoire,Temperate,City,Hostel,Voiture;Bateau;4x4,Europe
+U0077,Sofia,61,Female,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Marche;Randonnée;Métro,Europe
+U0078,Alexander,47,Male,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture (si isolé);Voiture;Marche,North America
+U0079,Isabella,50,Female,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Métro;Transports Publics;Bus,South America
+U0080,Sergio,47,Male,Spanish,Plage/Détente,Hot,Beach,Airbnb,Transports Publics;Bus;Taxi,Europe
+U0081,Abdullah,48,Male,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Scooter;4x4;Bus,Asia
+U0082,Gabriel,26,Male,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Tuk-Tuk;Vélo;Scooter,South America
+U0083,Ebba,69,Female,Swedish,Urbain/Luxe/Shopping,Temperate,City,Hotel,Tuk-Tuk;Transports Publics;Métro,Europe
+U0084,Turki,54,Male,Saudi,Exotique/Budget,Hot,Cultural/Nature,Hotel,Taxi;Vélo;Scooter,Asia
+U0085,Charlotte,46,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Bus;Métro;Transports Publics,Oceania
+U0086,Manuela,44,Female,Brazilian,Culturel/Histoire,Temperate,City,Villa,Randonnée;Transports Publics;Marche,South America
+U0087,Yulia,24,Female,Russian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture;Transports Publics;Randonnée,Europe
+U0088,Martina,41,Female,Italian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bateau;Bus;Voiture,Europe
+U0089,Mariana,58,Female,Colombian,Culturel/Histoire,Temperate,City,Hostel,Métro;Transports Publics;Bus,South America
+U0090,Emma,34,Female,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Marche;Vélo;Voiture (si isolé),Europe
+U0091,Leonardo,35,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Marche;Scooter;Taxi,Europe
+U0092,Juan,53,Male,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bateau;Transports Publics;Bus,North America
+U0093,Hiroshi,25,Male,Japanese,Exotique/Budget,Hot,Cultural/Nature,Hostel,Voiture;Scooter;Vélo,Asia
+U0094,Liam,58,Male,Australian,Culturel/Histoire,Temperate,City,Hotel,Voiture (si isolé);Marche;4x4,Oceania
+U0095,Mia,59,Female,Canadian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Randonnée;Transports Publics;4x4,North America
+U0096,Aisha,55,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,4x4;Scooter;Marche,Africa
+U0097,Ji-Woo,42,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Scooter;Taxi;Bateau,Asia
+U0098,Tunde,41,Male,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Scooter;Taxi;Voiture (si isolé),Africa
+U0099,Quỳnh,61,Female,Vietnamese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bus;4x4;Scooter,Asia
+U0100,Henry,48,Male,Australian,Exotique/Budget,Hot,Cultural/Nature,Hotel,4x4;Marche;Voiture (si isolé),Oceania
+U0101,Noah,39,Male,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,4x4;Bateau;Transports Publics,Oceania
+U0102,Andrea,52,Male,Italian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Bus;Tuk-Tuk;Métro,Europe
+U0103,Luciana,51,Female,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Randonnée;Scooter;Tuk-Tuk,South America
+U0104,Greta,40,Female,German,Plage/Détente,Hot,Beach,Airbnb,Voiture (si isolé);Taxi;Randonnée,Europe
+U0105,Elena,57,Female,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Métro;Marche;Bateau,Europe
+U0106,Elias,41,Male,German,Urbain/Luxe/Shopping,Temperate,City,Villa,Bus;Voiture;Randonnée,Europe
+U0107,Emeka,22,Male,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Transports Publics;4x4;Bus,Africa
+U0108,Alejandro,40,Male,Colombian,Culturel/Histoire,Temperate,City,Guesthouse,Tuk-Tuk;Voiture (si isolé);Taxi,South America
+U0109,Akira,42,Male,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Voiture;Randonnée;4x4,Asia
+U0110,Simon,57,Male,French,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Transports Publics;Randonnée;4x4,Europe
+U0111,Tunde,61,Male,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);4x4;Marche,Africa
+U0112,Emma,36,Female,Italian,Urbain/Luxe/Shopping,Temperate,City,Hostel,4x4;Randonnée;Tuk-Tuk,Europe
+U0113,Ike,49,Male,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Transports Publics;4x4;Tuk-Tuk,Africa
+U0114,Luis,61,Male,Mexican,Plage/Détente,Hot,Beach,Villa,Voiture (si isolé);Scooter;Transports Publics,North America
+U0115,Evelyn,45,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Voiture (si isolé);Bus;Transports Publics,North America
+U0116,Thomas,25,Male,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bus;Métro;4x4,Europe
+U0117,Nawaf,28,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Scooter;Transports Publics;Vélo,Asia
+U0118,Andrea,42,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Transports Publics;Bateau;Scooter,Europe
+U0119,Ethan,55,Male,Canadian,Culturel/Histoire,Temperate,City,Guesthouse,4x4;Transports Publics;Voiture (si isolé),North America
+U0120,Olivia,53,Female,Canadian,Culturel/Histoire,Temperate,City,Airbnb,Bateau;Vélo;Voiture,North America
+U0121,Juan,33,Male,Colombian,Culturel/Histoire,Temperate,City,Guesthouse,Transports Publics;Taxi;Tuk-Tuk,South America
+U0122,Vy,58,Female,Vietnamese,Culturel/Histoire,Temperate,City,Airbnb,Vélo;Bateau;Transports Publics,Asia
+U0123,Hana,50,Female,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Scooter;Voiture (si isolé);Bateau,Africa
+U0124,Anil,42,Male,Indian,Culturel/Histoire,Temperate,City,Villa,Transports Publics;Bus;Métro,Asia
+U0125,Ngozi,30,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bateau;Randonnée;Scooter,Africa
+U0126,Yoo-Jin,30,Female,South Korean,Culturel/Histoire,Temperate,City,Villa,Voiture;Bus;4x4,Asia
+U0127,Paulina,64,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Bus;Vélo;Voiture (si isolé),North America
+U0128,Heidi,50,Female,German,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Scooter;Transports Publics;Bateau,Europe
+U0129,Abdullah,40,Male,Saudi,Urbain/Luxe/Shopping,Temperate,City,Hotel,Taxi;4x4;Tuk-Tuk,Asia
+U0130,Quỳnh,45,Female,Vietnamese,Culturel/Histoire,Temperate,City,Airbnb,Bateau;Voiture;Transports Publics,Asia
+U0131,Sebastián,23,Male,Colombian,Culturel/Histoire,Temperate,City,Villa,Scooter;Voiture;Tuk-Tuk,South America
+U0132,Anil,65,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Taxi;Métro;4x4,Asia
+U0133,Sara,58,Female,Spanish,Exotique/Budget,Hot,Cultural/Nature,Hotel,Randonnée;Voiture;Tuk-Tuk,Europe
+U0134,Charlotte,52,Female,American,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bus;Métro;Tuk-Tuk,North America
+U0135,Hana,49,Female,Egyptian,Plage/Détente,Hot,Beach,Guesthouse,Taxi;4x4;Bateau,Africa
+U0136,Aisha,31,Female,Nigerian,Plage/Détente,Hot,Beach,Guesthouse,Vélo;Voiture;Randonnée,Africa
+U0137,Lucas,62,Male,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Vélo;Voiture;4x4,South America
+U0138,Turki,43,Male,Saudi,Exotique/Budget,Hot,Cultural/Nature,Hotel,Voiture (si isolé);Vélo;Transports Publics,Asia
+U0139,Khaya,27,Male,South African,Culturel/Histoire,Temperate,City,Villa,Voiture (si isolé);Bateau;Randonnée,Africa
+U0140,Jessica,45,Female,American,Urbain/Luxe/Shopping,Temperate,City,Villa,Bateau;Tuk-Tuk;Transports Publics,North America
+U0141,Sara,21,Female,Spanish,Culturel/Histoire,Temperate,City,Villa,Transports Publics;Vélo;Scooter,Europe
+U0142,Obi,56,Male,Nigerian,Culturel/Histoire,Temperate,City,Villa,Voiture;Marche;Tuk-Tuk,Africa
+U0143,Aisha,44,Female,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Bus;4x4;Transports Publics,Africa
+U0144,Javier,60,Male,Spanish,Urbain/Luxe/Shopping,Temperate,City,Hotel,Tuk-Tuk;Marche;Métro,Europe
+U0145,Zainab,51,Female,Nigerian,Plage/Détente,Hot,Beach,Guesthouse,Bateau;Vélo;Bus,Africa
+U0146,Khaya,22,Male,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Scooter;Bus;Vélo,Africa
+U0147,Abdullah,39,Male,Saudi,Exotique/Budget,Hot,Cultural/Nature,Villa,Scooter;Transports Publics;Voiture,Asia
+U0148,Minh,28,Male,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture (si isolé);Métro;Randonnée,Asia
+U0149,Samuel,31,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Villa,4x4;Voiture (si isolé);Transports Publics,South America
+U0150,Erik,38,Male,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Scooter;Transports Publics;Taxi,Europe
+U0151,Rina,57,Female,Japanese,Culturel/Histoire,Temperate,City,Hotel,Marche;Randonnée;Voiture,Asia
+U0152,Amr,25,Male,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Transports Publics;Voiture;Taxi,Africa
+U0153,Noah,51,Male,Canadian,Plage/Détente,Hot,Beach,Hotel,Taxi;Marche;Transports Publics,North America
+U0154,Dania,24,Female,Saudi,Plage/Détente,Hot,Beach,Airbnb,Bus;Marche;4x4,Asia
+U0155,Lorenzo,31,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Métro;Vélo;Tuk-Tuk,Europe
+U0156,Aoi,64,Female,Japanese,Culturel/Histoire,Temperate,City,Villa,Bateau;Randonnée;Voiture (si isolé),Asia
+U0157,Ella,53,Female,Australian,Plage/Détente,Hot,Beach,Hotel,Scooter;Tuk-Tuk;Voiture,Oceania
+U0158,Javier,53,Male,Mexican,Urbain/Luxe/Shopping,Temperate,City,Hotel,Taxi;Voiture;4x4,North America
+U0159,Liam,23,Male,Australian,Plage/Détente,Hot,Beach,Hostel,Scooter;Voiture;Randonnée,Oceania
+U0160,Carl,57,Male,Swedish,Plage/Détente,Hot,Beach,Villa,Tuk-Tuk;Bateau;Voiture (si isolé),Europe
+U0161,Juan,65,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Voiture (si isolé);4x4;Marche,South America
+U0162,Min-Jun,25,Male,South Korean,Exotique/Budget,Hot,Cultural/Nature,Hostel,Taxi;Tuk-Tuk;Voiture,Asia
+U0163,Sana,24,Female,Japanese,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Voiture (si isolé);Scooter;Métro,Asia
+U0164,Yulia,41,Female,Russian,Plage/Détente,Hot,Beach,Guesthouse,4x4;Tuk-Tuk;Métro,Europe
+U0165,Ye-Eun,62,Female,South Korean,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Bateau;Randonnée,Asia
+U0166,James,22,Male,American,Plage/Détente,Hot,Beach,Hostel,Voiture (si isolé);Scooter;Randonnée,North America
+U0167,Greta,28,Female,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Transports Publics;Scooter;Taxi,Europe
+U0168,Miyu,28,Female,Japanese,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Métro;4x4;Transports Publics,Asia
+U0169,Natalia,55,Female,Mexican,Exotique/Budget,Hot,Cultural/Nature,Hostel,4x4;Randonnée;Vélo,North America
+U0170,Yui,68,Female,Japanese,Exotique/Budget,Hot,Cultural/Nature,Villa,Métro;Bus;Voiture,Asia
+U0171,Owen,60,Male,Canadian,Culturel/Histoire,Temperate,City,Guesthouse,Marche;Vélo;Taxi,North America
+U0172,Hana,45,Female,Japanese,Exotique/Budget,Hot,Cultural/Nature,Hostel,Marche;Voiture (si isolé);Bateau,Asia
+U0173,Sara,58,Female,Swedish,Culturel/Histoire,Temperate,City,Hostel,Transports Publics;Bateau;Tuk-Tuk,Europe
+U0174,David,32,Male,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Villa,Tuk-Tuk;Scooter;Métro,North America
+U0175,Ngozi,28,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Métro;Randonnée;Bus,Africa
+U0176,Nikita,35,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Tuk-Tuk;Vélo;Voiture,Europe
+U0177,Pablo,65,Male,Spanish,Plage/Détente,Hot,Beach,Hotel,Métro;Tuk-Tuk;Transports Publics,Europe
+U0178,Zainab,52,Female,Nigerian,Plage/Détente,Hot,Beach,Hostel,Bateau;Scooter;Bus,Africa
+U0179,Mariana,22,Female,Colombian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Bus;Scooter;Voiture (si isolé),South America
+U0180,Alexander,41,Male,Canadian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Vélo;Randonnée;Bateau,North America
+U0181,Gabriele,34,Male,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Taxi;Tuk-Tuk;Vélo,Europe
+U0182,Lucas,37,Male,Swedish,Urbain/Luxe/Shopping,Temperate,City,Villa,Marche;Randonnée;Vélo,Europe
+U0183,Ha-Joon,57,Male,South Korean,Plage/Détente,Hot,Beach,Hotel,Bateau;Taxi;Marche,Asia
+U0184,Ricardo,30,Male,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Métro;Tuk-Tuk;Vélo,North America
+U0185,Ngozi,33,Female,Nigerian,Plage/Détente,Hot,Beach,Airbnb,Tuk-Tuk;Bateau;4x4,Africa
+U0186,Aisha,23,Female,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,4x4;Scooter;Marche,Africa
+U0187,Ji-Hoon,18,Male,South Korean,Culturel/Histoire,Temperate,City,Hostel,4x4;Métro;Taxi,Asia
+U0188,Deepa,41,Female,Indian,Culturel/Histoire,Temperate,City,Airbnb,Taxi;Tuk-Tuk;Randonnée,Asia
+U0189,Aisha,34,Female,Indian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Marche;4x4;Voiture,Asia
+U0190,Valeria,42,Female,Colombian,Culturel/Histoire,Temperate,City,Airbnb,Voiture;Bateau;Randonnée,South America
+U0191,Giorgia,32,Female,Italian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Bateau;4x4;Scooter,Europe
+U0192,Zanele,69,Female,South African,Culturel/Histoire,Temperate,City,Airbnb,Voiture;Bus;Transports Publics,Africa
+U0193,Charlotte,47,Female,Canadian,Plage/Détente,Hot,Beach,Airbnb,Vélo;Voiture (si isolé);Marche,North America
+U0194,Alice,30,Female,Italian,Urbain/Luxe/Shopping,Temperate,City,Villa,Bus;Transports Publics;Voiture (si isolé),Europe
+U0195,María,22,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Tuk-Tuk;Bateau;Randonnée,North America
+U0196,Aurora,69,Female,Italian,Culturel/Histoire,Temperate,City,Hostel,Bateau;Bus;Voiture (si isolé),Europe
+U0197,Hana,39,Female,Egyptian,Plage/Détente,Hot,Beach,Guesthouse,Voiture;Bus;Transports Publics,Africa
+U0198,Isabella,67,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;Scooter;Voiture (si isolé),North America
+U0199,Gustav,25,Male,Swedish,Exotique/Budget,Hot,Cultural/Nature,Hotel,Vélo;Bateau;Tuk-Tuk,Europe
+U0200,Miyu,38,Female,Japanese,Culturel/Histoire,Temperate,City,Hotel,Voiture (si isolé);Bus;Bateau,Asia
+U0201,Emily,47,Female,American,Exotique/Budget,Hot,Cultural/Nature,Hotel,Scooter;Voiture;Taxi,North America
+U0202,Pedro,46,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Villa,Marche;Métro;Voiture (si isolé),South America
+U0203,Hyun-Woo,63,Male,South Korean,Exotique/Budget,Hot,Cultural/Nature,Hotel,Vélo;Randonnée;Bateau,Asia
+U0204,Ha-Joon,35,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Hostel,Scooter;Bus;4x4,Asia
+U0205,Đức,62,Male,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Scooter;4x4;Marche,Asia
+U0206,Nkosi,61,Male,South African,Exotique/Budget,Hot,Cultural/Nature,Hotel,Vélo;Voiture;Randonnée,Africa
+U0207,Khaya,69,Male,South African,Plage/Détente,Hot,Beach,Guesthouse,Bateau;Marche;Scooter,Africa
+U0208,Alice,68,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;Bateau;Transports Publics,South America
+U0209,Đức,20,Male,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Villa,Randonnée;Transports Publics;Voiture (si isolé),Asia
+U0210,Elsa,47,Female,Swedish,Urbain/Luxe/Shopping,Temperate,City,Hotel,Vélo;Bus;Taxi,Europe
+U0211,Ethan,64,Male,Canadian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Vélo;Métro;Tuk-Tuk,North America
+U0212,Aisha,64,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Voiture;Vélo;Transports Publics,Africa
+U0213,Da-Eun,25,Female,South Korean,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture (si isolé);Taxi;Voiture,Asia
+U0214,Hugo,61,Male,French,Plage/Détente,Hot,Beach,Hostel,Voiture;Métro;Marche,Europe
+U0215,Chiara,61,Female,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Vélo;Transports Publics;Voiture,Europe
+U0216,Salomé,61,Female,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Taxi;Transports Publics;Voiture (si isolé),South America
+U0217,Faisal,46,Male,Saudi,Plage/Détente,Hot,Beach,Hostel,Transports Publics;4x4;Bus,Asia
+U0218,Sizakele,67,Female,South African,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Scooter;Voiture;Tuk-Tuk,Africa
+U0219,Carla,57,Female,Spanish,Plage/Détente,Hot,Beach,Airbnb,Bus;Voiture (si isolé);Tuk-Tuk,Europe
+U0220,Ayanda,38,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Bus;Marche;Voiture (si isolé),Africa
+U0221,Sana,55,Female,Japanese,Plage/Détente,Hot,Beach,Guesthouse,Métro;Tuk-Tuk;Bateau,Asia
+U0222,Carl,29,Male,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Taxi;Voiture;Métro,Europe
+U0223,Yumi,68,Female,Japanese,Urbain/Luxe/Shopping,Temperate,City,Hotel,Transports Publics;4x4;Marche,Asia
+U0224,Layla,35,Female,Egyptian,Culturel/Histoire,Temperate,City,Guesthouse,4x4;Métro;Voiture,Africa
+U0225,Ali,61,Male,Egyptian,Culturel/Histoire,Temperate,City,Guesthouse,Marche;Bateau;Scooter,Africa
+U0226,Jack,65,Male,Australian,Plage/Détente,Hot,Beach,Hotel,Scooter;Randonnée;Marche,Oceania
+U0227,Ngozi,25,Female,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Randonnée;Taxi;Bateau,Africa
+U0228,Omar,30,Male,Egyptian,Plage/Détente,Hot,Beach,Villa,Bus;Tuk-Tuk;Voiture,Africa
+U0229,Chloé,36,Female,French,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Bus;Bateau;Marche,Europe
+U0230,Francesco,55,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Marche;Taxi;Bus,Europe
+U0231,Mandla,44,Male,South African,Plage/Détente,Hot,Beach,Villa,Tuk-Tuk;Taxi;Bus,Africa
+U0232,Leon,60,Male,German,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Randonnée;Voiture (si isolé);Transports Publics,Europe
+U0233,Ksenia,36,Female,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Transports Publics;Randonnée;Tuk-Tuk,Europe
+U0234,Anja,25,Female,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;Scooter;Taxi,Europe
+U0235,Jack,24,Male,Australian,Culturel/Histoire,Temperate,City,Hostel,Voiture (si isolé);Bus;Taxi,Oceania
+U0236,Gustav,43,Male,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;Randonnée;Marche,Europe
+U0237,Nour,47,Female,Egyptian,Plage/Détente,Hot,Beach,Villa,Transports Publics;Vélo;Marche,Africa
+U0238,Davi,51,Male,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Vélo;Taxi;Voiture (si isolé),South America
+U0239,Maha,66,Female,Saudi,Plage/Détente,Hot,Beach,Villa,Tuk-Tuk;Taxi;Scooter,Asia
+U0240,Layla,54,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Métro;4x4;Randonnée,Africa
+U0241,Sergio,44,Male,Spanish,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Métro;Voiture,Europe
+U0242,Phương,57,Female,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Taxi;Voiture (si isolé);4x4,Asia
+U0243,Juan,42,Male,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Randonnée;Voiture (si isolé);Vélo,South America
+U0244,Elena,64,Female,Russian,Plage/Détente,Hot,Beach,Hotel,Taxi;Transports Publics;Voiture,Europe
+U0245,Alice,49,Female,Swedish,Culturel/Histoire,Temperate,City,Villa,Marche;Scooter;Vélo,Europe
+U0246,Emily,46,Female,American,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,4x4;Métro;Scooter,North America
+U0247,Finn,68,Male,Australian,Culturel/Histoire,Temperate,City,Hostel,Métro;Scooter;Randonnée,Oceania
+U0248,Alice,45,Female,French,Exotique/Budget,Hot,Cultural/Nature,Hotel,Scooter;Voiture (si isolé);Marche,Europe
+U0249,Aoi,42,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Vélo;Voiture;Métro,Asia
+U0250,Sebastián,66,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Villa,Bus;Métro;Voiture (si isolé),South America
+U0251,Ha-Eun,30,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;4x4;Taxi,Asia
+U0252,Mia,69,Female,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bateau;Métro;Tuk-Tuk,Oceania
+U0253,Sofía,21,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Transports Publics;Taxi;Tuk-Tuk,North America
+U0254,Khanya,22,Female,South African,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Bateau;Métro;4x4,Africa
+U0255,Sam,45,Male,American,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Bateau;4x4;Transports Publics,North America
+U0256,Nour,52,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Métro;Voiture (si isolé);Marche,Africa
+U0257,Isabella,33,Female,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Randonnée;Scooter;Voiture,South America
+U0258,Ike,52,Male,Nigerian,Culturel/Histoire,Temperate,City,Villa,Bateau;Taxi;Scooter,Africa
+U0259,Chloe,25,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture;Tuk-Tuk;Randonnée,Oceania
+U0260,Simon,40,Male,French,Culturel/Histoire,Temperate,City,Guesthouse,Bateau;Vélo;Métro,Europe
+U0261,Rajesh,42,Male,Indian,Plage/Détente,Hot,Beach,Hostel,Transports Publics;Tuk-Tuk;Bateau,Asia
+U0262,Alexandre,18,Male,French,Culturel/Histoire,Temperate,City,Airbnb,Métro;Taxi;Voiture,Europe
+U0263,Axel,47,Male,Swedish,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Taxi;Bateau;Vélo,Europe
+U0264,Renata,46,Female,Mexican,Plage/Détente,Hot,Beach,Guesthouse,Voiture (si isolé);Bateau;Taxi,North America
+U0265,Amelia,60,Female,American,Plage/Détente,Hot,Beach,Hotel,Vélo;Bus;Transports Publics,North America
+U0266,Yasmin,52,Female,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Villa,Bus;Vélo;Scooter,Africa
+U0267,Riku,30,Male,Japanese,Culturel/Histoire,Temperate,City,Hostel,Voiture (si isolé);Marche;4x4,Asia
+U0268,Mia,60,Female,Australian,Culturel/Histoire,Temperate,City,Guesthouse,Métro;Vélo;Bateau,Oceania
+U0269,Valeria,69,Female,Mexican,Culturel/Histoire,Temperate,City,Airbnb,Métro;Voiture;Marche,North America
+U0270,Hamad,21,Male,Saudi,Plage/Détente,Hot,Beach,Villa,Scooter;Bus;Taxi,Asia
+U0271,Isabella,26,Female,Colombian,Culturel/Histoire,Temperate,City,Airbnb,Taxi;Transports Publics;Voiture,South America
+U0272,Heidi,36,Female,German,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Scooter;Vélo;Transports Publics,Europe
+U0273,Mikhail,30,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Bateau;Bus;Métro,Europe
+U0274,David,21,Male,American,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);Scooter;4x4,North America
+U0275,Isabella,42,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture;Bateau;Marche,North America
+U0276,Jack,68,Male,Australian,Plage/Détente,Hot,Beach,Airbnb,Marche;Tuk-Tuk;Randonnée,Oceania
+U0277,Enzo,26,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bus;Bateau;Marche,South America
+U0278,María,34,Female,Spanish,Plage/Détente,Hot,Beach,Hostel,Métro;Vélo;4x4,Europe
+U0279,Valeria,29,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Hotel,Scooter;Marche;Transports Publics,North America
+U0280,Jide,35,Male,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Voiture (si isolé);Bateau;Scooter,Africa
+U0281,Hans,53,Male,German,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture;Tuk-Tuk;Taxi,Europe
+U0282,Sarah,64,Female,American,Culturel/Histoire,Temperate,City,Airbnb,Taxi;Scooter;Marche,North America
+U0283,Joon-Ho,36,Male,South Korean,Plage/Détente,Hot,Beach,Hotel,Voiture;Taxi;Bateau,Asia
+U0284,Vikram,36,Male,Indian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Métro;Voiture (si isolé);Tuk-Tuk,Asia
+U0285,Frieda,51,Female,German,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);Taxi;Transports Publics,Europe
+U0286,Yui,50,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;Taxi;Vélo,Asia
+U0287,Vladimir,50,Male,Russian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Transports Publics;Tuk-Tuk;Voiture (si isolé),Europe
+U0288,Tarek,18,Male,Egyptian,Plage/Détente,Hot,Beach,Hotel,Vélo;Scooter;Voiture (si isolé),Africa
+U0289,Omar,61,Male,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Bateau;Voiture (si isolé),Africa
+U0290,Emma,58,Female,Canadian,Culturel/Histoire,Temperate,City,Hostel,Vélo;Taxi;Transports Publics,North America
+U0291,Inès,32,Female,French,Plage/Détente,Hot,Beach,Guesthouse,Tuk-Tuk;Voiture;Métro,Europe
+U0292,Lily,43,Female,Australian,Culturel/Histoire,Temperate,City,Hostel,Marche;Randonnée;Métro,Oceania
+U0293,William,63,Male,Australian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Bus;Voiture;Tuk-Tuk,Oceania
+U0294,Nikita,45,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Voiture (si isolé);Tuk-Tuk;Scooter,Europe
+U0295,Mohamed,27,Male,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Villa,4x4;Voiture (si isolé);Scooter,Africa
+U0296,Vladimir,44,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Vélo;Bus;Randonnée,Europe
+U0297,Yumi,60,Female,Japanese,Exotique/Budget,Hot,Cultural/Nature,Hotel,Tuk-Tuk;Bateau;Bus,Asia
+U0298,Sergey,40,Male,Russian,Plage/Détente,Hot,Beach,Villa,Vélo;Bateau;Bus,Europe
+U0299,Riku,30,Male,Japanese,Culturel/Histoire,Temperate,City,Villa,Voiture (si isolé);Randonnée;Taxi,Asia
+U0300,Miyu,48,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Randonnée;Métro;Bateau,Asia
+U0301,Hanna,67,Female,German,Urbain/Luxe/Shopping,Temperate,City,Villa,Marche;Métro;Bus,Europe
+U0302,Michael,43,Male,American,Plage/Détente,Hot,Beach,Villa,Transports Publics;Scooter;4x4,North America
+U0303,Yemi,57,Female,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Bateau;Tuk-Tuk;Randonnée,Africa
+U0304,Lama,54,Female,Saudi,Plage/Détente,Hot,Beach,Hotel,Marche;Bateau;4x4,Asia
+U0305,João,24,Male,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Marche;Tuk-Tuk;Transports Publics,South America
+U0306,Mateus,31,Male,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Vélo;Bus;Transports Publics,South America
+U0307,Yulia,61,Female,Russian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Marche;Bateau;Voiture,Europe
+U0308,Gyu-Min,58,Male,South Korean,Plage/Détente,Hot,Beach,Hostel,Métro;Voiture (si isolé);Taxi,Asia
+U0309,Sifiso,35,Male,South African,Culturel/Histoire,Temperate,City,Hotel,Tuk-Tuk;Scooter;Voiture,Africa
+U0310,Noah,42,Male,Canadian,Plage/Détente,Hot,Beach,Villa,Tuk-Tuk;Voiture (si isolé);Marche,North America
+U0311,Alexey,67,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Tuk-Tuk;Taxi;Métro,Europe
+U0312,Maja,23,Female,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Villa,Transports Publics;Bateau;Métro,Europe
+U0313,Khanya,41,Female,South African,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;Bateau;Transports Publics,Africa
+U0314,Javier,58,Male,Mexican,Plage/Détente,Hot,Beach,Guesthouse,Voiture;Scooter;Randonnée,North America
+U0315,Ethan,27,Male,American,Urbain/Luxe/Shopping,Temperate,City,Hotel,Transports Publics;Randonnée;Voiture,North America
+U0316,Camille,69,Female,French,Plage/Détente,Hot,Beach,Hostel,Marche;Transports Publics;Tuk-Tuk,Europe
+U0317,Nomusa,37,Female,South African,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,4x4;Vélo;Tuk-Tuk,Africa
+U0318,Ksenia,41,Female,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Bus;Métro;Scooter,Europe
+U0319,Olivia,53,Female,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bus;Voiture (si isolé);Bateau,North America
+U0320,Paulina,29,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bateau;Vélo;Randonnée,North America
+U0321,Luciana,62,Female,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);4x4;Taxi,South America
+U0322,Tolu,40,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Villa,Transports Publics;4x4;Tuk-Tuk,Africa
+U0323,Frieda,65,Female,German,Plage/Détente,Hot,Beach,Guesthouse,Métro;Randonnée;Bateau,Europe
+U0324,Khaya,55,Male,South African,Culturel/Histoire,Temperate,City,Airbnb,Scooter;Vélo;Randonnée,Africa
+U0325,Luis,67,Male,Mexican,Exotique/Budget,Hot,Cultural/Nature,Villa,Vélo;Randonnée;Voiture (si isolé),North America
+U0326,Jorge,56,Male,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bateau;Tuk-Tuk;4x4,Europe
+U0327,Sophia,31,Female,Canadian,Plage/Détente,Hot,Beach,Airbnb,Bateau;Bus;Tuk-Tuk,North America
+U0328,Andrei,33,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Taxi;Tuk-Tuk;Voiture,Europe
+U0329,Bandar,61,Male,Saudi,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Bus;Métro;Bateau,Asia
+U0330,Lorenzo,57,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bateau;Taxi;Randonnée,Europe
+U0331,Ava,42,Female,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;Taxi;Voiture,North America
+U0332,Nandi,19,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Métro;Tuk-Tuk;Scooter,Africa
+U0333,David,67,Male,Mexican,Culturel/Histoire,Temperate,City,Hotel,Tuk-Tuk;Vélo;Scooter,North America
+U0334,Jana,41,Female,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Randonnée;Marche;Scooter,Africa
+U0335,Nkosi,24,Male,South African,Aventure/Nature,Temperate,Adventure/Nature,Villa,Scooter;Voiture (si isolé);Randonnée,Africa
+U0336,Andrea,35,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture;Transports Publics;Scooter,Europe
+U0337,Gyu-Min,67,Male,South Korean,Culturel/Histoire,Temperate,City,Guesthouse,Transports Publics;Randonnée;Voiture,Asia
+U0338,Aisha,62,Female,Egyptian,Plage/Détente,Hot,Beach,Hostel,Métro;Randonnée;Bateau,Africa
+U0339,Mariam,33,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Transports Publics;Voiture (si isolé);Taxi,Africa
+U0340,Maha,48,Female,Saudi,Plage/Détente,Hot,Beach,Airbnb,Transports Publics;Randonnée;Métro,Asia
+U0341,Aisha,45,Female,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,4x4;Métro;Taxi,Asia
+U0342,Daria,31,Female,Russian,Plage/Détente,Hot,Beach,Villa,Taxi;Bus;4x4,Europe
+U0343,Sato,50,Male,Japanese,Plage/Détente,Hot,Beach,Guesthouse,Marche;Voiture;Métro,Asia
+U0344,Isabella,41,Female,Canadian,Exotique/Budget,Hot,Cultural/Nature,Villa,Scooter;Voiture (si isolé);Métro,North America
+U0345,Arjun,30,Male,Indian,Culturel/Histoire,Temperate,City,Airbnb,Voiture (si isolé);Vélo;Taxi,Asia
+U0346,Nour,58,Female,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bus;Transports Publics;4x4,Africa
+U0347,Sato,62,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture (si isolé);Vélo;4x4,Asia
+U0348,Mariana,47,Female,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Transports Publics;4x4;Voiture (si isolé),South America
+U0349,Alexander,69,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Tuk-Tuk;Transports Publics;Bus,Europe
+U0350,Emeka,63,Male,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Tuk-Tuk;Voiture (si isolé);Taxi,Africa
+U0351,Charlotte,31,Female,Canadian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Voiture;Bateau;Marche,North America
+U0352,Martina,37,Female,Italian,Culturel/Histoire,Temperate,City,Villa,Tuk-Tuk;Vélo;Randonnée,Europe
+U0353,Chiara,42,Female,Italian,Culturel/Histoire,Temperate,City,Airbnb,Tuk-Tuk;Randonnée;Transports Publics,Europe
+U0354,Giorgia,27,Female,Italian,Culturel/Histoire,Temperate,City,Hostel,Voiture (si isolé);Transports Publics;Bateau,Europe
+U0355,Aurora,20,Female,Italian,Plage/Détente,Hot,Beach,Hotel,Bus;Transports Publics;Tuk-Tuk,Europe
+U0356,Louis,64,Male,French,Culturel/Histoire,Temperate,City,Hotel,Transports Publics;Tuk-Tuk;Bateau,Europe
+U0357,Aisha,36,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bus;Scooter;Vélo,Africa
+U0358,Axel,51,Male,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Villa,Tuk-Tuk;Randonnée;Vélo,Europe
+U0359,Sota,64,Male,Japanese,Culturel/Histoire,Temperate,City,Villa,4x4;Bateau;Voiture,Asia
+U0360,Carla,40,Female,Spanish,Culturel/Histoire,Temperate,City,Airbnb,Scooter;Marche;Tuk-Tuk,Europe
+U0361,Owen,24,Male,Canadian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Marche;Métro;Bateau,North America
+U0362,Gabriele,50,Male,Italian,Culturel/Histoire,Temperate,City,Villa,Tuk-Tuk;Scooter;Taxi,Europe
+U0363,Ruby,55,Female,Australian,Plage/Détente,Hot,Beach,Villa,Taxi;Tuk-Tuk;Bateau,Oceania
+U0364,Funke,57,Female,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Voiture;Randonnée;Scooter,Africa
+U0365,Lily,66,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Marche;Tuk-Tuk;Bus,Oceania
+U0366,Camila,18,Female,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Bateau;4x4;Vélo,South America
+U0367,Chae-Won,44,Female,South Korean,Urbain/Luxe/Shopping,Temperate,City,Hostel,Vélo;Marche;Scooter,Asia
+U0368,Laura,49,Female,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Vélo;Bateau;Métro,South America
+U0369,Yến,47,Female,Vietnamese,Plage/Détente,Hot,Beach,Airbnb,Scooter;Voiture (si isolé);Métro,Asia
+U0370,Ava,18,Female,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Randonnée;Scooter;4x4,Oceania
+U0371,Harrison,65,Male,Australian,Culturel/Histoire,Temperate,City,Hostel,Bateau;Vélo;Voiture,Oceania
+U0372,Gyu-Min,50,Male,South Korean,Exotique/Budget,Hot,Cultural/Nature,Hostel,Bateau;Métro;Voiture,Asia
+U0373,Grace,49,Female,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Voiture;Bus;Vélo,Oceania
+U0374,Ella,31,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Vélo;Transports Publics;Scooter,Oceania
+U0375,Emily,63,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Tuk-Tuk;Bateau;4x4,North America
+U0376,Rina,51,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Voiture;Vélo;Métro,Asia
+U0377,Tùng,42,Male,Vietnamese,Culturel/Histoire,Temperate,City,Villa,Marche;Vélo;Métro,Asia
+U0378,Mia,66,Female,Canadian,Culturel/Histoire,Temperate,City,Villa,Scooter;Vélo;Bateau,North America
+U0379,Ha-Joon,44,Male,South Korean,Plage/Détente,Hot,Beach,Hotel,Randonnée;Voiture;Transports Publics,Asia
+U0380,Alexey,18,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Métro;Voiture (si isolé);Voiture,Europe
+U0381,Thành,22,Male,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Bateau;Métro;Bus,Asia
+U0382,Mia,19,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Bateau;Taxi;4x4,Oceania
+U0383,Heidi,68,Female,German,Plage/Détente,Hot,Beach,Guesthouse,Voiture;Bus;Transports Publics,Europe
+U0384,Laura,27,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Transports Publics;4x4,South America
+U0385,William,48,Male,American,Culturel/Histoire,Temperate,City,Villa,Taxi;Voiture;Bus,North America
+U0386,Emma,58,Female,French,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Métro;Marche;Voiture,Europe
+U0387,Marie,19,Female,French,Aventure/Nature,Temperate,Adventure/Nature,Villa,Taxi;Voiture (si isolé);Scooter,Europe
+U0388,Sana,22,Female,Japanese,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Taxi;Métro;Marche,Asia
+U0389,Olle,44,Male,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Tuk-Tuk;4x4;Taxi,Europe
+U0390,Oliver,28,Male,Australian,Plage/Détente,Hot,Beach,Hotel,Voiture;Bus;Randonnée,Oceania
+U0391,Andrei,20,Male,Russian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Voiture (si isolé);Randonnée;Vélo,Europe
+U0392,Khanya,44,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,4x4;Taxi;Voiture (si isolé),Africa
+U0393,Abdullah,66,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,4x4;Bus;Voiture (si isolé),Asia
+U0394,Koharu,38,Female,Japanese,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Marche;Scooter;Tuk-Tuk,Asia
+U0395,Ada,49,Female,Nigerian,Plage/Détente,Hot,Beach,Hotel,4x4;Transports Publics;Scooter,Africa
+U0396,Camila,66,Female,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Randonnée;Taxi;Scooter,South America
+U0397,Chloé,53,Female,French,Culturel/Histoire,Temperate,City,Hostel,Bateau;Tuk-Tuk;Voiture (si isolé),Europe
+U0398,Nandi,50,Female,South African,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Bateau;4x4;Transports Publics,Africa
+U0399,Elena,42,Female,Russian,Plage/Détente,Hot,Beach,Villa,Randonnée;Marche;4x4,Europe
+U0400,Ethan,32,Male,Canadian,Culturel/Histoire,Temperate,City,Hotel,Bateau;Scooter;Tuk-Tuk,North America
+U0401,Tarek,63,Male,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Taxi;Randonnée;4x4,Africa
+U0402,Anja,44,Female,German,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Scooter;Transports Publics;Vélo,Europe
+U0403,Ye-Eun,47,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Transports Publics;Bus;Tuk-Tuk,Asia
+U0404,Koharu,58,Female,Japanese,Culturel/Histoire,Temperate,City,Hostel,Bus;Tuk-Tuk;Scooter,Asia
+U0405,Koharu,41,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;Métro;Randonnée,Asia
+U0406,Zainab,42,Female,Nigerian,Plage/Détente,Hot,Beach,Hotel,Scooter;Voiture (si isolé);Taxi,Africa
+U0407,Victoria,45,Female,Russian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bateau;Tuk-Tuk;Voiture,Europe
+U0408,Charlotte,43,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;Scooter;Bateau,Oceania
+U0409,Seo-Yeon,40,Female,South Korean,Plage/Détente,Hot,Beach,Villa,4x4;Bateau;Marche,Asia
+U0410,Juan,46,Male,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Tuk-Tuk;Vélo;Voiture,North America
+U0411,Hoàng,26,Male,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Bateau;Transports Publics,Asia
+U0412,Nikita,21,Male,Russian,Urbain/Luxe/Shopping,Temperate,City,Villa,Bus;Taxi;Métro,Europe
+U0413,Tùng,52,Male,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Scooter;Vélo;4x4,Asia
+U0414,Sara,39,Female,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Métro;Randonnée;Taxi,Europe
+U0415,Chinedu,58,Male,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Transports Publics;Voiture;Marche,Africa
+U0416,Oliver,25,Male,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Vélo;Scooter;Métro,Oceania
+U0417,Jack,48,Male,Australian,Plage/Détente,Hot,Beach,Guesthouse,Tuk-Tuk;Bus;Marche,Oceania
+U0418,Ella,65,Female,Australian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Bus;Marche;Randonnée,Oceania
+U0419,Salomé,60,Female,Colombian,Plage/Détente,Hot,Beach,Hostel,Transports Publics;Métro;Taxi,South America
+U0420,Fatima,60,Female,Egyptian,Culturel/Histoire,Temperate,City,Guesthouse,Transports Publics;Bateau;4x4,Africa
+U0421,Thomas,66,Male,French,Culturel/Histoire,Temperate,City,Villa,Métro;Transports Publics;Bateau,Europe
+U0422,Evelyn,55,Female,American,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bateau;Randonnée;Voiture (si isolé),North America
+U0423,Aisha,48,Female,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Scooter;Transports Publics;Voiture,Africa
+U0424,Harrison,67,Male,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Taxi;Bateau;Bus,Oceania
+U0425,Javier,49,Male,Mexican,Culturel/Histoire,Temperate,City,Guesthouse,Scooter;Vélo;Randonnée,North America
+U0426,Andrei,31,Male,Russian,Culturel/Histoire,Temperate,City,Guesthouse,Bus;Voiture (si isolé);Voiture,Europe
+U0427,Andrea,53,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Transports Publics;4x4;Voiture (si isolé),North America
+U0428,Alessandro,32,Male,Italian,Culturel/Histoire,Temperate,City,Airbnb,Vélo;Bus;Scooter,Europe
+U0429,Martina,47,Female,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Voiture;Vélo;Scooter,Europe
+U0430,Jonas,66,Male,German,Culturel/Histoire,Temperate,City,Guesthouse,Voiture (si isolé);Vélo;Bus,Europe
+U0431,Kaito,60,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Voiture;Marche;Voiture (si isolé),Asia
+U0432,Ye-Eun,46,Female,South Korean,Culturel/Histoire,Temperate,City,Airbnb,Taxi;Bateau;4x4,Asia
+U0433,Hoàng,33,Male,Vietnamese,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bus;Randonnée;Marche,Asia
+U0434,Maria,50,Female,Brazilian,Plage/Détente,Hot,Beach,Hostel,Randonnée;Taxi;Métro,South America
+U0435,Camila,55,Female,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Voiture;Marche,South America
+U0436,Ximena,67,Female,Mexican,Culturel/Histoire,Temperate,City,Villa,4x4;Voiture;Bus,North America
+U0437,Femi,67,Male,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Scooter;Voiture;Randonnée,Africa
+U0438,William,38,Male,Australian,Culturel/Histoire,Temperate,City,Villa,Bus;Taxi;Voiture,Oceania
+U0439,Nour,31,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Métro;Bus;Vélo,Africa
+U0440,Emeka,27,Male,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bus;Transports Publics;Scooter,Africa
+U0441,Mai,37,Female,Vietnamese,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;Transports Publics;Randonnée,Asia
+U0442,Ricardo,60,Male,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Voiture;Vélo;Métro,North America
+U0443,Femi,37,Male,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Métro;Bateau;Scooter,Africa
+U0444,Alice,60,Female,French,Culturel/Histoire,Temperate,City,Guesthouse,Bateau;Bus;Randonnée,Europe
+U0445,Miyu,24,Female,Japanese,Culturel/Histoire,Temperate,City,Villa,Taxi;Transports Publics;Scooter,Asia
+U0446,Miguel,68,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bus;Voiture;Métro,South America
+U0447,Alice,18,Female,Italian,Culturel/Histoire,Temperate,City,Guesthouse,Scooter;Métro;Transports Publics,Europe
+U0448,Khaled,19,Male,Saudi,Plage/Détente,Hot,Beach,Airbnb,Transports Publics;Randonnée;Taxi,Asia
+U0449,Amahle,58,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture (si isolé);Tuk-Tuk;Taxi,Africa
+U0450,Musa,18,Male,South African,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Marche;Randonnée;Scooter,Africa
+U0451,Daniel,44,Male,Spanish,Plage/Détente,Hot,Beach,Villa,Randonnée;Tuk-Tuk;4x4,Europe
+U0452,Yemi,69,Female,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Vélo;Taxi;Voiture,Africa
+U0453,Thomas,24,Male,French,Culturel/Histoire,Temperate,City,Airbnb,Bus;Taxi;Vélo,Europe
+U0454,Kenji,56,Male,Japanese,Urbain/Luxe/Shopping,Temperate,City,Hostel,Transports Publics;Marche;Bus,Asia
+U0455,Sato,56,Male,Japanese,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Scooter;4x4;Métro,Asia
+U0456,Mandla,62,Male,South African,Plage/Détente,Hot,Beach,Hotel,Transports Publics;Randonnée;Marche,Africa
+U0457,Maha,69,Female,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Taxi;4x4;Scooter,Asia
+U0458,Riccardo,23,Male,Italian,Culturel/Histoire,Temperate,City,Guesthouse,Bateau;Transports Publics;Taxi,Europe
+U0459,Lily,46,Female,Australian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Marche;Taxi;Bateau,Oceania
+U0460,Victoria,21,Female,Russian,Plage/Détente,Hot,Beach,Villa,Transports Publics;Taxi;Métro,Europe
+U0461,Dmitry,38,Male,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Transports Publics;Vélo;Scooter,Europe
+U0462,Ludwig,53,Male,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;Randonnée;Marche,Europe
+U0463,Riku,44,Male,Japanese,Culturel/Histoire,Temperate,City,Guesthouse,Transports Publics;Vélo;Bateau,Asia
+U0464,Zainab,33,Female,Nigerian,Culturel/Histoire,Temperate,City,Guesthouse,Scooter;Randonnée;Bateau,Africa
+U0465,Zola,49,Female,South African,Culturel/Histoire,Temperate,City,Airbnb,Voiture;Taxi;Bus,Africa
+U0466,Lindiwe,39,Female,South African,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Marche;Bateau;Vélo,Africa
+U0467,Nkosi,67,Male,South African,Culturel/Histoire,Temperate,City,Hotel,Voiture (si isolé);Randonnée;Métro,Africa
+U0468,Leon,58,Male,German,Culturel/Histoire,Temperate,City,Villa,Taxi;4x4;Transports Publics,Europe
+U0469,Rajesh,21,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture;Bateau;Voiture (si isolé),Asia
+U0470,Saud,55,Male,Saudi,Culturel/Histoire,Temperate,City,Guesthouse,Marche;4x4;Randonnée,Asia
+U0471,Heloísa,64,Female,Brazilian,Plage/Détente,Hot,Beach,Hostel,4x4;Métro;Vélo,South America
+U0472,Ada,58,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Scooter;4x4;Bateau,Africa
+U0473,Greta,52,Female,Italian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Voiture (si isolé);Métro;Tuk-Tuk,Europe
+U0474,Seo-Yeon,57,Female,South Korean,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Voiture (si isolé);Métro;4x4,Asia
+U0475,Hyun-Woo,38,Male,South Korean,Plage/Détente,Hot,Beach,Guesthouse,Marche;Vélo;Taxi,Asia
+U0476,Ngọc,47,Female,Vietnamese,Plage/Détente,Hot,Beach,Guesthouse,Marche;Voiture;Randonnée,Asia
+U0477,Mariana,39,Female,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Voiture (si isolé);Tuk-Tuk;4x4,South America
+U0478,Ike,68,Male,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Taxi;Métro;Randonnée,Africa
+U0479,Gabriela,48,Female,Colombian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Voiture;Taxi;Bateau,South America
+U0480,Valeria,30,Female,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,4x4;Transports Publics;Taxi,North America
+U0481,Ksenia,21,Female,Russian,Culturel/Histoire,Temperate,City,Hostel,Vélo;Bus;Randonnée,Europe
+U0482,Emma,67,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);Vélo;Bus,North America
+U0483,Bảo,55,Male,Vietnamese,Culturel/Histoire,Temperate,City,Airbnb,Tuk-Tuk;Marche;Transports Publics,Asia
+U0484,Alexander,59,Male,Russian,Plage/Détente,Hot,Beach,Airbnb,Scooter;Randonnée;Vélo,Europe
+U0485,Marc,29,Male,French,Urbain/Luxe/Shopping,Temperate,City,Hotel,Voiture;Voiture (si isolé);Scooter,Europe
+U0486,Sergey,69,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Scooter;Marche;Voiture,Europe
+U0487,Ethan,52,Male,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bus;Voiture (si isolé);Tuk-Tuk,North America
+U0488,Hà,32,Female,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Hotel,Transports Publics;Taxi;Tuk-Tuk,Asia
+U0489,Emily,69,Female,American,Plage/Détente,Hot,Beach,Villa,Tuk-Tuk;Transports Publics;Randonnée,North America
+U0490,Harrison,18,Male,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;4x4;Marche,Oceania
+U0491,Mario,34,Male,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Scooter;Bus;Voiture,Europe
+U0492,Alexander,63,Male,Russian,Culturel/Histoire,Temperate,City,Hotel,Vélo;Transports Publics;Taxi,Europe
+U0493,William,29,Male,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Scooter;Tuk-Tuk;4x4,Europe
+U0494,Sergio,28,Male,Spanish,Culturel/Histoire,Temperate,City,Airbnb,Tuk-Tuk;4x4;Vélo,Europe
+U0495,Isabella,47,Female,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Scooter;Voiture;Voiture (si isolé),South America
+U0496,Elena,31,Female,Russian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Scooter;Taxi,Europe
+U0497,Ike,53,Male,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Métro;Bateau;Voiture (si isolé),Africa
+U0498,Sofía,25,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Métro;Scooter;Voiture (si isolé),North America
+U0499,Ava,42,Female,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Métro;Tuk-Tuk;Bateau,North America
+U0500,Andrei,48,Male,Russian,Culturel/Histoire,Temperate,City,Guesthouse,Vélo;Taxi;Bateau,Europe
+U0501,Ayanda,46,Female,South African,Exotique/Budget,Hot,Cultural/Nature,Hostel,Bateau;Bus;Métro,Africa
+U0502,Elias,23,Male,German,Culturel/Histoire,Temperate,City,Hotel,Voiture;Métro;Bateau,Europe
+U0503,Eyad,60,Male,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,4x4;Randonnée;Bateau,Africa
+U0504,Lucas,33,Male,French,Culturel/Histoire,Temperate,City,Airbnb,Scooter;Randonnée;Métro,Europe
+U0505,Sung-Min,31,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Hostel,4x4;Transports Publics;Vélo,Asia
+U0506,Kaito,34,Male,Japanese,Culturel/Histoire,Temperate,City,Hostel,Taxi;Vélo;Voiture,Asia
+U0507,Pierre,41,Male,French,Culturel/Histoire,Temperate,City,Hostel,Marche;Voiture (si isolé);Métro,Europe
+U0508,Gabriela,46,Female,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bateau;Voiture (si isolé);Randonnée,South America
+U0509,Sara,57,Female,Spanish,Culturel/Histoire,Temperate,City,Hostel,Marche;Transports Publics;Métro,Europe
+U0510,Sifiso,23,Male,South African,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Taxi;Vélo;Bateau,Africa
+U0511,Noah,50,Male,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Bus;Scooter;4x4,North America
+U0512,Simon,44,Male,French,Plage/Détente,Hot,Beach,Guesthouse,Bus;4x4;Vélo,Europe
+U0513,Charlotte,41,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Randonnée;Métro;Marche,North America
+U0514,Alice,33,Female,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Villa,Vélo;Voiture (si isolé);4x4,South America
+U0515,Thư,57,Female,Vietnamese,Culturel/Histoire,Temperate,City,Airbnb,Transports Publics;Bateau;Bus,Asia
+U0516,Mariana,38,Female,Colombian,Plage/Détente,Hot,Beach,Hotel,Transports Publics;Scooter;Voiture,South America
+U0517,Sophia,42,Female,American,Culturel/Histoire,Temperate,City,Guesthouse,Tuk-Tuk;Voiture (si isolé);Transports Publics,North America
+U0518,Manon,22,Female,French,Exotique/Budget,Hot,Cultural/Nature,Hotel,Randonnée;Vélo;Bateau,Europe
+U0519,William,30,Male,American,Exotique/Budget,Hot,Cultural/Nature,Villa,Taxi;Tuk-Tuk;Voiture,North America
+U0520,Giorgia,42,Female,Italian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Vélo;Randonnée;Voiture,Europe
+U0521,Ayanda,61,Female,South African,Exotique/Budget,Hot,Cultural/Nature,Airbnb,4x4;Tuk-Tuk;Scooter,Africa
+U0522,Noura,58,Female,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Bateau;Transports Publics;Scooter,Asia
+U0523,Greta,32,Female,Italian,Exotique/Budget,Hot,Cultural/Nature,Villa,Métro;Vélo;Scooter,Europe
+U0524,Luis,25,Male,Mexican,Urbain/Luxe/Shopping,Temperate,City,Villa,Bus;Voiture;Vélo,North America
+U0525,Min-Ji,63,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Marche;4x4;Randonnée,Asia
+U0526,Tae-Hyun,66,Male,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture (si isolé);Transports Publics;Taxi,Asia
+U0527,Ali,63,Male,Egyptian,Plage/Détente,Hot,Beach,Villa,Randonnée;Transports Publics;Bateau,Africa
+U0528,Arthur,52,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bateau;Marche;Métro,South America
+U0529,Lorenzo,61,Male,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Voiture;Transports Publics;Scooter,Europe
+U0530,Chloé,66,Female,French,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Scooter;Voiture;Marche,Europe
+U0531,Riccardo,69,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Vélo;Bateau;Bus,Europe
+U0532,David,46,Male,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Métro;Transports Publics;Marche,Europe
+U0533,Emma,49,Female,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Transports Publics;Marche;4x4,Europe
+U0534,Kemi,64,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Scooter;Marche;Transports Publics,Africa
+U0535,Sung-Min,68,Male,South Korean,Culturel/Histoire,Temperate,City,Hotel,Voiture (si isolé);Randonnée;Transports Publics,Asia
+U0536,Yazeed,57,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Randonnée;Marche;Taxi,Asia
+U0537,Mikhail,54,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Scooter;Transports Publics;Bus,Europe
+U0538,Min-Jun,38,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Hostel,Vélo;Marche;Taxi,Asia
+U0539,Ada,43,Female,Nigerian,Culturel/Histoire,Temperate,City,Villa,Métro;Transports Publics;Randonnée,Africa
+U0540,Tolu,62,Female,Nigerian,Plage/Détente,Hot,Beach,Hotel,Taxi;Vélo;Tuk-Tuk,Africa
+U0541,Gabriele,60,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Marche;Scooter;Voiture,Europe
+U0542,Pablo,18,Male,Spanish,Urbain/Luxe/Shopping,Temperate,City,Hostel,Randonnée;Transports Publics;Bateau,Europe
+U0543,Simone,25,Male,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Vélo;Transports Publics;Voiture (si isolé),Europe
+U0544,Marc,33,Male,French,Plage/Détente,Hot,Beach,Hotel,Voiture (si isolé);Randonnée;Marche,Europe
+U0545,Alice,35,Female,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Villa,Tuk-Tuk;Marche;Randonnée,South America
+U0546,Chris,67,Male,American,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Voiture (si isolé);Bus;4x4,North America
+U0547,Lucas,61,Male,Canadian,Plage/Détente,Hot,Beach,Hotel,Randonnée;Métro;Taxi,North America
+U0548,Olivia,56,Female,American,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Bateau;Scooter;Tuk-Tuk,North America
+U0549,Davi,65,Male,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Marche;Randonnée;Voiture,South America
+U0550,Chiara,25,Female,Italian,Culturel/Histoire,Temperate,City,Hostel,Marche;Vélo;Voiture (si isolé),Europe
+U0551,Emma,45,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Scooter;Voiture;Vélo,North America
+U0552,Manon,36,Female,French,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Scooter;Bateau;4x4,Europe
+U0553,Greta,19,Female,Italian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Bus;Vélo;Taxi,Europe
+U0554,Amelia,47,Female,Canadian,Plage/Détente,Hot,Beach,Villa,Scooter;4x4;Bus,North America
+U0555,Nour,32,Female,Egyptian,Plage/Détente,Hot,Beach,Hostel,Bus;Voiture;Transports Publics,Africa
+U0556,Isla,23,Female,Australian,Culturel/Histoire,Temperate,City,Hotel,Vélo;Voiture (si isolé);Scooter,Oceania
+U0557,Hana,50,Female,Japanese,Plage/Détente,Hot,Beach,Airbnb,Marche;Bateau;Taxi,Asia
+U0558,Mandla,42,Male,South African,Exotique/Budget,Hot,Cultural/Nature,Hotel,4x4;Bateau;Scooter,Africa
+U0559,Simone,21,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Scooter;Randonnée;Vélo,Europe
+U0560,Yến,52,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Vélo;Bateau;Métro,Asia
+U0561,Lena,23,Female,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Scooter;Marche;4x4,Europe
+U0562,Thandi,58,Female,South African,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Scooter;Voiture (si isolé);Vélo,Africa
+U0563,Maria,42,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Taxi;Scooter;Randonnée,South America
+U0564,Ravi,21,Male,Indian,Plage/Détente,Hot,Beach,Guesthouse,Randonnée;Taxi;Voiture (si isolé),Asia
+U0565,Emma,53,Female,Italian,Culturel/Histoire,Temperate,City,Hotel,Voiture (si isolé);4x4;Marche,Europe
+U0566,Renata,65,Female,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Randonnée;4x4;Bateau,North America
+U0567,Álvaro,45,Male,Spanish,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Tuk-Tuk;Métro;4x4,Europe
+U0568,Greta,31,Female,German,Plage/Détente,Hot,Beach,Villa,Tuk-Tuk;Scooter;Voiture (si isolé),Europe
+U0569,Sophie,33,Female,French,Exotique/Budget,Hot,Cultural/Nature,Hotel,Tuk-Tuk;Transports Publics;Métro,Europe
+U0570,Nawaf,21,Male,Saudi,Urbain/Luxe/Shopping,Temperate,City,Hotel,Tuk-Tuk;Bateau;Marche,Asia
+U0571,Sara,18,Female,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Scooter;Tuk-Tuk;Bateau,Europe
+U0572,Isla,39,Female,Australian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Vélo;Marche;Randonnée,Oceania
+U0573,Rajesh,19,Male,Indian,Exotique/Budget,Hot,Cultural/Nature,Villa,Vélo;Scooter;Bateau,Asia
+U0574,Henry,25,Male,Australian,Plage/Détente,Hot,Beach,Hotel,Voiture (si isolé);Vélo;4x4,Oceania
+U0575,Ingrid,22,Female,German,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Bus;Transports Publics;Vélo,Europe
+U0576,Irene,41,Female,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,4x4;Bus;Marche,Europe
+U0577,Sonia,47,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Randonnée;Métro;Voiture,Asia
+U0578,Yemi,34,Female,Nigerian,Culturel/Histoire,Temperate,City,Guesthouse,Voiture (si isolé);Vélo;Taxi,Africa
+U0579,Inès,49,Female,French,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Tuk-Tuk;Scooter;Bateau,Europe
+U0580,Min-Jun,28,Male,South Korean,Exotique/Budget,Hot,Cultural/Nature,Hostel,Transports Publics;4x4;Bus,Asia
+U0581,Khaya,55,Male,South African,Culturel/Histoire,Temperate,City,Airbnb,Voiture;Scooter;Bus,Africa
+U0582,Khoa,68,Male,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Hotel,Voiture;Taxi;Bateau,Asia
+U0583,David,60,Male,Mexican,Culturel/Histoire,Temperate,City,Hotel,Métro;Randonnée;Voiture (si isolé),North America
+U0584,Rohan,35,Male,Indian,Plage/Détente,Hot,Beach,Hotel,Tuk-Tuk;Bateau;Taxi,Asia
+U0585,Alexandre,55,Male,French,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Tuk-Tuk;Transports Publics;Randonnée,Europe
+U0586,Camille,56,Female,French,Urbain/Luxe/Shopping,Temperate,City,Hostel,Marche;Voiture (si isolé);Scooter,Europe
+U0587,Nawaf,61,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bateau;Marche;Taxi,Asia
+U0588,Mia,38,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture;Marche;4x4,North America
+U0589,Lucas,63,Male,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Randonnée;Métro,North America
+U0590,Enzo,53,Male,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Voiture (si isolé);Métro;Randonnée,South America
+U0591,Hoàng,60,Male,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Hostel,Voiture;Bateau;Métro,Asia
+U0592,Do-Yun,37,Male,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Bus;Randonnée;Taxi,Asia
+U0593,Rafael,46,Male,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Bus;Tuk-Tuk;Transports Publics,South America
+U0594,Gabriel,32,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Villa,Tuk-Tuk;Métro;Bateau,South America
+U0595,Inès,33,Female,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Tuk-Tuk;Vélo;Transports Publics,Europe
+U0596,Martina,46,Female,Spanish,Exotique/Budget,Hot,Cultural/Nature,Hostel,Randonnée;Transports Publics;4x4,Europe
+U0597,Thành,42,Male,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Villa,Transports Publics;Scooter;Bateau,Asia
+U0598,Mariam,39,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Vélo;Marche;Métro,Africa
+U0599,Sato,38,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;Bateau;Randonnée,Asia
+U0600,Nikita,58,Male,Russian,Culturel/Histoire,Temperate,City,Airbnb,Scooter;4x4;Randonnée,Europe
+U0601,Noah,67,Male,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Marche;Vélo;Transports Publics,North America
+U0602,Emeka,21,Male,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Transports Publics;Voiture (si isolé);Scooter,Africa
+U0603,Lucas,31,Male,French,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);Scooter;Tuk-Tuk,Europe
+U0604,Mikhail,37,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Randonnée;Taxi;Voiture,Europe
+U0605,Tolu,61,Female,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Bateau;Transports Publics;Randonnée,Africa
+U0606,Davi,58,Male,Brazilian,Plage/Détente,Hot,Beach,Hotel,Vélo;Scooter;Tuk-Tuk,South America
+U0607,Sakura,61,Female,Japanese,Culturel/Histoire,Temperate,City,Guesthouse,Voiture (si isolé);4x4;Randonnée,Asia
+U0608,Riku,46,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture;Métro;Bateau,Asia
+U0609,Ava,56,Female,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bus;Voiture;Métro,North America
+U0610,Noura,28,Female,Saudi,Plage/Détente,Hot,Beach,Villa,Taxi;Voiture;Vélo,Asia
+U0611,Mia,21,Female,German,Plage/Détente,Hot,Beach,Hotel,Transports Publics;Vélo;Taxi,Europe
+U0612,Ruby,68,Female,Australian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Randonnée;Bus;4x4,Oceania
+U0613,Manuel,65,Male,Mexican,Plage/Détente,Hot,Beach,Villa,Métro;Vélo;4x4,North America
+U0614,Salma,69,Female,Egyptian,Plage/Détente,Hot,Beach,Villa,Voiture;Randonnée;Tuk-Tuk,Africa
+U0615,Aisha,30,Female,Indian,Plage/Détente,Hot,Beach,Hotel,Taxi;Randonnée;Voiture (si isolé),Asia
+U0616,Sofia,29,Female,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Marche;4x4;Métro,Europe
+U0617,Neha,49,Female,Indian,Exotique/Budget,Hot,Cultural/Nature,Villa,Voiture;Transports Publics;Vélo,Asia
+U0618,Isla,69,Female,Australian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Tuk-Tuk;Voiture (si isolé);Bateau,Oceania
+U0619,Carlos,31,Male,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Vélo;Voiture;Bateau,North America
+U0620,Sofía,26,Female,Mexican,Culturel/Histoire,Temperate,City,Hotel,Vélo;Transports Publics;Métro,North America
+U0621,Aisha,27,Female,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Marche;Bus;Transports Publics,Asia
+U0622,Gyu-Min,27,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Métro;Bateau;Marche,Asia
+U0623,Mateo,36,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Taxi;Voiture (si isolé);Randonnée,South America
+U0624,Mariana,35,Female,Colombian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Randonnée;Voiture;Marche,South America
+U0625,Javier,21,Male,Spanish,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Tuk-Tuk;Marche;Scooter,Europe
+U0626,Zola,45,Male,South African,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Vélo;Bus,Africa
+U0627,Camila,28,Female,Mexican,Culturel/Histoire,Temperate,City,Hotel,Métro;Bus;Vélo,North America
+U0628,Olu,69,Male,Nigerian,Plage/Détente,Hot,Beach,Villa,Randonnée;Tuk-Tuk;Métro,Africa
+U0629,Deepa,37,Female,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Randonnée;Voiture;Bus,Asia
+U0630,Adrián,69,Male,Spanish,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,4x4;Transports Publics;Bus,Europe
+U0631,Ava,61,Female,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Voiture (si isolé);Scooter;Vélo,Oceania
+U0632,Lovisa,30,Female,Swedish,Plage/Détente,Hot,Beach,Hotel,Randonnée;Métro;Voiture,Europe
+U0633,Finn,53,Male,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Métro;Bus;Transports Publics,Oceania
+U0634,Tara,67,Female,Indian,Culturel/Histoire,Temperate,City,Hostel,Taxi;Marche;Métro,Asia
+U0635,Clara,44,Female,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Marche;Scooter;Bateau,Europe
+U0636,Daniel,31,Male,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Randonnée;Métro;Vélo,South America
+U0637,Charlotte,24,Female,Canadian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Voiture (si isolé);Voiture;Transports Publics,North America
+U0638,Hoàng,40,Male,Vietnamese,Culturel/Histoire,Temperate,City,Villa,Voiture;Scooter;Bus,Asia
+U0639,Isabella,23,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Scooter;Voiture (si isolé);Transports Publics,South America
+U0640,Thandi,38,Female,South African,Plage/Détente,Hot,Beach,Guesthouse,Randonnée;Taxi;Voiture (si isolé),Africa
+U0641,Emma,59,Female,Canadian,Culturel/Histoire,Temperate,City,Hotel,Bateau;Randonnée;Bus,North America
+U0642,Mostafa,23,Male,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Villa,Marche;Tuk-Tuk;Scooter,Africa
+U0643,Sergio,32,Male,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Villa,Tuk-Tuk;Bus;Bateau,Europe
+U0644,Camille,64,Female,French,Exotique/Budget,Hot,Cultural/Nature,Hostel,Vélo;Marche;Métro,Europe
+U0645,Lucas,51,Male,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;Bus;Vélo,Europe
+U0646,David,41,Male,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture (si isolé);Tuk-Tuk;Bateau,Europe
+U0647,Lily,38,Female,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Scooter;Voiture;Bateau,Oceania
+U0648,Mia,19,Female,German,Plage/Détente,Hot,Beach,Airbnb,Vélo;4x4;Scooter,Europe
+U0649,Gabriel,49,Male,Colombian,Culturel/Histoire,Temperate,City,Guesthouse,Tuk-Tuk;Marche;Randonnée,South America
+U0650,Elias,56,Male,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Vélo;Scooter;Bateau,Europe
+U0651,Amelia,37,Female,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Taxi;Tuk-Tuk;Scooter,North America
+U0652,Yulia,52,Female,Russian,Urbain/Luxe/Shopping,Temperate,City,Villa,Scooter;Transports Publics;Taxi,Europe
+U0653,Min-Ji,51,Female,South Korean,Plage/Détente,Hot,Beach,Villa,Voiture;Randonnée;Bus,Asia
+U0654,Paulina,67,Female,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Villa,Vélo;Bateau;4x4,North America
+U0655,Kiên,59,Male,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hotel,4x4;Taxi;Randonnée,Asia
+U0656,Ryan,48,Male,American,Plage/Détente,Hot,Beach,Villa,Voiture;Transports Publics;Tuk-Tuk,North America
+U0657,Hugo,33,Male,Spanish,Culturel/Histoire,Temperate,City,Villa,Bus;4x4;Tuk-Tuk,Europe
+U0658,Alessandro,54,Male,Italian,Plage/Détente,Hot,Beach,Airbnb,Taxi;Tuk-Tuk;4x4,Europe
+U0659,Phương,63,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Randonnée;Bus,Asia
+U0660,Emma,43,Female,Swedish,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture (si isolé);Tuk-Tuk;Marche,Europe
+U0661,Sofía,46,Female,Colombian,Plage/Détente,Hot,Beach,Airbnb,Transports Publics;Randonnée;Vélo,South America
+U0662,Rina,32,Female,Japanese,Plage/Détente,Hot,Beach,Guesthouse,Voiture;4x4;Bateau,Asia
+U0663,Aisha,35,Female,Indian,Culturel/Histoire,Temperate,City,Airbnb,Bateau;4x4;Randonnée,Asia
+U0664,Ksenia,27,Female,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Taxi;Marche;Scooter,Europe
+U0665,Arjun,48,Male,Indian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Bus;4x4;Scooter,Asia
+U0666,Ye-Eun,57,Female,South Korean,Urbain/Luxe/Shopping,Temperate,City,Villa,Randonnée;Métro;Voiture,Asia
+U0667,Alex,56,Male,American,Culturel/Histoire,Temperate,City,Hotel,Scooter;Bateau;Voiture,North America
+U0668,Thandi,60,Female,South African,Aventure/Nature,Temperate,Adventure/Nature,Villa,Bateau;Randonnée;4x4,Africa
+U0669,Aisha,34,Female,Saudi,Culturel/Histoire,Temperate,City,Villa,Bateau;Marche;Tuk-Tuk,Asia
+U0670,Clara,32,Female,German,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Transports Publics;Tuk-Tuk;Randonnée,Europe
+U0671,Hoàng,66,Male,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Hostel,Scooter;Bateau;Vélo,Asia
+U0672,Kemi,55,Female,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bateau;Transports Publics;Randonnée,Africa
+U0673,Jessica,22,Female,American,Plage/Détente,Hot,Beach,Airbnb,Bus;Scooter;Transports Publics,North America
+U0674,Sarah,43,Female,American,Culturel/Histoire,Temperate,City,Airbnb,Voiture;Voiture (si isolé);Bateau,North America
+U0675,Lata,38,Female,Indian,Culturel/Histoire,Temperate,City,Guesthouse,Randonnée;Transports Publics;Voiture (si isolé),Asia
+U0676,Lindiwe,27,Female,South African,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Randonnée;Scooter;Tuk-Tuk,Africa
+U0677,Davi,20,Male,Brazilian,Plage/Détente,Hot,Beach,Airbnb,Métro;Scooter;Bateau,South America
+U0678,Kaito,42,Male,Japanese,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Transports Publics;Voiture;Voiture (si isolé),Asia
+U0679,Greta,40,Female,German,Culturel/Histoire,Temperate,City,Guesthouse,Voiture (si isolé);Marche;Taxi,Europe
+U0680,Bandar,62,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Métro;Voiture (si isolé);4x4,Asia
+U0681,Mostafa,55,Male,Egyptian,Plage/Détente,Hot,Beach,Guesthouse,Bateau;4x4;Transports Publics,Africa
+U0682,Emma,58,Female,French,Urbain/Luxe/Shopping,Temperate,City,Villa,Vélo;Taxi;Marche,Europe
+U0683,Damilola,43,Female,Nigerian,Culturel/Histoire,Temperate,City,Hotel,Scooter;Bus;Tuk-Tuk,Africa
+U0684,Emma,57,Female,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture;Métro;Voiture (si isolé),Europe
+U0685,Daniela,36,Female,Spanish,Urbain/Luxe/Shopping,Temperate,City,Hostel,Voiture;Voiture (si isolé);Transports Publics,Europe
+U0686,Fatima,27,Female,Saudi,Plage/Détente,Hot,Beach,Hotel,Randonnée;Taxi;4x4,Asia
+U0687,Anil,20,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Taxi;Scooter;Transports Publics,Asia
+U0688,Da-Eun,32,Female,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Bus;Tuk-Tuk;4x4,Asia
+U0689,Rohan,43,Male,Indian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Taxi;Marche;Tuk-Tuk,Asia
+U0690,Owen,62,Male,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Tuk-Tuk;Métro;Marche,North America
+U0691,Saud,56,Male,Saudi,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bus;Vélo;4x4,Asia
+U0692,Olivia,55,Female,American,Culturel/Histoire,Temperate,City,Hostel,Vélo;Transports Publics;Bateau,North America
+U0693,Yazeed,52,Male,Saudi,Plage/Détente,Hot,Beach,Hotel,Voiture;Marche;Scooter,Asia
+U0694,Alba,58,Female,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Bateau;Transports Publics;4x4,Europe
+U0695,Ayanda,41,Female,South African,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Vélo;Marche;Tuk-Tuk,Africa
+U0696,Tshepo,18,Male,South African,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Vélo;Taxi;Transports Publics,Africa
+U0697,Arthur,56,Male,Brazilian,Culturel/Histoire,Temperate,City,Hostel,4x4;Tuk-Tuk;Voiture (si isolé),South America
+U0698,Vivek,47,Male,Indian,Culturel/Histoire,Temperate,City,Hotel,Voiture;Bus;Marche,Asia
+U0699,Themba,52,Male,South African,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;4x4;Voiture (si isolé),Africa
+U0700,Khaya,49,Male,South African,Plage/Détente,Hot,Beach,Airbnb,Métro;4x4;Bateau,Africa
+U0701,William,48,Male,Swedish,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Voiture;Randonnée;Marche,Europe
+U0702,Quỳnh,48,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Randonnée;Vélo;Marche,Asia
+U0703,Isabella,18,Female,American,Culturel/Histoire,Temperate,City,Villa,Voiture (si isolé);Marche;Randonnée,North America
+U0704,Vikram,69,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Transports Publics;Bus;Métro,Asia
+U0705,Polina,20,Female,Russian,Plage/Détente,Hot,Beach,Airbnb,Bus;Randonnée;Transports Publics,Europe
+U0706,Isabella,21,Female,Canadian,Culturel/Histoire,Temperate,City,Guesthouse,4x4;Vélo;Bateau,North America
+U0707,Pablo,36,Male,Spanish,Urbain/Luxe/Shopping,Temperate,City,Hotel,Vélo;Bateau;Bus,Europe
+U0708,Mateus,69,Male,Brazilian,Culturel/Histoire,Temperate,City,Hotel,Randonnée;Taxi;Scooter,South America
+U0709,Lindiwe,45,Female,South African,Plage/Détente,Hot,Beach,Hostel,Marche;Métro;Vélo,Africa
+U0710,Sofia,20,Female,Brazilian,Plage/Détente,Hot,Beach,Guesthouse,Bateau;Scooter;Bus,South America
+U0711,Ksenia,49,Female,Russian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Vélo;4x4;Taxi,Europe
+U0712,Sakura,22,Female,Japanese,Culturel/Histoire,Temperate,City,Guesthouse,Randonnée;Taxi;Métro,Asia
+U0713,Musa,41,Male,South African,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Voiture (si isolé);Randonnée;Taxi,Africa
+U0714,Isabella,30,Female,Canadian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Bateau;Métro;Marche,North America
+U0715,Evelyn,36,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Randonnée;Vélo;Scooter,North America
+U0716,Sofia,60,Female,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;Taxi;Métro,Europe
+U0717,Anna,66,Female,Russian,Culturel/Histoire,Temperate,City,Guesthouse,Taxi;Transports Publics;Métro,Europe
+U0718,Vy,48,Female,Vietnamese,Plage/Détente,Hot,Beach,Villa,Marche;4x4;Voiture (si isolé),Asia
+U0719,Sifiso,57,Male,South African,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Tuk-Tuk;Voiture;Voiture (si isolé),Africa
+U0720,Jack,42,Male,Australian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture (si isolé);Vélo;Scooter,Oceania
+U0721,Mia,48,Female,Canadian,Culturel/Histoire,Temperate,City,Hostel,4x4;Voiture (si isolé);Tuk-Tuk,North America
+U0722,Leonardo,67,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Métro;Transports Publics;4x4,Europe
+U0723,Mia,41,Female,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture (si isolé);Scooter;Vélo,Oceania
+U0724,Inès,41,Female,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Scooter;Tuk-Tuk;Voiture,Europe
+U0725,Claudia,64,Female,Spanish,Plage/Détente,Hot,Beach,Guesthouse,Vélo;Scooter;Métro,Europe
+U0726,Thomas,59,Male,French,Plage/Détente,Hot,Beach,Hostel,Voiture (si isolé);Voiture;Transports Publics,Europe
+U0727,Su-Min,37,Female,South Korean,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Transports Publics;Scooter;Randonnée,Asia
+U0728,Bheki,69,Male,South African,Culturel/Histoire,Temperate,City,Hotel,Métro;Voiture (si isolé);Randonnée,Africa
+U0729,Vikram,36,Male,Indian,Exotique/Budget,Hot,Cultural/Nature,Villa,4x4;Voiture (si isolé);Transports Publics,Asia
+U0730,Priya,67,Female,Indian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Scooter;Vélo;Bateau,Asia
+U0731,Isabella,47,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Hotel,Transports Publics;Scooter;Randonnée,North America
+U0732,Koharu,37,Female,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Métro;Bus,Asia
+U0733,Thomas,43,Male,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Voiture (si isolé);Voiture;Tuk-Tuk,Europe
+U0734,Yuto,63,Male,Japanese,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Voiture;Transports Publics;Randonnée,Asia
+U0735,Ngọc,21,Female,Vietnamese,Plage/Détente,Hot,Beach,Hotel,Voiture;Randonnée;4x4,Asia
+U0736,Simon,56,Male,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;Voiture (si isolé);Bus,Europe
+U0737,Min-Ji,54,Female,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Transports Publics;Tuk-Tuk;Bus,Asia
+U0738,Ji-Min,22,Female,South Korean,Culturel/Histoire,Temperate,City,Guesthouse,Bateau;Randonnée;Vélo,Asia
+U0739,Kaito,56,Male,Japanese,Plage/Détente,Hot,Beach,Villa,Métro;Bus;Voiture (si isolé),Asia
+U0740,Rina,64,Female,Japanese,Plage/Détente,Hot,Beach,Hotel,4x4;Randonnée;Voiture,Asia
+U0741,Inès,51,Female,French,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Tuk-Tuk;Bus;4x4,Europe
+U0742,Salomé,40,Female,Colombian,Culturel/Histoire,Temperate,City,Guesthouse,Voiture (si isolé);Métro;Voiture,South America
+U0743,Amelia,21,Female,Canadian,Culturel/Histoire,Temperate,City,Hotel,Métro;4x4;Bateau,North America
+U0744,David,51,Male,Mexican,Culturel/Histoire,Temperate,City,Villa,4x4;Randonnée;Vélo,North America
+U0745,Andrei,38,Male,Russian,Plage/Détente,Hot,Beach,Airbnb,Voiture;Voiture (si isolé);Taxi,Europe
+U0746,Emma,48,Female,Italian,Plage/Détente,Hot,Beach,Airbnb,4x4;Randonnée;Transports Publics,Europe
+U0747,Manuel,57,Male,Mexican,Culturel/Histoire,Temperate,City,Villa,Voiture (si isolé);Voiture;Marche,North America
+U0748,Da-Eun,35,Female,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Marche;Transports Publics;Scooter,Asia
+U0749,Alice,43,Female,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Marche;Voiture;Métro,Europe
+U0750,Noah,50,Male,German,Culturel/Histoire,Temperate,City,Hotel,Bus;Transports Publics;Randonnée,Europe
+U0751,Fatima,24,Female,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Taxi;Marche;Scooter,Africa
+U0752,Noura,54,Female,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Marche;Métro;Taxi,Asia
+U0753,Miguel,60,Male,Brazilian,Culturel/Histoire,Temperate,City,Hostel,Voiture (si isolé);4x4;Taxi,South America
+U0754,Olivia,51,Female,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture (si isolé);Transports Publics;Randonnée,North America
+U0755,Saud,34,Male,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Villa,Taxi;Tuk-Tuk;4x4,Asia
+U0756,Ingrid,24,Female,German,Culturel/Histoire,Temperate,City,Villa,Taxi;Tuk-Tuk;4x4,Europe
+U0757,Ravi,32,Male,Indian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Bus;Marche;Scooter,Asia
+U0758,Hiroshi,47,Male,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Randonnée;Marche;Scooter,Asia
+U0759,Greta,36,Female,Italian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Vélo;Bus;Randonnée,Europe
+U0760,Tùng,52,Male,Vietnamese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Tuk-Tuk;Transports Publics;Bateau,Asia
+U0761,Alexandre,68,Male,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bus;Vélo;Randonnée,Europe
+U0762,Sara,53,Female,Egyptian,Plage/Détente,Hot,Beach,Airbnb,Vélo;Voiture;Scooter,Africa
+U0763,Sofia,44,Female,Italian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Scooter;Voiture (si isolé);Transports Publics,Europe
+U0764,José,43,Male,Colombian,Culturel/Histoire,Temperate,City,Hostel,Transports Publics;Voiture (si isolé);Métro,South America
+U0765,Liam,52,Male,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Bateau;Randonnée;Bus,North America
+U0766,Andrea,33,Male,Italian,Culturel/Histoire,Temperate,City,Guesthouse,Vélo;Randonnée;Scooter,Europe
+U0767,Zanele,25,Female,South African,Plage/Détente,Hot,Beach,Villa,Voiture;Bus;Marche,Africa
+U0768,Amelia,68,Female,American,Urbain/Luxe/Shopping,Temperate,City,Hostel,Vélo;4x4;Voiture,North America
+U0769,Jorge,19,Male,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Marche;4x4;Bus,Europe
+U0770,Nicolás,59,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Villa,Voiture;Bus;Randonnée,South America
+U0771,Miguel,18,Male,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;Vélo;Voiture (si isolé),South America
+U0772,Mandla,29,Male,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,4x4;Taxi;Scooter,Africa
+U0773,Jacob,51,Male,American,Aventure/Nature,Temperate,Adventure/Nature,Villa,Taxi;Randonnée;Marche,North America
+U0774,Ryan,67,Male,American,Culturel/Histoire,Temperate,City,Guesthouse,Marche;Bus;Tuk-Tuk,North America
+U0775,Andrei,54,Male,Russian,Plage/Détente,Hot,Beach,Hotel,Métro;Taxi;Tuk-Tuk,Europe
+U0776,Tara,56,Female,Indian,Plage/Détente,Hot,Beach,Guesthouse,Tuk-Tuk;Voiture (si isolé);Marche,Asia
+U0777,Simone,28,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Transports Publics;Randonnée;Scooter,Europe
+U0778,Paul,29,Male,German,Exotique/Budget,Hot,Cultural/Nature,Hotel,Bateau;Marche;Voiture,Europe
+U0779,Ava,44,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Marche;Vélo;Tuk-Tuk,North America
+U0780,Ada,53,Female,Nigerian,Culturel/Histoire,Temperate,City,Hostel,Transports Publics;Métro;Tuk-Tuk,Africa
+U0781,José,31,Male,Colombian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Randonnée;Tuk-Tuk;Voiture (si isolé),South America
+U0782,Mariana,21,Female,Colombian,Culturel/Histoire,Temperate,City,Villa,Voiture (si isolé);Vélo;Métro,South America
+U0783,Laura,68,Female,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Voiture (si isolé);Bateau;Transports Publics,South America
+U0784,Yasmin,40,Female,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Tuk-Tuk;Bus;Vélo,Africa
+U0785,Nikita,44,Male,Russian,Culturel/Histoire,Temperate,City,Guesthouse,Scooter;Métro;Vélo,Europe
+U0786,Elena,30,Female,Russian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Tuk-Tuk;Randonnée;Métro,Europe
+U0787,Phương,53,Female,Vietnamese,Plage/Détente,Hot,Beach,Villa,Voiture (si isolé);Voiture;4x4,Asia
+U0788,Lucas,67,Male,Canadian,Culturel/Histoire,Temperate,City,Hostel,Bus;Vélo;4x4,North America
+U0789,Tae-Hyun,54,Male,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bateau;Transports Publics;Bus,Asia
+U0790,Lorenzo,19,Male,Italian,Culturel/Histoire,Temperate,City,Hotel,4x4;Taxi;Bateau,Europe
+U0791,Yuto,67,Male,Japanese,Exotique/Budget,Hot,Cultural/Nature,Hostel,Tuk-Tuk;Bus;Voiture (si isolé),Asia
+U0792,Ethan,57,Male,American,Exotique/Budget,Hot,Cultural/Nature,Villa,Marche;Bus;Transports Publics,North America
+U0793,Mia,67,Female,Canadian,Plage/Détente,Hot,Beach,Airbnb,Tuk-Tuk;Bus;Transports Publics,North America
+U0794,Alice,45,Female,Swedish,Plage/Détente,Hot,Beach,Villa,Randonnée;Bateau;Transports Publics,Europe
+U0795,Minh,30,Male,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bateau;Métro;Voiture (si isolé),Asia
+U0796,Miyu,30,Female,Japanese,Culturel/Histoire,Temperate,City,Hotel,Vélo;Métro;Voiture (si isolé),Asia
+U0797,Natalia,47,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Scooter;Vélo;Randonnée,North America
+U0798,Seo-Yeon,62,Female,South Korean,Plage/Détente,Hot,Beach,Guesthouse,Bateau;Randonnée;Bus,Asia
+U0799,Salomé,68,Female,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Scooter;Voiture;Bateau,South America
+U0800,Ji-Min,60,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture;Vélo;Randonnée,Asia
+U0801,Clara,27,Female,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Voiture;Bus;Voiture (si isolé),Europe
+U0802,Priya,20,Female,Indian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Bateau;Marche;Bus,Asia
+U0803,Turki,63,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Tuk-Tuk;Métro;Bus,Asia
+U0804,Emma,42,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Métro;Scooter;Randonnée,North America
+U0805,Louis,55,Male,French,Plage/Détente,Hot,Beach,Villa,Transports Publics;Scooter;Bus,Europe
+U0806,Maha,28,Female,Saudi,Plage/Détente,Hot,Beach,Villa,Voiture;Bateau;Tuk-Tuk,Asia
+U0807,Maxim,56,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Marche;Tuk-Tuk;Voiture,Europe
+U0808,Gustav,36,Male,Swedish,Culturel/Histoire,Temperate,City,Hotel,Bus;Transports Publics;Bateau,Europe
+U0809,Kiên,68,Male,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Hotel,Marche;Taxi;Tuk-Tuk,Asia
+U0810,Amahle,43,Female,South African,Plage/Détente,Hot,Beach,Guesthouse,Vélo;Transports Publics;Bateau,Africa
+U0811,Rahul,66,Male,Indian,Culturel/Histoire,Temperate,City,Villa,Tuk-Tuk;Voiture (si isolé);Métro,Asia
+U0812,Dmitry,65,Male,Russian,Culturel/Histoire,Temperate,City,Hotel,Scooter;Transports Publics;4x4,Europe
+U0813,Lucas,63,Male,Canadian,Culturel/Histoire,Temperate,City,Hostel,4x4;Bus;Métro,North America
+U0814,Davi,53,Male,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bateau;Métro;Tuk-Tuk,South America
+U0815,Dmitry,42,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Voiture;Randonnée,Europe
+U0816,Ludwig,51,Male,German,Culturel/Histoire,Temperate,City,Airbnb,Bus;Voiture;Transports Publics,Europe
+U0817,Gabriela,46,Female,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Voiture;Taxi;Marche,South America
+U0818,Gabriela,21,Female,Colombian,Urbain/Luxe/Shopping,Temperate,City,Hotel,4x4;Transports Publics;Voiture,South America
+U0819,Yui,64,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,4x4;Voiture;Vélo,Asia
+U0820,Manon,32,Female,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;Voiture (si isolé);Transports Publics,Europe
+U0821,Heloísa,46,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Vélo;Bus;Taxi,South America
+U0822,Aurora,28,Female,Italian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,4x4;Taxi;Transports Publics,Europe
+U0823,Ebba,49,Female,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Bus;Randonnée;Transports Publics,Europe
+U0824,Gabriel,35,Male,French,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Randonnée;Taxi;Bus,Europe
+U0825,Ji-Min,65,Female,South Korean,Culturel/Histoire,Temperate,City,Hostel,Tuk-Tuk;Transports Publics;Scooter,Asia
+U0826,Jeanne,53,Female,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Randonnée;Bus;Marche,Europe
+U0827,Gabriela,35,Female,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Scooter;4x4;Métro,South America
+U0828,Nicolás,42,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Taxi;Transports Publics;Randonnée,South America
+U0829,Alejandro,41,Male,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Scooter;Métro;Bateau,South America
+U0830,Aoi,42,Female,Japanese,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Métro;Voiture (si isolé);Voiture,Asia
+U0831,Youssef,41,Male,Egyptian,Plage/Détente,Hot,Beach,Villa,Randonnée;Marche;Bus,Africa
+U0832,Heloísa,29,Female,Brazilian,Culturel/Histoire,Temperate,City,Hotel,Métro;Taxi;Bateau,South America
+U0833,Enzo,40,Male,Brazilian,Culturel/Histoire,Temperate,City,Villa,Vélo;Randonnée;Métro,South America
+U0834,Ricardo,40,Male,Mexican,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bus;Randonnée;Marche,North America
+U0835,Emeka,64,Male,Nigerian,Culturel/Histoire,Temperate,City,Villa,Scooter;Transports Publics;Voiture,Africa
+U0836,Linh,60,Female,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Bateau;Scooter;Transports Publics,Asia
+U0837,Riku,40,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Bus;Voiture (si isolé);4x4,Asia
+U0838,Olivia,66,Female,Canadian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Métro;Taxi;Voiture (si isolé),North America
+U0839,Mario,21,Male,Spanish,Culturel/Histoire,Temperate,City,Airbnb,Bateau;Randonnée;Marche,Europe
+U0840,Enzo,20,Male,Brazilian,Culturel/Histoire,Temperate,City,Guesthouse,Randonnée;Scooter;4x4,South America
+U0841,Lucas,49,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Voiture;Marche;Métro,South America
+U0842,Salma,44,Female,Egyptian,Plage/Détente,Hot,Beach,Hotel,Tuk-Tuk;Scooter;Bus,Africa
+U0843,Tùng,47,Male,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Vélo;Voiture (si isolé);Scooter,Asia
+U0844,Hans,40,Male,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Taxi;Métro;Marche,Europe
+U0845,Natalia,60,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Taxi;Vélo;Bateau,North America
+U0846,Yumi,31,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Bus;Marche;4x4,Asia
+U0847,Charlotte,56,Female,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture;Randonnée;4x4,North America
+U0848,Maha,52,Female,Saudi,Plage/Détente,Hot,Beach,Airbnb,Marche;Taxi;Métro,Asia
+U0849,Daria,37,Female,Russian,Plage/Détente,Hot,Beach,Guesthouse,Métro;Voiture;Tuk-Tuk,Europe
+U0850,Ethan,61,Male,Australian,Culturel/Histoire,Temperate,City,Hotel,Voiture;Vélo;Bus,Oceania
+U0851,Riccardo,40,Male,Italian,Plage/Détente,Hot,Beach,Villa,Randonnée;Taxi;Bateau,Europe
+U0852,Beatrice,58,Female,Italian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Marche;Bus;Voiture (si isolé),Europe
+U0853,Sara,45,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Scooter;Métro;Bus,Africa
+U0854,Tara,41,Female,Indian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Vélo;Tuk-Tuk;Bus,Asia
+U0855,Joon-Ho,32,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Marche;Tuk-Tuk;Bus,Asia
+U0856,Bandar,61,Male,Saudi,Plage/Détente,Hot,Beach,Hostel,Voiture;Voiture (si isolé);Transports Publics,Asia
+U0857,Sara,28,Female,Swedish,Plage/Détente,Hot,Beach,Hostel,Voiture (si isolé);Tuk-Tuk;Voiture,Europe
+U0858,Hanna,59,Female,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture;Bateau;Métro,Europe
+U0859,Karim,33,Male,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture (si isolé);Transports Publics;Randonnée,Africa
+U0860,Mateus,57,Male,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture (si isolé);Voiture;Bateau,South America
+U0861,Juan,32,Male,Colombian,Plage/Détente,Hot,Beach,Airbnb,Métro;Voiture;Bus,South America
+U0862,Nikita,68,Male,Russian,Plage/Détente,Hot,Beach,Hostel,Transports Publics;Marche;Bus,Europe
+U0863,Frieda,32,Female,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Vélo;Voiture;Bus,Europe
+U0864,Sebastián,28,Male,Colombian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Voiture (si isolé);Tuk-Tuk,South America
+U0865,Sophia,41,Female,American,Urbain/Luxe/Shopping,Temperate,City,Villa,Bateau;Voiture (si isolé);Randonnée,North America
+U0866,Kelechi,38,Male,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Métro;Scooter;Marche,Africa
+U0867,Min-Jun,20,Male,South Korean,Plage/Détente,Hot,Beach,Guesthouse,Métro;Voiture;Voiture (si isolé),Asia
+U0868,Matteo,55,Male,Italian,Culturel/Histoire,Temperate,City,Hostel,Transports Publics;Randonnée;Bateau,Europe
+U0869,Ji-Min,23,Female,South Korean,Plage/Détente,Hot,Beach,Villa,Bus;Transports Publics;Voiture (si isolé),Asia
+U0870,Priya,18,Female,Indian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Bus;Voiture (si isolé);Marche,Asia
+U0871,Jack,66,Male,Australian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,4x4;Voiture;Métro,Oceania
+U0872,Javier,59,Male,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Tuk-Tuk;Voiture;Bus,North America
+U0873,Sara,67,Female,Saudi,Exotique/Budget,Hot,Cultural/Nature,Hostel,Vélo;Taxi;Voiture (si isolé),Asia
+U0874,Louise,55,Female,French,Culturel/Histoire,Temperate,City,Hotel,Bateau;Voiture;Marche,Europe
+U0875,Jorge,39,Male,Spanish,Culturel/Histoire,Temperate,City,Hostel,Tuk-Tuk;4x4;Marche,Europe
+U0876,Hessa,44,Female,Saudi,Plage/Détente,Hot,Beach,Villa,Bateau;Tuk-Tuk;Scooter,Asia
+U0877,Mikhail,22,Male,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Vélo;Taxi;Bateau,Europe
+U0878,Oliver,46,Male,Australian,Exotique/Budget,Hot,Cultural/Nature,Villa,Métro;Scooter;Voiture,Oceania
+U0879,Mohamed,21,Male,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Villa,Marche;Scooter;4x4,Africa
+U0880,Damilola,69,Female,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture (si isolé);Métro;Voiture,Africa
+U0881,Sizakele,31,Female,South African,Culturel/Histoire,Temperate,City,Airbnb,Transports Publics;Tuk-Tuk;Vélo,Africa
+U0882,Tunde,38,Male,Nigerian,Plage/Détente,Hot,Beach,Airbnb,Tuk-Tuk;Métro;Marche,Africa
+U0883,Kaito,51,Male,Japanese,Urbain/Luxe/Shopping,Temperate,City,Hostel,Scooter;Tuk-Tuk;Métro,Asia
+U0884,Gyu-Min,65,Male,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Randonnée;Bateau;Voiture (si isolé),Asia
+U0885,Gabriel,58,Male,French,Urbain/Luxe/Shopping,Temperate,City,Villa,Taxi;Vélo;Métro,Europe
+U0886,Seo-Jun,35,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bus;Bateau;4x4,Asia
+U0887,Deepa,47,Female,Indian,Culturel/Histoire,Temperate,City,Hostel,4x4;Scooter;Voiture,Asia
+U0888,Lucas,21,Male,Swedish,Culturel/Histoire,Temperate,City,Villa,Vélo;Bus;Marche,Europe
+U0889,Manuela,67,Female,Brazilian,Plage/Détente,Hot,Beach,Hotel,Scooter;Vélo;Taxi,South America
+U0890,Lucía,27,Female,Spanish,Exotique/Budget,Hot,Cultural/Nature,Hostel,Tuk-Tuk;4x4;Voiture (si isolé),Europe
+U0891,Đức,30,Male,Vietnamese,Plage/Détente,Hot,Beach,Airbnb,Voiture (si isolé);Transports Publics;Scooter,Asia
+U0892,Yemi,24,Female,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,4x4;Bateau;Vélo,Africa
+U0893,Anna,25,Female,Swedish,Culturel/Histoire,Temperate,City,Hostel,Bus;Taxi;Vélo,Europe
+U0894,Kenji,46,Male,Japanese,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Marche;Randonnée;Voiture (si isolé),Asia
+U0895,Ji-Hoon,66,Male,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Scooter;Tuk-Tuk;Randonnée,Asia
+U0896,David,53,Male,American,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Taxi;4x4;Voiture,North America
+U0897,Kelechi,41,Male,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bus;Randonnée;Métro,Africa
+U0898,Michael,45,Male,American,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Transports Publics;Scooter;Marche,North America
+U0899,Juan,26,Male,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Taxi;Voiture (si isolé);4x4,South America
+U0900,Ava,38,Female,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;Vélo;Randonnée,North America
+U0901,Sara,67,Female,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Hotel,4x4;Marche;Bus,Europe
+U0902,Dmitry,56,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Vélo;Taxi;Tuk-Tuk,Europe
+U0903,Ella,42,Female,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Bateau;Bus;Voiture,Oceania
+U0904,Samuel,64,Male,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Vélo;Tuk-Tuk;Bateau,South America
+U0905,Charlotte,31,Female,Australian,Plage/Détente,Hot,Beach,Guesthouse,4x4;Tuk-Tuk;Vélo,Oceania
+U0906,Min-Ji,59,Female,South Korean,Plage/Détente,Hot,Beach,Guesthouse,Tuk-Tuk;Taxi;Bateau,Asia
+U0907,Yazeed,58,Male,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Villa,Bus;Marche;Transports Publics,Asia
+U0908,Nour,65,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Bus;Transports Publics;Marche,Africa
+U0909,Louis,41,Male,French,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Transports Publics;Tuk-Tuk;Métro,Europe
+U0910,Sara,31,Female,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bus;Taxi;Métro,Europe
+U0911,Nandi,37,Female,South African,Plage/Détente,Hot,Beach,Hostel,Voiture;Métro;Taxi,Africa
+U0912,Yoo-Jin,59,Female,South Korean,Urbain/Luxe/Shopping,Temperate,City,Hotel,Taxi;Vélo;Métro,Asia
+U0913,Zanele,63,Female,South African,Culturel/Histoire,Temperate,City,Guesthouse,Voiture (si isolé);Randonnée;Marche,Africa
+U0914,Julia,62,Female,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Marche;Métro;Randonnée,South America
+U0915,Ji-Woo,38,Female,South Korean,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Taxi;Tuk-Tuk;Marche,Asia
+U0916,Greta,61,Female,Italian,Plage/Détente,Hot,Beach,Airbnb,Voiture (si isolé);Taxi;4x4,Europe
+U0917,Maha,49,Female,Saudi,Urbain/Luxe/Shopping,Temperate,City,Hostel,Randonnée;Bus;Transports Publics,Asia
+U0918,Juan,50,Male,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Vélo;Randonnée;Voiture (si isolé),North America
+U0919,Karan,20,Male,Indian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Voiture;4x4;Scooter,Asia
+U0920,Evelyn,57,Female,American,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Vélo;Randonnée;Tuk-Tuk,North America
+U0921,Ava,54,Female,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Marche;Taxi;Bateau,North America
+U0922,Yemi,55,Female,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Vélo;Transports Publics;4x4,Africa
+U0923,Arjun,48,Male,Indian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Marche;Métro;Taxi,Asia
+U0924,Heloísa,68,Female,Brazilian,Plage/Détente,Hot,Beach,Airbnb,Voiture (si isolé);Métro;Taxi,South America
+U0925,Lucas,33,Male,French,Plage/Détente,Hot,Beach,Hostel,Taxi;Bus;Randonnée,Europe
+U0926,Sebastián,21,Male,Colombian,Plage/Détente,Hot,Beach,Airbnb,Transports Publics;Voiture (si isolé);Bateau,South America
+U0927,Ali,46,Male,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Transports Publics;Randonnée;Tuk-Tuk,Africa
+U0928,Fatima,52,Female,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Taxi;Bateau;Voiture,Asia
+U0929,Kiên,24,Male,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Voiture;Bateau;Transports Publics,Asia
+U0930,Thomas,61,Male,French,Urbain/Luxe/Shopping,Temperate,City,Hostel,Marche;Tuk-Tuk;Voiture (si isolé),Europe
+U0931,Su-Min,61,Female,South Korean,Culturel/Histoire,Temperate,City,Guesthouse,Tuk-Tuk;Taxi;Randonnée,Asia
+U0932,Aisha,66,Female,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,4x4;Vélo;Randonnée,Africa
+U0933,Salomé,51,Female,Colombian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bateau;Vélo;Randonnée,South America
+U0934,Samuel,66,Male,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Scooter;Taxi;Tuk-Tuk,South America
+U0935,Chloé,51,Female,French,Plage/Détente,Hot,Beach,Hotel,Tuk-Tuk;Voiture;Bus,Europe
+U0936,Obi,43,Male,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Villa,Voiture (si isolé);Transports Publics;Taxi,Africa
+U0937,Laura,66,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture (si isolé);Marche;Tuk-Tuk,South America
+U0938,Chiara,52,Female,Italian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Scooter;Vélo,Europe
+U0939,Elias,46,Male,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Bus;Bateau;Taxi,Europe
+U0940,Min-Ji,31,Female,South Korean,Plage/Détente,Hot,Beach,Airbnb,Bus;Métro;Bateau,Asia
+U0941,Emma,28,Female,French,Plage/Détente,Hot,Beach,Hotel,Marche;Tuk-Tuk;Taxi,Europe
+U0942,Layla,29,Female,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;Marche;Métro,Africa
+U0943,Liam,54,Male,Australian,Urbain/Luxe/Shopping,Temperate,City,Villa,4x4;Bus;Marche,Oceania
+U0944,Khanya,38,Female,South African,Plage/Détente,Hot,Beach,Guesthouse,Tuk-Tuk;Taxi;Vélo,Africa
+U0945,Karim,24,Male,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Taxi;Randonnée;Transports Publics,Africa
+U0946,Andrea,54,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Villa,Marche;Scooter;Vélo,North America
+U0947,Alejandro,67,Male,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Métro;4x4;Vélo,South America
+U0948,Elias,36,Male,Swedish,Culturel/Histoire,Temperate,City,Hostel,Tuk-Tuk;Taxi;Métro,Europe
+U0949,João,67,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bateau;Randonnée;Taxi,South America
+U0950,Sota,27,Male,Japanese,Urbain/Luxe/Shopping,Temperate,City,Villa,Bateau;4x4;Randonnée,Asia
+U0951,Amr,48,Male,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Marche;Voiture (si isolé);Vélo,Africa
+U0952,Juan,53,Male,Colombian,Culturel/Histoire,Temperate,City,Villa,Randonnée;Bus;Marche,South America
+U0953,Kenji,58,Male,Japanese,Culturel/Histoire,Temperate,City,Airbnb,4x4;Marche;Tuk-Tuk,Asia
+U0954,Khoa,58,Male,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Scooter;Taxi;Transports Publics,Asia
+U0955,Gyu-Min,64,Male,South Korean,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Vélo;Tuk-Tuk;Taxi,Asia
+U0956,Gabriele,46,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Voiture;Vélo;4x4,Europe
+U0957,Ji-Min,21,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;4x4;Marche,Asia
+U0958,Thandi,26,Female,South African,Culturel/Histoire,Temperate,City,Guesthouse,Voiture;Métro;Bateau,Africa
+U0959,Riku,56,Male,Japanese,Plage/Détente,Hot,Beach,Airbnb,Bus;Vélo;Tuk-Tuk,Asia
+U0960,Hoàng,67,Male,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Hostel,Transports Publics;Tuk-Tuk;Marche,Asia
+U0961,Chinedu,37,Male,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Marche;Taxi;Scooter,Africa
+U0962,Turki,32,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Bateau;Voiture;Vélo,Asia
+U0963,Alba,28,Female,Spanish,Plage/Détente,Hot,Beach,Airbnb,Taxi;Bus;Bateau,Europe
+U0964,Ludwig,45,Male,German,Exotique/Budget,Hot,Cultural/Nature,Hotel,Scooter;Randonnée;Transports Publics,Europe
+U0965,Themba,48,Male,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Vélo;Scooter;Marche,Africa
+U0966,Daniel,53,Male,Spanish,Culturel/Histoire,Temperate,City,Villa,Randonnée;4x4;Marche,Europe
+U0967,Camille,38,Female,French,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Randonnée;Taxi;Scooter,Europe
+U0968,Mohamed,31,Male,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Tuk-Tuk;Scooter;Bateau,Africa
+U0969,Saud,34,Male,Saudi,Urbain/Luxe/Shopping,Temperate,City,Hotel,Voiture;Tuk-Tuk;Métro,Asia
+U0970,Jorge,34,Male,Spanish,Exotique/Budget,Hot,Cultural/Nature,Hostel,Vélo;Scooter;Bateau,Europe
+U0971,Rafael,59,Male,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Vélo;4x4;Scooter,South America
+U0972,Hà,49,Female,Vietnamese,Plage/Détente,Hot,Beach,Villa,Voiture;Tuk-Tuk;Marche,Asia
+U0973,Sergey,31,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Transports Publics;Taxi;Scooter,Europe
+U0974,Frieda,43,Female,German,Culturel/Histoire,Temperate,City,Hotel,Bateau;Scooter;Vélo,Europe
+U0975,Elsa,54,Female,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Marche;Transports Publics;Métro,Europe
+U0976,Lena,59,Female,German,Exotique/Budget,Hot,Cultural/Nature,Hotel,Tuk-Tuk;Bateau;Voiture (si isolé),Europe
+U0977,Emily,48,Female,American,Exotique/Budget,Hot,Cultural/Nature,Hotel,Transports Publics;4x4;Vélo,North America
+U0978,Ruby,18,Female,Australian,Plage/Détente,Hot,Beach,Hotel,Taxi;Bus;4x4,Oceania
+U0979,Pablo,29,Male,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Bateau;Bus;Scooter,Europe
+U0980,Siddharth,43,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Marche;Métro;Transports Publics,Asia
+U0981,Thomas,39,Male,French,Exotique/Budget,Hot,Cultural/Nature,Hostel,Randonnée;Vélo;Scooter,Europe
+U0982,Seo-Jun,30,Male,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Vélo;4x4;Transports Publics,Asia
+U0983,Ludwig,50,Male,German,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);Voiture;Transports Publics,Europe
+U0984,Carlos,40,Male,Mexican,Culturel/Histoire,Temperate,City,Hotel,Scooter;Transports Publics;Métro,North America
+U0985,Heidi,18,Female,German,Exotique/Budget,Hot,Cultural/Nature,Hotel,Métro;Randonnée;Transports Publics,Europe
+U0986,Sana,44,Female,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Marche;Voiture (si isolé);Bateau,Asia
+U0987,Mandla,39,Male,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,4x4;Randonnée;Taxi,Africa
+U0988,Camila,25,Female,Colombian,Exotique/Budget,Hot,Cultural/Nature,Villa,Vélo;Randonnée;Bus,South America
+U0989,Olle,54,Male,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Tuk-Tuk;Bus;Voiture,Europe
+U0990,Matteo,32,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bateau;Randonnée;Transports Publics,Europe
+U0991,Khaya,69,Male,South African,Urbain/Luxe/Shopping,Temperate,City,Hostel,Vélo;Transports Publics;Bus,Africa
+U0992,Rohan,29,Male,Indian,Urbain/Luxe/Shopping,Temperate,City,Villa,Transports Publics;Voiture;Marche,Asia
+U0993,Ravi,56,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture (si isolé);Voiture;Bus,Asia
+U0994,Hugo,41,Male,French,Culturel/Histoire,Temperate,City,Airbnb,Randonnée;Marche;Scooter,Europe
+U0995,Kunle,41,Male,Nigerian,Culturel/Histoire,Temperate,City,Villa,Randonnée;Marche;Métro,Africa
+U0996,Ren,51,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture;Vélo;Marche,Asia
+U0997,Pierre,67,Male,French,Urbain/Luxe/Shopping,Temperate,City,Villa,Randonnée;Taxi;Transports Publics,Europe
+U0998,Kenji,28,Male,Japanese,Plage/Détente,Hot,Beach,Villa,Bus;4x4;Vélo,Asia
+U0999,Rajesh,67,Male,Indian,Exotique/Budget,Hot,Cultural/Nature,Villa,Transports Publics;Vélo;Randonnée,Asia
+U1000,Leon,27,Male,German,Culturel/Histoire,Temperate,City,Hostel,Métro;Tuk-Tuk;Marche,Europe
+U1001,Nour,40,Female,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture;Taxi;Bus,Africa
+U1002,María,34,Female,Colombian,Culturel/Histoire,Temperate,City,Hotel,Randonnée;4x4;Bus,South America
+U1003,Michael,42,Male,American,Urbain/Luxe/Shopping,Temperate,City,Villa,Tuk-Tuk;Taxi;Vélo,North America
+U1004,Quỳnh,34,Female,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Hostel,Métro;Voiture (si isolé);Voiture,Asia
+U1005,Anastasia,48,Female,Russian,Culturel/Histoire,Temperate,City,Guesthouse,Bateau;Randonnée;Transports Publics,Europe
+U1006,Yulia,26,Female,Russian,Plage/Détente,Hot,Beach,Hotel,Métro;Bateau;Randonnée,Europe
+U1007,Ali,63,Male,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Bus;Marche;Tuk-Tuk,Africa
+U1008,Nkosi,46,Male,South African,Plage/Détente,Hot,Beach,Villa,Voiture (si isolé);4x4;Bateau,Africa
+U1009,Chiamaka,49,Female,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Voiture;4x4;Bateau,Africa
+U1010,Chinedu,48,Male,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Marche;Transports Publics;Métro,Africa
+U1011,Javier,45,Male,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Hotel,4x4;Transports Publics;Voiture (si isolé),North America
+U1012,Claudia,34,Female,Spanish,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Taxi;Tuk-Tuk;Scooter,Europe
+U1013,Trang,63,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture (si isolé);Voiture;Taxi,Asia
+U1014,Karim,53,Male,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Scooter;4x4;Marche,Africa
+U1015,Khanya,40,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture (si isolé);Randonnée;Taxi,Africa
+U1016,Ingrid,52,Female,German,Culturel/Histoire,Temperate,City,Airbnb,Voiture (si isolé);Scooter;Métro,Europe
+U1017,Tshepo,67,Male,South African,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bus;Vélo;4x4,Africa
+U1018,Sarah,30,Female,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture;4x4;Bateau,North America
+U1019,Ksenia,32,Female,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Bus;Taxi;Vélo,Europe
+U1020,Irene,65,Female,Spanish,Culturel/Histoire,Temperate,City,Hostel,Scooter;Marche;Vélo,Europe
+U1021,Sara,20,Female,Swedish,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Marche;Randonnée;Scooter,Europe
+U1022,Valeria,23,Female,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture (si isolé);Bus;Marche,South America
+U1023,Mikhail,25,Male,Russian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Scooter;Bus;Taxi,Europe
+U1024,Laura,60,Female,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Taxi;Vélo;Voiture (si isolé),South America
+U1025,Isabella,52,Female,Mexican,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Scooter;Métro;Voiture,North America
+U1026,Nikita,30,Male,Russian,Culturel/Histoire,Temperate,City,Guesthouse,Voiture (si isolé);Randonnée;Voiture,Europe
+U1027,Nandi,25,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Transports Publics;4x4;Marche,Africa
+U1028,Obi,28,Male,Nigerian,Plage/Détente,Hot,Beach,Airbnb,Marche;Voiture;4x4,Africa
+U1029,Ebba,62,Female,Swedish,Urbain/Luxe/Shopping,Temperate,City,Hostel,Transports Publics;Métro;4x4,Europe
+U1030,Rina,26,Female,Japanese,Exotique/Budget,Hot,Cultural/Nature,Hostel,Taxi;Randonnée;Voiture (si isolé),Asia
+U1031,Daniela,51,Female,Colombian,Plage/Détente,Hot,Beach,Hotel,Transports Publics;Voiture (si isolé);4x4,South America
+U1032,Chiamaka,36,Female,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;Randonnée;4x4,Africa
+U1033,Álvaro,66,Male,Spanish,Plage/Détente,Hot,Beach,Hostel,Taxi;Voiture (si isolé);Transports Publics,Europe
+U1034,Neha,24,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Voiture;4x4;Vélo,Asia
+U1035,Fatima,49,Female,Egyptian,Culturel/Histoire,Temperate,City,Villa,Métro;Voiture (si isolé);Vélo,Africa
+U1036,Olu,39,Male,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Vélo;4x4;Voiture (si isolé),Africa
+U1037,Kunle,41,Male,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Marche;Voiture (si isolé);Scooter,Africa
+U1038,Owen,19,Male,Canadian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Voiture;Marche;Scooter,North America
+U1039,Maxim,66,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Vélo;Métro;Transports Publics,Europe
+U1040,Rohan,57,Male,Indian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Marche;Tuk-Tuk;Transports Publics,Asia
+U1041,Maja,54,Female,Swedish,Urbain/Luxe/Shopping,Temperate,City,Hostel,Randonnée;Bateau;Taxi,Europe
+U1042,Tae-Hyun,38,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Villa,Voiture;Scooter;4x4,Asia
+U1043,Do-Yun,46,Male,South Korean,Culturel/Histoire,Temperate,City,Airbnb,Bateau;Voiture;4x4,Asia
+U1044,Yoo-Jin,27,Female,South Korean,Culturel/Histoire,Temperate,City,Hostel,Métro;Randonnée;Transports Publics,Asia
+U1045,Kelechi,49,Male,Nigerian,Culturel/Histoire,Temperate,City,Hostel,Tuk-Tuk;Bus;Bateau,Africa
+U1046,Francesco,63,Male,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Marche;Voiture (si isolé);Tuk-Tuk,Europe
+U1047,Pierre,56,Male,French,Plage/Détente,Hot,Beach,Hotel,Bus;Voiture (si isolé);Randonnée,Europe
+U1048,Do-Yun,44,Male,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Randonnée;Bus;Tuk-Tuk,Asia
+U1049,Sota,53,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;4x4;Bateau,Asia
+U1050,Leonardo,42,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Métro;Marche;Bus,Europe
+U1051,Yulia,28,Female,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Marche;Voiture;Randonnée,Europe
+U1052,Min-Ji,21,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Voiture;Bus,Asia
+U1053,Emma,63,Female,Canadian,Culturel/Histoire,Temperate,City,Hotel,4x4;Voiture;Vélo,North America
+U1054,Arthur,57,Male,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,4x4;Vélo;Randonnée,South America
+U1055,Simone,32,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture;Voiture (si isolé);4x4,Europe
+U1056,Maxim,50,Male,Russian,Culturel/Histoire,Temperate,City,Hostel,Voiture;Bateau;Scooter,Europe
+U1057,Seo-Yeon,45,Female,South Korean,Exotique/Budget,Hot,Cultural/Nature,Hotel,Scooter;4x4;Voiture (si isolé),Asia
+U1058,Erik,31,Male,Swedish,Plage/Détente,Hot,Beach,Guesthouse,Voiture (si isolé);Scooter;4x4,Europe
+U1059,Finn,21,Male,Australian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Voiture (si isolé);Vélo;Transports Publics,Oceania
+U1060,Maxim,62,Male,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Voiture (si isolé);Transports Publics;Marche,Europe
+U1061,Jeanne,23,Female,French,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture;Scooter;Taxi,Europe
+U1062,Olivia,69,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Bus;Voiture,North America
+U1063,Sam,33,Male,American,Aventure/Nature,Temperate,Adventure/Nature,Villa,Scooter;4x4;Randonnée,North America
+U1064,Elena,31,Female,Russian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Marche;Bus;Vélo,Europe
+U1065,Louis,26,Male,French,Plage/Détente,Hot,Beach,Hostel,Transports Publics;Bateau;Tuk-Tuk,Europe
+U1066,Yazeed,52,Male,Saudi,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture;Taxi;Randonnée,Asia
+U1067,Gabriel,49,Male,Brazilian,Culturel/Histoire,Temperate,City,Hostel,4x4;Voiture;Tuk-Tuk,South America
+U1068,Ali,53,Male,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;Métro;4x4,Africa
+U1069,Miyu,24,Female,Japanese,Plage/Détente,Hot,Beach,Villa,Taxi;Bus;Marche,Asia
+U1070,Isabella,28,Female,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Transports Publics;Taxi;Scooter,South America
+U1071,Ava,62,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Taxi;Vélo;Bateau,North America
+U1072,Camila,51,Female,Colombian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Vélo;4x4;Voiture,South America
+U1073,William,37,Male,Canadian,Plage/Détente,Hot,Beach,Villa,Taxi;Transports Publics;Métro,North America
+U1074,Tarek,20,Male,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Vélo;Marche;4x4,Africa
+U1075,William,29,Male,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Bateau;Taxi;Transports Publics,Europe
+U1076,Rina,31,Female,Japanese,Exotique/Budget,Hot,Cultural/Nature,Villa,4x4;Vélo;Voiture (si isolé),Asia
+U1077,Gabriel,38,Male,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Tuk-Tuk;Randonnée,South America
+U1078,Francesco,68,Male,Italian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Transports Publics;Taxi;Métro,Europe
+U1079,Ye-Eun,43,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Randonnée;4x4;Voiture,Asia
+U1080,Frieda,20,Female,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Marche;4x4;Randonnée,Europe
+U1081,Sara,20,Female,Spanish,Urbain/Luxe/Shopping,Temperate,City,Villa,Transports Publics;4x4;Marche,Europe
+U1082,Carlos,52,Male,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Bateau;Métro;Vélo,North America
+U1083,Anastasia,59,Female,Russian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Voiture;Transports Publics;Tuk-Tuk,Europe
+U1084,Yazeed,29,Male,Saudi,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bus;Vélo;Bateau,Asia
+U1085,Anil,35,Male,Indian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Scooter;Bus,Asia
+U1086,Aoi,40,Female,Japanese,Plage/Détente,Hot,Beach,Hotel,Tuk-Tuk;Voiture;Voiture (si isolé),Asia
+U1087,Owen,51,Male,Canadian,Plage/Détente,Hot,Beach,Hotel,4x4;Randonnée;Voiture (si isolé),North America
+U1088,Femi,67,Male,Nigerian,Culturel/Histoire,Temperate,City,Guesthouse,Bus;Voiture;Tuk-Tuk,Africa
+U1089,Sebastián,36,Male,Colombian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Transports Publics;Vélo;4x4,South America
+U1090,Santiago,65,Male,Colombian,Culturel/Histoire,Temperate,City,Guesthouse,Bateau;Tuk-Tuk;Bus,South America
+U1091,Min-Ji,48,Female,South Korean,Culturel/Histoire,Temperate,City,Hostel,Bateau;Scooter;Marche,Asia
+U1092,Natalia,58,Female,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Bus;Transports Publics;Taxi,North America
+U1093,Thandi,55,Female,South African,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Bateau;Voiture (si isolé);Transports Publics,Africa
+U1094,Ji-Hoon,37,Male,South Korean,Culturel/Histoire,Temperate,City,Hostel,Scooter;Randonnée;Bus,Asia
+U1095,Liam,34,Male,Australian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;Voiture;Randonnée,Oceania
+U1096,David,58,Male,American,Exotique/Budget,Hot,Cultural/Nature,Hotel,Taxi;Tuk-Tuk;Randonnée,North America
+U1097,Phúc,29,Male,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Hotel,Voiture (si isolé);Métro;Bus,Asia
+U1098,Gyu-Min,30,Male,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Vélo;Bus;Voiture,Asia
+U1099,Gabriela,31,Female,Colombian,Culturel/Histoire,Temperate,City,Hotel,Tuk-Tuk;Voiture;Vélo,South America
+U1100,Jacob,46,Male,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Marche;Transports Publics;Randonnée,North America
+U1101,Koharu,69,Female,Japanese,Plage/Détente,Hot,Beach,Hotel,Marche;Voiture (si isolé);Transports Publics,Asia
+U1102,Alexander,44,Male,Russian,Plage/Détente,Hot,Beach,Hotel,Tuk-Tuk;Transports Publics;Métro,Europe
+U1103,Valeria,39,Female,Colombian,Culturel/Histoire,Temperate,City,Villa,Taxi;4x4;Transports Publics,South America
+U1104,Mai,46,Female,Vietnamese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Voiture;Voiture (si isolé);Bus,Asia
+U1105,Olivia,37,Female,Canadian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Vélo;Voiture;Voiture (si isolé),North America
+U1106,Sizakele,24,Female,South African,Exotique/Budget,Hot,Cultural/Nature,Hostel,Bateau;Scooter;Transports Publics,Africa
+U1107,Jacob,33,Male,Canadian,Plage/Détente,Hot,Beach,Airbnb,Bus;4x4;Voiture (si isolé),North America
+U1108,Noura,35,Female,Saudi,Exotique/Budget,Hot,Cultural/Nature,Villa,Voiture;Métro;Bateau,Asia
+U1109,Yemi,19,Female,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Scooter;Randonnée;Transports Publics,Africa
+U1110,Tshepo,21,Male,South African,Aventure/Nature,Temperate,Adventure/Nature,Villa,Randonnée;Transports Publics;Tuk-Tuk,Africa
+U1111,Fatima,41,Female,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Voiture;Transports Publics;Bus,Africa
+U1112,Sophia,23,Female,American,Exotique/Budget,Hot,Cultural/Nature,Hostel,Transports Publics;Taxi;Bateau,North America
+U1113,Ngozi,65,Female,Nigerian,Culturel/Histoire,Temperate,City,Guesthouse,Bateau;Randonnée;Tuk-Tuk,Africa
+U1114,Samuel,49,Male,Colombian,Culturel/Histoire,Temperate,City,Hostel,Bus;Bateau;Marche,South America
+U1115,Nawaf,19,Male,Saudi,Culturel/Histoire,Temperate,City,Hostel,Voiture (si isolé);Vélo;Marche,Asia
+U1116,Alice,24,Female,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Métro;Tuk-Tuk;Randonnée,South America
+U1117,Camille,54,Female,French,Culturel/Histoire,Temperate,City,Guesthouse,Taxi;Marche;Transports Publics,Europe
+U1118,María,44,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Hostel,Scooter;Voiture (si isolé);Bus,North America
+U1119,Leonardo,44,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture;Bateau;Métro,Europe
+U1120,Erik,61,Male,Swedish,Plage/Détente,Hot,Beach,Villa,Scooter;4x4;Bateau,Europe
+U1121,Gabriel,33,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Villa,Randonnée;Métro;Tuk-Tuk,South America
+U1122,Maha,64,Female,Saudi,Plage/Détente,Hot,Beach,Guesthouse,Randonnée;Métro;Scooter,Asia
+U1123,Zainab,50,Female,Nigerian,Culturel/Histoire,Temperate,City,Villa,Vélo;Scooter;Transports Publics,Africa
+U1124,Sofia,65,Female,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Randonnée;Bateau;Métro,South America
+U1125,Sakura,62,Female,Japanese,Urbain/Luxe/Shopping,Temperate,City,Villa,Bateau;Transports Publics;Scooter,Asia
+U1126,Renata,60,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Scooter;Voiture (si isolé);Vélo,North America
+U1127,Yasmin,51,Female,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bus;Métro;Taxi,Africa
+U1128,Lata,26,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Villa,Voiture (si isolé);Vélo;Voiture,Asia
+U1129,Hiroshi,24,Male,Japanese,Plage/Détente,Hot,Beach,Villa,Taxi;Marche;Randonnée,Asia
+U1130,Kaito,50,Male,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture;Bus;Tuk-Tuk,Asia
+U1131,Samuel,45,Male,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Voiture;Voiture (si isolé);Tuk-Tuk,South America
+U1132,Kavita,68,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Randonnée;4x4;Transports Publics,Asia
+U1133,Sara,30,Female,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Taxi;Voiture (si isolé);Tuk-Tuk,Africa
+U1134,Vikram,60,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Marche;Randonnée;Scooter,Asia
+U1135,Sebastián,55,Male,Colombian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Vélo;Tuk-Tuk;Transports Publics,South America
+U1136,Dania,36,Female,Saudi,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Taxi;Bus;Vélo,Asia
+U1137,Daria,28,Female,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,4x4;Bateau;Métro,Europe
+U1138,Mateus,56,Male,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Voiture;Transports Publics,South America
+U1139,Anastasia,58,Female,Russian,Culturel/Histoire,Temperate,City,Hostel,Transports Publics;Voiture (si isolé);Taxi,Europe
+U1140,Anastasia,31,Female,Russian,Culturel/Histoire,Temperate,City,Hotel,Transports Publics;Bateau;Taxi,Europe
+U1141,Evelyn,69,Female,Canadian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Métro;Voiture (si isolé);Marche,North America
+U1142,João,36,Male,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Villa,Taxi;Vélo;Randonnée,South America
+U1143,Alejandro,41,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bateau;Bus;Randonnée,South America
+U1144,Khaled,67,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Randonnée;Bateau;Bus,Asia
+U1145,Lama,44,Female,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Métro;Bus;Vélo,Asia
+U1146,Renata,36,Female,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Hostel,4x4;Scooter;Vélo,North America
+U1147,Yuto,63,Male,Japanese,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Marche;Vélo;4x4,Asia
+U1148,Lily,69,Female,Australian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Voiture;Transports Publics;Vélo,Oceania
+U1149,Ayanda,52,Female,South African,Exotique/Budget,Hot,Cultural/Nature,Villa,Taxi;Métro;Voiture (si isolé),Africa
+U1150,Hugo,55,Male,Spanish,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Scooter;Vélo;Randonnée,Europe
+U1151,Minh,51,Male,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Villa,Scooter;Transports Publics;Bus,Asia
+U1152,Eyad,18,Male,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Tuk-Tuk;Marche;Métro,Africa
+U1153,William,43,Male,American,Plage/Détente,Hot,Beach,Hotel,Bateau;4x4;Vélo,North America
+U1154,Sergio,62,Male,Spanish,Culturel/Histoire,Temperate,City,Villa,Randonnée;Tuk-Tuk;4x4,Europe
+U1155,Santiago,56,Male,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Randonnée;Bus;Bateau,South America
+U1156,Luciana,49,Female,Colombian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Taxi;Bateau;Scooter,South America
+U1157,Jeanne,18,Female,French,Plage/Détente,Hot,Beach,Airbnb,Voiture;Voiture (si isolé);Bateau,Europe
+U1158,Valeria,26,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bus;Voiture;Tuk-Tuk,North America
+U1159,Liam,43,Male,Australian,Culturel/Histoire,Temperate,City,Hotel,Scooter;Marche;Métro,Oceania
+U1160,Manuela,30,Female,Brazilian,Plage/Détente,Hot,Beach,Hostel,Transports Publics;Taxi;4x4,South America
+U1161,Emeka,39,Male,Nigerian,Plage/Détente,Hot,Beach,Guesthouse,Tuk-Tuk;Métro;4x4,Africa
+U1162,Isabella,23,Female,Mexican,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Bus;Vélo;Taxi,North America
+U1163,Koharu,53,Female,Japanese,Plage/Détente,Hot,Beach,Hotel,Bateau;Voiture;Métro,Asia
+U1164,Chiamaka,31,Female,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Marche;Randonnée;4x4,Africa
+U1165,Tunde,65,Male,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bus;Métro;Vélo,Africa
+U1166,Alexander,44,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Bus;Métro;Marche,Europe
+U1167,Vivek,24,Male,Indian,Urbain/Luxe/Shopping,Temperate,City,Villa,Taxi;Voiture (si isolé);Transports Publics,Asia
+U1168,Harrison,57,Male,Australian,Culturel/Histoire,Temperate,City,Hotel,Vélo;Bateau;Scooter,Oceania
+U1169,Alexander,32,Male,Canadian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Randonnée;Métro;Bus,North America
+U1170,Ella,41,Female,Australian,Exotique/Budget,Hot,Cultural/Nature,Villa,Tuk-Tuk;Bus;Bateau,Oceania
+U1171,Tunde,68,Male,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Randonnée;Tuk-Tuk,Africa
+U1172,Sato,26,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture;Voiture (si isolé);Tuk-Tuk,Asia
+U1173,Hans,41,Male,German,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Bus;Tuk-Tuk;Randonnée,Europe
+U1174,Yemi,40,Female,Nigerian,Plage/Détente,Hot,Beach,Hostel,Taxi;Bus;Vélo,Africa
+U1175,Bandar,60,Male,Saudi,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Transports Publics;Voiture (si isolé);Bus,Asia
+U1176,Saud,51,Male,Saudi,Culturel/Histoire,Temperate,City,Airbnb,Voiture;Voiture (si isolé);Transports Publics,Asia
+U1177,Neha,43,Female,Indian,Plage/Détente,Hot,Beach,Airbnb,Voiture;Randonnée;Scooter,Asia
+U1178,Alice,66,Female,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bateau;Vélo;Bus,South America
+U1179,Mandla,45,Male,South African,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,4x4;Bus;Bateau,Africa
+U1180,Hiroshi,55,Male,Japanese,Plage/Détente,Hot,Beach,Villa,Métro;Tuk-Tuk;Taxi,Asia
+U1181,Claudia,51,Female,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Vélo;Voiture;4x4,Europe
+U1182,Carla,61,Female,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Tuk-Tuk;Marche;Bateau,Europe
+U1183,Faisal,42,Male,Saudi,Culturel/Histoire,Temperate,City,Hostel,Voiture (si isolé);Métro;Bateau,Asia
+U1184,Sarah,67,Female,American,Plage/Détente,Hot,Beach,Airbnb,Marche;4x4;Scooter,North America
+U1185,Seo-Jun,62,Male,South Korean,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Bateau;4x4;Marche,Asia
+U1186,Tae-Hyun,19,Male,South Korean,Culturel/Histoire,Temperate,City,Guesthouse,Vélo;Métro;Bus,Asia
+U1187,Emma,57,Female,Italian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Tuk-Tuk;Taxi;Voiture (si isolé),Europe
+U1188,Ahmed,37,Male,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Voiture (si isolé);Randonnée;Scooter,Africa
+U1189,Sipho,32,Male,South African,Plage/Détente,Hot,Beach,Hostel,Bus;Métro;Voiture,Africa
+U1190,Henry,61,Male,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bus;Marche;Métro,Oceania
+U1191,Henry,58,Male,Australian,Plage/Détente,Hot,Beach,Guesthouse,Randonnée;4x4;Bateau,Oceania
+U1192,David,36,Male,American,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Voiture;Bateau;Bus,North America
+U1193,Ravi,45,Male,Indian,Plage/Détente,Hot,Beach,Hotel,Bateau;Taxi;Bus,Asia
+U1194,Mohamed,23,Male,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Transports Publics;Randonnée;Taxi,Africa
+U1195,Jacob,66,Male,American,Plage/Détente,Hot,Beach,Hotel,Métro;Transports Publics;Vélo,North America
+U1196,Karan,27,Male,Indian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,4x4;Tuk-Tuk;Randonnée,Asia
+U1197,Carlos,39,Male,Mexican,Exotique/Budget,Hot,Cultural/Nature,Hostel,Tuk-Tuk;Bus;Bateau,North America
+U1198,Bandar,28,Male,Saudi,Culturel/Histoire,Temperate,City,Guesthouse,Marche;Randonnée;Vélo,Asia
+U1199,Salomé,37,Female,Colombian,Plage/Détente,Hot,Beach,Hotel,Bateau;Randonnée;Voiture (si isolé),South America
+U1200,Tùng,23,Male,Vietnamese,Plage/Détente,Hot,Beach,Airbnb,Vélo;Voiture;Métro,Asia
+U1201,Mai,54,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Métro;Marche;Tuk-Tuk,Asia
+U1202,Karan,52,Male,Indian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;4x4;Voiture,Asia
+U1203,Lucas,54,Male,French,Urbain/Luxe/Shopping,Temperate,City,Hotel,4x4;Voiture (si isolé);Voiture,Europe
+U1204,Min-Ji,68,Female,South Korean,Culturel/Histoire,Temperate,City,Hostel,Bus;Marche;4x4,Asia
+U1205,Joud,60,Female,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);4x4;Métro,Asia
+U1206,Phương,30,Female,Vietnamese,Plage/Détente,Hot,Beach,Guesthouse,Voiture (si isolé);Taxi;Marche,Asia
+U1207,Tolu,45,Female,Nigerian,Culturel/Histoire,Temperate,City,Guesthouse,Bateau;Voiture (si isolé);Tuk-Tuk,Africa
+U1208,Amelia,20,Female,Canadian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Randonnée;Taxi;Voiture (si isolé),North America
+U1209,Ryan,69,Male,American,Culturel/Histoire,Temperate,City,Hostel,Transports Publics;Bus;Taxi,North America
+U1210,Maja,40,Female,Swedish,Exotique/Budget,Hot,Cultural/Nature,Hostel,4x4;Voiture (si isolé);Transports Publics,Europe
+U1211,Amahle,55,Female,South African,Plage/Détente,Hot,Beach,Airbnb,Scooter;Bateau;Métro,Africa
+U1212,Sizakele,42,Female,South African,Plage/Détente,Hot,Beach,Hostel,Scooter;Métro;Transports Publics,Africa
+U1213,David,21,Male,American,Plage/Détente,Hot,Beach,Villa,Randonnée;Bateau;Taxi,North America
+U1214,Emeka,44,Male,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Vélo;4x4;Voiture (si isolé),Africa
+U1215,Lata,55,Female,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Voiture (si isolé);Bus;Marche,Asia
+U1216,Gabriela,45,Female,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Métro;Vélo;Taxi,South America
+U1217,Aria,61,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Marche;Bateau;Transports Publics,North America
+U1218,Benjamin,30,Male,Canadian,Culturel/Histoire,Temperate,City,Hotel,Randonnée;Bateau;Scooter,North America
+U1219,Isabella,19,Female,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Bus;Scooter;Vélo,South America
+U1220,Mariana,24,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Marche;Vélo;Métro,South America
+U1221,Ksenia,57,Female,Russian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Transports Publics;Bus;Vélo,Europe
+U1222,Chinedu,28,Male,Nigerian,Plage/Détente,Hot,Beach,Airbnb,Scooter;Voiture;Taxi,Africa
+U1223,Alice,35,Female,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Marche;Bus;Randonnée,Europe
+U1224,Emily,45,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Tuk-Tuk;Taxi;Vélo,North America
+U1225,Elena,30,Female,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,4x4;Métro;Scooter,Europe
+U1226,Paula,52,Female,Spanish,Urbain/Luxe/Shopping,Temperate,City,Hostel,Randonnée;Vélo;Voiture (si isolé),Europe
+U1227,Hugo,21,Male,French,Exotique/Budget,Hot,Cultural/Nature,Hotel,Scooter;Bus;Vélo,Europe
+U1228,Alexey,53,Male,Russian,Plage/Détente,Hot,Beach,Airbnb,4x4;Métro;Randonnée,Europe
+U1229,Themba,30,Male,South African,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture (si isolé);Transports Publics;Randonnée,Africa
+U1230,Bandar,32,Male,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Transports Publics;Randonnée;Voiture,Asia
+U1231,Mariana,55,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Métro;Scooter;Taxi,South America
+U1232,Camila,54,Female,Colombian,Culturel/Histoire,Temperate,City,Villa,Bateau;4x4;Voiture (si isolé),South America
+U1233,Neha,25,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bus;Métro;Voiture (si isolé),Asia
+U1234,Ji-Hoon,54,Male,South Korean,Plage/Détente,Hot,Beach,Guesthouse,Voiture (si isolé);Randonnée;Voiture,Asia
+U1235,Mandla,46,Male,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,4x4;Randonnée;Scooter,Africa
+U1236,Charlotte,54,Female,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture;Marche;Bus,Oceania
+U1237,Zola,45,Male,South African,Culturel/Histoire,Temperate,City,Guesthouse,Marche;Voiture (si isolé);4x4,Africa
+U1238,Chiara,34,Female,Italian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Vélo;Bateau;Métro,Europe
+U1239,Liam,44,Male,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Voiture (si isolé);Marche;Tuk-Tuk,North America
+U1240,William,32,Male,American,Plage/Détente,Hot,Beach,Hostel,Scooter;Marche;Métro,North America
+U1241,Nandi,60,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Scooter;Métro;Voiture,Africa
+U1242,Emily,25,Female,American,Urbain/Luxe/Shopping,Temperate,City,Villa,4x4;Bateau;Vélo,North America
+U1243,Sultan,22,Male,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Scooter;Métro;Bateau,Asia
+U1244,Pedro,42,Male,Brazilian,Plage/Détente,Hot,Beach,Airbnb,Tuk-Tuk;Scooter;Vélo,South America
+U1245,Ryan,35,Male,American,Plage/Détente,Hot,Beach,Hotel,Métro;Bateau;Transports Publics,North America
+U1246,Neha,56,Female,Indian,Plage/Détente,Hot,Beach,Airbnb,Bateau;Voiture (si isolé);Tuk-Tuk,Asia
+U1247,Paulina,36,Female,Mexican,Culturel/Histoire,Temperate,City,Villa,Transports Publics;Voiture;Bus,North America
+U1248,Alex,36,Male,American,Culturel/Histoire,Temperate,City,Hostel,4x4;Tuk-Tuk;Voiture (si isolé),North America
+U1249,Priya,64,Female,Indian,Culturel/Histoire,Temperate,City,Airbnb,Bateau;Voiture (si isolé);Voiture,Asia
+U1250,Layla,51,Female,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Scooter;4x4;Voiture (si isolé),Africa
+U1251,Thomas,54,Male,French,Plage/Détente,Hot,Beach,Hotel,4x4;Métro;Marche,Europe
+U1252,Greta,66,Female,German,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture;Taxi;Tuk-Tuk,Europe
+U1253,Maxim,18,Male,Russian,Plage/Détente,Hot,Beach,Villa,Scooter;Bus;Randonnée,Europe
+U1254,Mia,61,Female,Australian,Plage/Détente,Hot,Beach,Airbnb,Scooter;Marche;Taxi,Oceania
+U1255,Tolu,29,Female,Nigerian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,4x4;Voiture (si isolé);Vélo,Africa
+U1256,Ji-Hoon,35,Male,South Korean,Exotique/Budget,Hot,Cultural/Nature,Hotel,Bateau;Randonnée;Voiture (si isolé),Asia
+U1257,Mai,29,Female,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Villa,Taxi;Transports Publics;Bus,Asia
+U1258,Sonia,51,Female,Indian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Voiture (si isolé);Métro;Randonnée,Asia
+U1259,Haruto,55,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Scooter;Voiture;Métro,Asia
+U1260,Thandi,36,Female,South African,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Métro;Transports Publics;Scooter,Africa
+U1261,Ada,47,Female,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Bus;4x4;Randonnée,Africa
+U1262,Quỳnh,63,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Vélo;Bateau;Marche,Asia
+U1263,Kiên,63,Male,Vietnamese,Culturel/Histoire,Temperate,City,Hostel,Scooter;Métro;Randonnée,Asia
+U1264,Pedro,31,Male,Brazilian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bateau;Voiture;Voiture (si isolé),South America
+U1265,Aisha,43,Female,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture (si isolé);Bus;4x4,Asia
+U1266,Fatima,31,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Bateau;4x4,Africa
+U1267,Maja,43,Female,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bateau;Métro;Voiture (si isolé),Europe
+U1268,Gustav,33,Male,Swedish,Culturel/Histoire,Temperate,City,Guesthouse,Taxi;Marche;4x4,Europe
+U1269,Matteo,67,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Marche;Voiture;Bus,Europe
+U1270,Lucía,45,Female,Spanish,Urbain/Luxe/Shopping,Temperate,City,Hotel,Taxi;Transports Publics;Tuk-Tuk,Europe
+U1271,Zola,63,Female,South African,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Scooter;Tuk-Tuk;Vélo,Africa
+U1272,Eyad,28,Male,Egyptian,Culturel/Histoire,Temperate,City,Guesthouse,Taxi;Bateau;Métro,Africa
+U1273,Antoine,46,Male,French,Plage/Détente,Hot,Beach,Hotel,Transports Publics;Bateau;Tuk-Tuk,Europe
+U1274,Ahmed,67,Male,Egyptian,Culturel/Histoire,Temperate,City,Airbnb,Voiture;Transports Publics;Tuk-Tuk,Africa
+U1275,Damilola,56,Female,Nigerian,Culturel/Histoire,Temperate,City,Villa,Scooter;Bateau;Randonnée,Africa
+U1276,Reema,29,Female,Saudi,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Scooter;Bus;Voiture,Asia
+U1277,Khoa,41,Male,Vietnamese,Culturel/Histoire,Temperate,City,Hotel,Marche;Taxi;Vélo,Asia
+U1278,Mandla,34,Male,South African,Culturel/Histoire,Temperate,City,Hostel,Taxi;Voiture (si isolé);Voiture,Africa
+U1279,Ngozi,56,Female,Nigerian,Plage/Détente,Hot,Beach,Guesthouse,Voiture (si isolé);Vélo;Scooter,Africa
+U1280,Emma,47,Female,Swedish,Exotique/Budget,Hot,Cultural/Nature,Hostel,Tuk-Tuk;4x4;Bus,Europe
+U1281,Noah,59,Male,German,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Scooter;Randonnée;Métro,Europe
+U1282,José,54,Male,Mexican,Plage/Détente,Hot,Beach,Villa,Randonnée;Bus;Vélo,North America
+U1283,Irene,51,Female,Spanish,Plage/Détente,Hot,Beach,Villa,Scooter;Marche;Métro,Europe
+U1284,Aiko,47,Female,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Transports Publics;Voiture;Randonnée,Asia
+U1285,Ahmed,46,Male,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Scooter;Randonnée;Bateau,Africa
+U1286,Daria,19,Female,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Taxi;4x4;Vélo,Europe
+U1287,Hans,61,Male,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Taxi;Transports Publics;4x4,Europe
+U1288,Shanti,66,Female,Indian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;Scooter;Vélo,Asia
+U1289,Ksenia,60,Female,Russian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Vélo;Tuk-Tuk;Randonnée,Europe
+U1290,Ji-Woo,24,Female,South Korean,Culturel/Histoire,Temperate,City,Hotel,Scooter;Transports Publics;Bus,Asia
+U1291,Hà,32,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Transports Publics;Voiture;Tuk-Tuk,Asia
+U1292,Bandar,46,Male,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Tuk-Tuk;Randonnée;Marche,Asia
+U1293,Tara,55,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Hostel,4x4;Randonnée;Taxi,Asia
+U1294,Valeria,63,Female,Mexican,Plage/Détente,Hot,Beach,Hostel,Bus;Métro;4x4,North America
+U1295,Mai,42,Female,Vietnamese,Plage/Détente,Hot,Beach,Hostel,Bus;Voiture;Randonnée,Asia
+U1296,Gabriela,53,Female,Colombian,Culturel/Histoire,Temperate,City,Hostel,Scooter;Tuk-Tuk;Voiture (si isolé),South America
+U1297,Lena,34,Female,German,Plage/Détente,Hot,Beach,Airbnb,Randonnée;Voiture;Bus,Europe
+U1298,Nkosi,35,Male,South African,Exotique/Budget,Hot,Cultural/Nature,Hotel,Scooter;Tuk-Tuk;Métro,Africa
+U1299,Pedro,41,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Bus;Bateau;Randonnée,South America
+U1300,Ksenia,51,Female,Russian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Randonnée;Métro;Scooter,Europe
+U1301,Hana,42,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Randonnée;Bateau;Scooter,Africa
+U1302,Ksenia,56,Female,Russian,Culturel/Histoire,Temperate,City,Airbnb,Voiture (si isolé);Randonnée;Bus,Europe
+U1303,Dmitry,27,Male,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Voiture;Bus;Métro,Europe
+U1304,Mario,47,Male,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Tuk-Tuk;Métro;Taxi,Europe
+U1305,Mario,43,Male,Spanish,Culturel/Histoire,Temperate,City,Guesthouse,4x4;Voiture;Bateau,Europe
+U1306,Nomusa,43,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Transports Publics;Voiture (si isolé);Bus,Africa
+U1307,Nour,26,Female,Egyptian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Marche;Scooter;Voiture (si isolé),Africa
+U1308,Ava,65,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Transports Publics;Voiture;Scooter,Oceania
+U1309,Erik,66,Male,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Randonnée;Voiture (si isolé);4x4,Europe
+U1310,Jorge,60,Male,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;Bus;Marche,Europe
+U1311,Axel,50,Male,Swedish,Culturel/Histoire,Temperate,City,Villa,Transports Publics;Voiture;Scooter,Europe
+U1312,Vivek,67,Male,Indian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture;Scooter;Voiture (si isolé),Asia
+U1313,Aisha,18,Female,Saudi,Culturel/Histoire,Temperate,City,Airbnb,Marche;Vélo;Scooter,Asia
+U1314,Sergey,19,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Villa,Bus;Voiture (si isolé);Tuk-Tuk,Europe
+U1315,Aisha,56,Female,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Métro;Voiture;Scooter,Asia
+U1316,Ada,63,Female,Nigerian,Culturel/Histoire,Temperate,City,Hotel,Randonnée;Transports Publics;Vélo,Africa
+U1317,Aisha,27,Female,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Voiture;Tuk-Tuk;Taxi,Asia
+U1318,Ava,54,Female,Australian,Culturel/Histoire,Temperate,City,Guesthouse,4x4;Voiture;Tuk-Tuk,Oceania
+U1319,Andrea,57,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Hostel,Voiture (si isolé);Marche;Randonnée,North America
+U1320,Hà,20,Female,Vietnamese,Urbain/Luxe/Shopping,Temperate,City,Villa,Vélo;Bus;Marche,Asia
+U1321,Paulina,30,Female,Mexican,Urbain/Luxe/Shopping,Temperate,City,Villa,4x4;Marche;Bateau,North America
+U1322,Anja,40,Female,German,Culturel/Histoire,Temperate,City,Airbnb,Métro;Vélo;Randonnée,Europe
+U1323,Riku,25,Male,Japanese,Plage/Détente,Hot,Beach,Villa,Marche;Taxi;Tuk-Tuk,Asia
+U1324,Laura,22,Female,Brazilian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Métro;Tuk-Tuk;Marche,South America
+U1325,Ava,62,Female,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Métro;Marche;Vélo,North America
+U1326,Ayanda,36,Female,South African,Plage/Détente,Hot,Beach,Guesthouse,Transports Publics;Métro;Taxi,Africa
+U1327,Yến,56,Female,Vietnamese,Culturel/Histoire,Temperate,City,Airbnb,Marche;Bus;Métro,Asia
+U1328,Charlotte,32,Female,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;Métro;Taxi,North America
+U1329,Khoa,32,Male,Vietnamese,Exotique/Budget,Hot,Cultural/Nature,Hostel,Transports Publics;Métro;Voiture,Asia
+U1330,Sophia,52,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,4x4;Voiture;Randonnée,North America
+U1331,Priya,61,Female,Indian,Culturel/Histoire,Temperate,City,Hostel,Vélo;Métro;Tuk-Tuk,Asia
+U1332,Elias,20,Male,Swedish,Urbain/Luxe/Shopping,Temperate,City,Villa,Vélo;Marche;Voiture,Europe
+U1333,Mateus,18,Male,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Scooter;Voiture;Randonnée,South America
+U1334,Khoa,61,Male,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Transports Publics;Bateau;Voiture (si isolé),Asia
+U1335,Yumi,64,Female,Japanese,Plage/Détente,Hot,Beach,Guesthouse,Marche;Transports Publics;Tuk-Tuk,Asia
+U1336,Wilma,24,Female,Swedish,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Transports Publics;Tuk-Tuk;4x4,Europe
+U1337,James,67,Male,American,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Scooter;Voiture (si isolé);Tuk-Tuk,North America
+U1338,Valeria,31,Female,Colombian,Plage/Détente,Hot,Beach,Airbnb,Taxi;Voiture;Bateau,South America
+U1339,Noah,33,Male,Australian,Plage/Détente,Hot,Beach,Hotel,Marche;Scooter;Transports Publics,Oceania
+U1340,Dmitry,62,Male,Russian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Taxi;Bateau;Métro,Europe
+U1341,Kiên,51,Male,Vietnamese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bus;Randonnée;Voiture,Asia
+U1342,Noah,36,Male,Australian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Taxi;Scooter;Transports Publics,Oceania
+U1343,Seo-Yeon,69,Female,South Korean,Urbain/Luxe/Shopping,Temperate,City,Villa,Transports Publics;Voiture;Métro,Asia
+U1344,Aisha,47,Female,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;Métro;Taxi,Africa
+U1345,Renata,59,Female,Mexican,Plage/Détente,Hot,Beach,Guesthouse,Bateau;Scooter;Métro,North America
+U1346,Juan,41,Male,Colombian,Plage/Détente,Hot,Beach,Villa,Voiture;Tuk-Tuk;Taxi,South America
+U1347,Ivan,35,Male,Russian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Voiture (si isolé);Vélo;Marche,Europe
+U1348,Oliver,22,Male,Canadian,Exotique/Budget,Hot,Cultural/Nature,Villa,Métro;Vélo;Randonnée,North America
+U1349,Chinedu,37,Male,Nigerian,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Métro;Marche;Bus,Africa
+U1350,Nicolás,56,Male,Colombian,Plage/Détente,Hot,Beach,Airbnb,Voiture (si isolé);Bateau;Vélo,South America
+U1351,Karan,38,Male,Indian,Culturel/Histoire,Temperate,City,Villa,4x4;Marche;Vélo,Asia
+U1352,Vivek,44,Male,Indian,Plage/Détente,Hot,Beach,Airbnb,Marche;Bus;Taxi,Asia
+U1353,Emilia,29,Female,German,Culturel/Histoire,Temperate,City,Villa,Vélo;Métro;Bus,Europe
+U1354,Manuel,23,Male,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Taxi;4x4;Voiture (si isolé),North America
+U1355,Priya,56,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Bus;Taxi;Transports Publics,Asia
+U1356,Ha-Eun,39,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Marche;4x4;Bus,Asia
+U1357,Olivia,26,Female,Canadian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Bus;Métro;Randonnée,North America
+U1358,Daniela,44,Female,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Taxi;Voiture (si isolé);Marche,South America
+U1359,Khanya,30,Female,South African,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Randonnée;Marche;Taxi,Africa
+U1360,Juan,63,Male,Colombian,Plage/Détente,Hot,Beach,Villa,Vélo;Tuk-Tuk;Voiture,South America
+U1361,Turki,30,Male,Saudi,Plage/Détente,Hot,Beach,Guesthouse,Taxi;Vélo;Bateau,Asia
+U1362,Hanna,59,Female,German,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Randonnée;Vélo;Voiture,Europe
+U1363,Thư,19,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Villa,Marche;Voiture (si isolé);Scooter,Asia
+U1364,Marie,40,Female,French,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Métro;Scooter;Bateau,Europe
+U1365,Da-Eun,54,Female,South Korean,Urbain/Luxe/Shopping,Temperate,City,Hotel,Transports Publics;Scooter;Voiture,Asia
+U1366,Jessica,18,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Scooter;Voiture (si isolé);Bateau,North America
+U1367,Lena,33,Female,German,Culturel/Histoire,Temperate,City,Villa,Bus;Métro;Tuk-Tuk,Europe
+U1368,Ava,26,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Voiture (si isolé);Scooter,North America
+U1369,Owen,42,Male,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Voiture (si isolé);Marche;Voiture,North America
+U1370,Karan,37,Male,Indian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Vélo;Tuk-Tuk;Transports Publics,Asia
+U1371,Mia,61,Female,German,Culturel/Histoire,Temperate,City,Hotel,Métro;Marche;Vélo,Europe
+U1372,Bandar,33,Male,Saudi,Urbain/Luxe/Shopping,Temperate,City,Airbnb,4x4;Vélo;Marche,Asia
+U1373,Ruby,55,Female,Australian,Exotique/Budget,Hot,Cultural/Nature,Hotel,Bateau;Scooter;Bus,Oceania
+U1374,Paula,60,Female,Spanish,Plage/Détente,Hot,Beach,Hostel,4x4;Bateau;Vélo,Europe
+U1375,Ksenia,43,Female,Russian,Aventure/Nature,Temperate,Adventure/Nature,Villa,4x4;Scooter;Bateau,Europe
+U1376,Archie,46,Male,Australian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Marche;Scooter;Voiture (si isolé),Oceania
+U1377,Henry,66,Male,Australian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Voiture (si isolé);Taxi;4x4,Oceania
+U1378,Mandla,20,Male,South African,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Transports Publics;4x4;Tuk-Tuk,Africa
+U1379,Priya,35,Female,Indian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Vélo;Transports Publics;Taxi,Asia
+U1380,Jack,51,Male,Australian,Culturel/Histoire,Temperate,City,Villa,Métro;Randonnée;Tuk-Tuk,Oceania
+U1381,William,49,Male,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Scooter;Vélo;Transports Publics,Oceania
+U1382,Isla,56,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Scooter;Tuk-Tuk;Voiture,Oceania
+U1383,Alejandro,49,Male,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Marche;Vélo;Tuk-Tuk,South America
+U1384,Giorgia,37,Female,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Bus;Randonnée;4x4,Europe
+U1385,Natalia,20,Female,Mexican,Culturel/Histoire,Temperate,City,Airbnb,Vélo;Métro;Bus,North America
+U1386,Ha-Eun,64,Female,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Villa,Bus;Métro;Tuk-Tuk,Asia
+U1387,David,56,Male,Spanish,Exotique/Budget,Hot,Cultural/Nature,Hostel,Randonnée;4x4;Taxi,Europe
+U1388,Luciana,68,Female,Colombian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Marche;Transports Publics;Taxi,South America
+U1389,Ivan,47,Male,Russian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Tuk-Tuk;Bus,Europe
+U1390,Aurora,34,Female,Italian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Tuk-Tuk;Voiture (si isolé);Scooter,Europe
+U1391,Salma,57,Female,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;4x4;Voiture (si isolé),Africa
+U1392,Felix,18,Male,German,Exotique/Budget,Hot,Cultural/Nature,Hostel,Bateau;4x4;Marche,Europe
+U1393,Alice,41,Female,French,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Métro;Randonnée;Vélo,Europe
+U1394,Sato,31,Male,Japanese,Exotique/Budget,Hot,Cultural/Nature,Villa,Scooter;Transports Publics;Vélo,Asia
+U1395,Oliver,37,Male,Canadian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Tuk-Tuk;Vélo;Voiture,North America
+U1396,Emeka,28,Male,Nigerian,Plage/Détente,Hot,Beach,Guesthouse,Métro;Tuk-Tuk;Randonnée,Africa
+U1397,Louis,25,Male,French,Exotique/Budget,Hot,Cultural/Nature,Hostel,Tuk-Tuk;Randonnée;Bus,Europe
+U1398,Alice,27,Female,Swedish,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Voiture;Tuk-Tuk;Bus,Europe
+U1399,Mateo,35,Male,Colombian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Marche;Scooter;Métro,South America
+U1400,Hana,55,Female,Egyptian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Transports Publics;Marche;Bus,Africa
+U1401,Lorenzo,56,Male,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Voiture;Scooter;Transports Publics,Europe
+U1402,Youssef,31,Male,Egyptian,Culturel/Histoire,Temperate,City,Hostel,Scooter;Métro;Vélo,Africa
+U1403,Olivia,21,Female,Canadian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Randonnée;Transports Publics,North America
+U1404,Huy,32,Male,Vietnamese,Plage/Détente,Hot,Beach,Hotel,Transports Publics;Randonnée;4x4,Asia
+U1405,Elena,38,Female,Russian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Tuk-Tuk;Bus;4x4,Europe
+U1406,Sara,59,Female,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Marche;Taxi;Tuk-Tuk,Asia
+U1407,Faisal,57,Male,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Villa,Métro;Bateau;Tuk-Tuk,Asia
+U1408,Sana,44,Female,Japanese,Plage/Détente,Hot,Beach,Hotel,Métro;Scooter;Taxi,Asia
+U1409,Leonardo,65,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Transports Publics;Vélo;Tuk-Tuk,Europe
+U1410,Antoine,58,Male,French,Culturel/Histoire,Temperate,City,Guesthouse,Bus;Voiture (si isolé);Randonnée,Europe
+U1411,Chinedu,41,Male,Nigerian,Plage/Détente,Hot,Beach,Hotel,Voiture;Randonnée;Métro,Africa
+U1412,Valentina,49,Female,Brazilian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Tuk-Tuk;Bateau;Taxi,South America
+U1413,Sato,31,Male,Japanese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Voiture;Bus;Métro,Asia
+U1414,Henry,61,Male,Australian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Voiture;Scooter;Randonnée,Oceania
+U1415,Joud,25,Female,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Taxi;Bus;Scooter,Asia
+U1416,Ji-Hoon,44,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Taxi;4x4;Randonnée,Asia
+U1417,Ngozi,25,Female,Nigerian,Culturel/Histoire,Temperate,City,Villa,Taxi;Marche;Randonnée,Africa
+U1418,Mia,52,Female,Canadian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,4x4;Tuk-Tuk;Transports Publics,North America
+U1419,Ivan,43,Male,Russian,Culturel/Histoire,Temperate,City,Guesthouse,Voiture;Voiture (si isolé);Marche,Europe
+U1420,Siddharth,27,Male,Indian,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Bus;Scooter;Transports Publics,Asia
+U1421,Noah,23,Male,Australian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bus;Métro;Marche,Oceania
+U1422,Dania,24,Female,Saudi,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Transports Publics;Métro;Randonnée,Asia
+U1423,Thandi,43,Female,South African,Culturel/Histoire,Temperate,City,Hostel,Bateau;Métro;Vélo,Africa
+U1424,Shanti,60,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bateau;Voiture (si isolé);Taxi,Asia
+U1425,Alessandro,60,Male,Italian,Plage/Détente,Hot,Beach,Hotel,Métro;Randonnée;Marche,Europe
+U1426,Linnéa,52,Female,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Voiture (si isolé);Bateau;Tuk-Tuk,Europe
+U1427,Isabella,36,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Transports Publics;Métro;4x4,North America
+U1428,Rahul,35,Male,Indian,Plage/Détente,Hot,Beach,Hostel,Taxi;Bus;4x4,Asia
+U1429,Pierre,38,Male,French,Exotique/Budget,Hot,Cultural/Nature,Villa,Voiture;Métro;4x4,Europe
+U1430,Yuto,50,Male,Japanese,Exotique/Budget,Hot,Cultural/Nature,Hostel,4x4;Voiture (si isolé);Bus,Asia
+U1431,Ha-Joon,38,Male,South Korean,Aventure/Nature,Temperate,Adventure/Nature,Villa,Taxi;4x4;Bus,Asia
+U1432,Joon-Ho,60,Male,South Korean,Plage/Détente,Hot,Beach,Hostel,Métro;Taxi;Bus,Asia
+U1433,Chris,33,Male,American,Froid/Ski/Nordique,Cold,Adventure/Nature,Villa,Tuk-Tuk;Transports Publics;4x4,North America
+U1434,Ren,47,Male,Japanese,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Bus;Bateau;Taxi,Asia
+U1435,Davide,57,Male,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Marche;Voiture;Transports Publics,Europe
+U1436,Layla,35,Female,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Guesthouse,Randonnée;Vélo;Bateau,Africa
+U1437,Daniel,22,Male,Spanish,Plage/Détente,Hot,Beach,Hotel,Vélo;Voiture;Voiture (si isolé),Europe
+U1438,Rohan,52,Male,Indian,Exotique/Budget,Hot,Cultural/Nature,Hostel,Vélo;4x4;Voiture (si isolé),Asia
+U1439,Erik,44,Male,Swedish,Exotique/Budget,Hot,Cultural/Nature,Villa,Scooter;Bus;Vélo,Europe
+U1440,Mohamed,38,Male,Egyptian,Exotique/Budget,Hot,Cultural/Nature,Villa,Randonnée;Marche;Taxi,Africa
+U1441,Min-Jun,57,Male,South Korean,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Randonnée;Transports Publics;4x4,Asia
+U1442,Matteo,46,Male,Italian,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Bus;Vélo;Scooter,Europe
+U1443,Mia,29,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Voiture (si isolé);Transports Publics;Marche,Oceania
+U1444,Javier,39,Male,Mexican,Plage/Détente,Hot,Beach,Hotel,Vélo;Scooter;Tuk-Tuk,North America
+U1445,Frieda,52,Female,German,Aventure/Nature,Temperate,Adventure/Nature,Villa,Taxi;Bateau;Métro,Europe
+U1446,Aoi,43,Female,Japanese,Plage/Détente,Hot,Beach,Hostel,Voiture (si isolé);Marche;Taxi,Asia
+U1447,Mia,59,Female,German,Culturel/Histoire,Temperate,City,Hotel,Scooter;Randonnée;Métro,Europe
+U1448,Jonas,43,Male,German,Exotique/Budget,Hot,Cultural/Nature,Villa,Tuk-Tuk;Randonnée;Transports Publics,Europe
+U1449,Sara,30,Female,Spanish,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Voiture (si isolé);Transports Publics;Taxi,Europe
+U1450,Giorgia,18,Female,Italian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Bus;Voiture;Métro,Europe
+U1451,Paulina,66,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Voiture (si isolé);Transports Publics;Randonnée,North America
+U1452,Mateo,20,Male,Colombian,Culturel/Histoire,Temperate,City,Airbnb,Transports Publics;Voiture (si isolé);Marche,South America
+U1453,Daniel,45,Male,Colombian,Plage/Détente,Hot,Beach,Villa,Bus;Scooter;Vélo,South America
+U1454,Yến,54,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Randonnée;Vélo;Transports Publics,Asia
+U1455,Pablo,62,Male,Spanish,Aventure/Nature,Temperate,Adventure/Nature,Hostel,Taxi;Tuk-Tuk;Transports Publics,Europe
+U1456,Aiko,57,Female,Japanese,Plage/Détente,Hot,Beach,Airbnb,Voiture;4x4;Tuk-Tuk,Asia
+U1457,Aisha,21,Female,Indian,Culturel/Histoire,Temperate,City,Hotel,Métro;Vélo;Marche,Asia
+U1458,Quỳnh,18,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Villa,Bateau;Tuk-Tuk;Vélo,Asia
+U1459,Vikram,65,Male,Indian,Culturel/Histoire,Temperate,City,Hotel,4x4;Transports Publics;Randonnée,Asia
+U1460,Francesco,59,Male,Italian,Plage/Détente,Hot,Beach,Guesthouse,Vélo;Bateau;Métro,Europe
+U1461,Isabella,32,Female,Canadian,Plage/Détente,Hot,Beach,Hostel,Voiture (si isolé);Scooter;Randonnée,North America
+U1462,Nawaf,21,Male,Saudi,Exotique/Budget,Hot,Cultural/Nature,Airbnb,Marche;Transports Publics;Randonnée,Asia
+U1463,Davide,63,Male,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Voiture;Vélo;Bus,Europe
+U1464,Nandi,29,Female,South African,Plage/Détente,Hot,Beach,Guesthouse,Vélo;Scooter;Transports Publics,Africa
+U1465,Turki,52,Male,Saudi,Culturel/Histoire,Temperate,City,Airbnb,Bateau;Transports Publics;4x4,Asia
+U1466,Carl,59,Male,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Villa,Voiture;Vélo;4x4,Europe
+U1467,Quỳnh,35,Female,Vietnamese,Aventure/Nature,Temperate,Adventure/Nature,Airbnb,Tuk-Tuk;Voiture (si isolé);Vélo,Asia
+U1468,Ava,24,Female,American,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Scooter;Transports Publics;Bateau,North America
+U1469,Kavita,32,Female,Indian,Urbain/Luxe/Shopping,Temperate,City,Guesthouse,Taxi;Scooter;Marche,Asia
+U1470,Aiko,46,Female,Japanese,Plage/Détente,Hot,Beach,Airbnb,Voiture;Tuk-Tuk;4x4,Asia
+U1471,Ava,18,Female,Australian,Urbain/Luxe/Shopping,Temperate,City,Villa,Taxi;Métro;Vélo,Oceania
+U1472,Ava,60,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Guesthouse,Bateau;Bus;Taxi,Oceania
+U1473,Gustav,69,Male,Swedish,Culturel/Histoire,Temperate,City,Villa,Vélo;Métro;Tuk-Tuk,Europe
+U1474,Karan,58,Male,Indian,Culturel/Histoire,Temperate,City,Airbnb,Marche;Scooter;4x4,Asia
+U1475,Santiago,23,Male,Colombian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Vélo;Marche;Randonnée,South America
+U1476,William,41,Male,Canadian,Culturel/Histoire,Temperate,City,Villa,Métro;Marche;Transports Publics,North America
+U1477,Emma,29,Female,Swedish,Aventure/Nature,Temperate,Adventure/Nature,Villa,Métro;Taxi;Tuk-Tuk,Europe
+U1478,Martina,35,Female,Italian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hostel,Randonnée;4x4;Marche,Europe
+U1479,Amr,62,Male,Egyptian,Froid/Ski/Nordique,Cold,Adventure/Nature,Hotel,Scooter;Transports Publics;Métro,Africa
+U1480,Karim,41,Male,Egyptian,Plage/Détente,Hot,Beach,Villa,Taxi;Scooter;Métro,Africa
+U1481,Isla,29,Female,Australian,Aventure/Nature,Temperate,Adventure/Nature,Villa,Taxi;Transports Publics;Marche,Oceania
+U1482,Maja,34,Female,Swedish,Culturel/Histoire,Temperate,City,Hostel,Tuk-Tuk;Bus;Vélo,Europe
+U1483,Akira,56,Male,Japanese,Plage/Détente,Hot,Beach,Hotel,4x4;Marche;Vélo,Asia
+U1484,Fatima,58,Female,Saudi,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Bus;Tuk-Tuk;Voiture (si isolé),Asia
+U1485,Erik,67,Male,Swedish,Urbain/Luxe/Shopping,Temperate,City,Airbnb,Vélo;Transports Publics;Voiture,Europe
+U1486,Fatima,67,Female,Egyptian,Plage/Détente,Hot,Beach,Guesthouse,Voiture (si isolé);Voiture;Bateau,Africa
+U1487,Laura,49,Female,Brazilian,Urbain/Luxe/Shopping,Temperate,City,Hostel,Transports Publics;Voiture;Voiture (si isolé),South America
+U1488,Oliver,25,Male,Australian,Culturel/Histoire,Temperate,City,Hostel,Métro;Voiture;4x4,Oceania
+U1489,María,64,Female,Mexican,Froid/Ski/Nordique,Cold,Adventure/Nature,Airbnb,Tuk-Tuk;4x4;Taxi,North America
+U1490,Obi,62,Male,Nigerian,Froid/Ski/Nordique,Cold,Adventure/Nature,Guesthouse,Scooter;Vélo;4x4,Africa
+U1491,Sofia,55,Female,Russian,Plage/Détente,Hot,Beach,Guesthouse,Voiture;Bus;Bateau,Europe
+U1492,Chinedu,57,Male,Nigerian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Transports Publics;Métro;Taxi,Africa
+U1493,Quỳnh,37,Female,Vietnamese,Plage/Détente,Hot,Beach,Villa,Métro;Randonnée;Scooter,Asia
+U1494,Oscar,51,Male,Swedish,Exotique/Budget,Hot,Cultural/Nature,Hotel,Vélo;4x4;Métro,Europe
+U1495,Francesco,64,Male,Italian,Urbain/Luxe/Shopping,Temperate,City,Hotel,Tuk-Tuk;Bus;4x4,Europe
+U1496,Alessandro,62,Male,Italian,Plage/Détente,Hot,Beach,Hotel,Taxi;Bus;Marche,Europe
+U1497,Lucas,32,Male,Canadian,Culturel/Histoire,Temperate,City,Villa,Voiture;Métro;Marche,North America
+U1498,Frieda,25,Female,German,Urbain/Luxe/Shopping,Temperate,City,Hotel,Voiture (si isolé);Tuk-Tuk;Voiture,Europe
+U1499,Camila,60,Female,Colombian,Aventure/Nature,Temperate,Adventure/Nature,Hotel,Voiture;Transports Publics;Métro,South America
+U1500,Greta,61,Female,German,Plage/Détente,Hot,Beach,Airbnb,Randonnée;4x4;Voiture,Europe
