@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from Python.Backend.recup_data import recup_travel, recup_users
 from Python.Backend.genV2 import DESTINATIONS
-from Model.predict import get_recommendation
+# from Model.predict import get_recommendation
 
 def chargement_df():
     # Charger les deux datasets directement depuis le cloud:

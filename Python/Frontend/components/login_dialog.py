@@ -34,11 +34,10 @@ def login_dialog():
                             f.write(f"{user_id}|{password}")
                     except Exception as e:
                         print(f"Impossible to write: {e}")
-                        st.session_state['STATUT_CONNEXION'] = False
                 else:
                     if os.path.exists(SESSION_FILE):
                         os.remove(SESSION_FILE)
                 
                 sleep(0.5)
                 
-                st.switch_page("pages/1_Accueil.py")
+                st.rerun()
