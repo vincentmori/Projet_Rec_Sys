@@ -6,10 +6,9 @@ from typing import Optional
 
 # *************************************************************************
 # CLÉ DE CONNEXION HEROKU (DATABASE_URL)
-# Cette chaîne permet la connexion à votre base de données cloud PostgreSQL
+# Cette chaîne permet la connexion à la base de données cloud PostgreSQL
 # *************************************************************************
 load_dotenv() 
-
 
 DB_CONNECTION_STRING = os.environ.get("DATABASE_URL")
 
@@ -30,7 +29,7 @@ def _execute_query_and_get_df(sql_query: str, table_name: str) -> pd.DataFrame:
         return pd.DataFrame() 
 
 # =========================================================================
-# FONCTIONS PUBLIQUES POUR LES ML ENGINEERS
+# FONCTIONS DE RECUPERATION USER ET TRAVEL
 # =========================================================================
 
 def recup_users() -> pd.DataFrame:

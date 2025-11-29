@@ -19,6 +19,9 @@ def content_accueil():
     st.title("Bienvenue sur TripplyBuddy ✈️")
     st.write("Page d'accueil")
     
+    """if st.session_state['STATUT_CONNEXION']:
+        st.write(st.session_state["reco_user"])"""
+    
 content_accueil()
 
 # -------------------------------
