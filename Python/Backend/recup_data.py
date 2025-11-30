@@ -8,8 +8,9 @@ from typing import Optional
 # CLÉ DE CONNEXION HEROKU (DATABASE_URL)
 # Cette chaîne permet la connexion à la base de données cloud PostgreSQL
 # *************************************************************************
-# Load .env from Data folder (file is named 'env' without the dot)
-_env_path = os.path.join(os.path.dirname(__file__), '..', '..', 'Data', 'env')
+# Load .env from project root (standard location, ignored by git)
+_project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+_env_path = os.path.join(_project_root, '.env')
 load_dotenv(_env_path)
 
 DB_CONNECTION_STRING = os.environ.get("DATABASE_URL")

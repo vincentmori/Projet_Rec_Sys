@@ -17,7 +17,7 @@ from Model.data_loader import load_and_process_data, build_graph
 HIDDEN_CHANNELS = 128
 OUT_CHANNELS = 32
 LEARNING_RATE = 0.0004
-EPOCHS = 2000
+EPOCHS = 250
 BETA = 0.001
 ARTIFACTS_DIR = os.path.join(os.path.dirname(__file__), "artifacts")
 
