@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 import torch
 from torch_geometric.data import HeteroData
 from sklearn.preprocessing import StandardScaler
@@ -12,9 +13,14 @@ def process_new_data(df_users, df_travel):
     """
     print("--- [Preprocessing] Nettoyage et Feature Engineering ---")
 
-    # Fusion ou concaténation si nécessaire, ici on travaille sur une copie de travel
-    # (Adapte si tu dois merger df_users et df_travel, ici on suppose que tout est dans df_travel ou géré en amont)
+    # Copy travel dataframe and normalize column names (snake_case) for robust processing
     df = df_travel.copy()
+    # Normalize column names: lower, strip, replace spaces and special chars with underscore
+    def normalize_col(c):
+        return c.strip().lower().replace(' ', '_').replace('-', '_').replace('/', '_')
+
+    new_cols = {c: normalize_col(c) for c in df.columns}
+    df.rename(columns=new_cols, inplace=True)
 
     # 1. NETTOYAGE DES TEXTES (Guillemets et Espaces)
     for col in df.columns:
@@ -28,23 +34,25 @@ def process_new_data(df_users, df_travel):
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
 
-    # Calcul Transport si possible
+    # Calcul Transport si possible -> use normalized column names (total_cost/accommodation_cost) and keep normalized key
     if 'total_cost' in df.columns and 'accommodation_cost' in df.columns:
-        df['Transportation cost'] = (df['total_cost'] - df['accommodation_cost']).clip(lower=0)
+        df['transportation_cost'] = (df['total_cost'] - df['accommodation_cost']).clip(lower=0)
     else:
-        df['Transportation cost'] = 0
+        df['transportation_cost'] = 0
 
-    # Dates
-    if 'start_date' in df.columns: df['Start date'] = pd.to_datetime(df['start_date'], errors='coerce')
-    if 'end_date' in df.columns: df['End date'] = pd.to_datetime(df['end_date'], errors='coerce')
+    # Dates: parse normalized 'start_date' and 'end_date' if present
+    if 'start_date' in df.columns:
+        df['start_date'] = pd.to_datetime(df['start_date'], errors='coerce')
+    if 'end_date' in df.columns:
+        df['end_date'] = pd.to_datetime(df['end_date'], errors='coerce')
 
-    # Durée
+    # Durée (operate on normalized keys)
     if 'duration_days' in df.columns:
-        df['Duration (days)'] = pd.to_numeric(df['duration_days'], errors='coerce').fillna(1)
-    elif 'Start date' in df.columns and 'End date' in df.columns:
-        df['Duration (days)'] = (df['End date'] - df['Start date']).dt.days
+        df['duration_(days)'] = pd.to_numeric(df['duration_days'], errors='coerce').fillna(1)
+    elif 'start_date' in df.columns and 'end_date' in df.columns:
+        df['duration_(days)'] = (df['end_date'] - df['start_date']).dt.days
     else:
-        df['Duration (days)'] = 1  # Valeur par défaut
+        df['duration_(days)'] = 1  # Valeur par défaut
 
     # 3. SAISON (Basée sur la date de début)
     def get_season(date_obj):
@@ -63,8 +71,8 @@ def process_new_data(df_users, df_travel):
         except:
             return "Unknown"
 
-    if 'Start date' in df.columns:
-        df['travel_season'] = df['Start date'].apply(get_season)
+    if 'start_date' in df.columns:
+        df['travel_season'] = df['start_date'].apply(get_season)
     else:
         df['travel_season'] = "Unknown"
 
@@ -74,7 +82,7 @@ def process_new_data(df_users, df_travel):
     else:
         df['dest_country'] = "Unknown"
 
-    # 5. RENOMMAGE (Standardisation des noms de colonnes)
+    # 5. RENOMMAGE (Standardisation des noms de colonnes). Map normalized keys to canonical column names
     rename_map = {
         'destination': 'Destination',
         'traveler_name': 'Traveler name',
@@ -83,7 +91,13 @@ def process_new_data(df_users, df_travel):
         'traveler_nationality': 'Traveler nationality',
         'accommodation_type': 'Accommodation type',
         'accommodation_cost': 'Accommodation cost',
+        'transportation_cost': 'Transportation cost',
         'local_transport_mode': 'Transportation type',
+        'local_transport_options': 'Transportation options',
+        'user_id': 'User ID',
+        'start_date': 'Start date',
+        'end_date': 'End date',
+        'duration_(days)': 'Duration (days)'
     }
     df = df.rename(columns=rename_map)
 
@@ -106,8 +120,21 @@ def load_and_process_data(csv_path=None):
     C'est la fonction principale à appeler.
     """
     # 1. Chargement
-    df_users = recup_data.recup_users()
-    df_travel = recup_data.recup_travel()
+    if csv_path is not None and os.path.exists(csv_path):
+        # Load travel data from CSV file
+        df_travel = pd.read_csv(csv_path)
+        # Users may not be available via CSV; try to extract users from the csv if present
+        df_users = None
+        # Normalize column names like we do in process_new_data so we can find columns consistently
+        cols = {c: c.strip() for c in df_travel.columns}
+        lower_cols = {c.lower().strip().replace(' ', '_'): c for c in df_travel.columns}
+        if 'traveler_name' in lower_cols and 'user_id' in lower_cols:
+            users_df = df_travel[[lower_cols['user_id'], lower_cols['traveler_name']]].drop_duplicates()
+            users_df.columns = ['user_id', 'traveler_name']
+            df_users = users_df
+    else:
+        df_users = recup_data.recup_users()
+        df_travel = recup_data.recup_travel()
 
     # 2. Pré-traitement (Nettoyage texte/dates)
     df = process_new_data(df_users, df_travel)
@@ -116,8 +143,23 @@ def load_and_process_data(csv_path=None):
 
     # 3. NETTOYAGE NUMÉRIQUE (CRUCIAL AVANT LE MAPPING)
     num_cols = ['Accommodation cost', 'Transportation cost', 'Duration (days)', 'Traveler age']
+    # Ensure list elements are strings in case of unexpected transformations
+    num_cols = [str(x) for x in num_cols]
 
     for col in num_cols:
+        col = str(col)
+        # If any expected numeric column is missing, fill with zeros to avoid KeyError
+        if col not in df.columns:
+            df[col] = 0
+        # If the column exists but maps to a DataFrame slice (rare), reduce to a single Series
+        val = df[col]
+        if isinstance(val, pd.DataFrame):
+            if val.shape[1] >= 1:
+                # Take the first sub-column if multiple; preserve name
+                val = val.iloc[:, 0]
+            else:
+                val = val.squeeze()
+            df[col] = val
         # Nettoyage des symboles monétaires si restants
         if df[col].dtype == object:
             df[col] = df[col].astype(str).str.replace(r'[$,]', '', regex=True)
@@ -141,6 +183,9 @@ def load_and_process_data(csv_path=None):
 
     # Helper pour créer un mapping
     def create_mapping(column_name, mapping_key):
+        # Accept either canonical column names or lowercased keys (e.g., 'Traveler name' or 'traveler_name')
+        if column_name not in df.columns and column_name.lower() in df.columns:
+            column_name = column_name.lower()
         unique_vals = df[column_name].unique()
         # Création du dico {Nom: ID}
         mapp = {name: i for i, name in enumerate(unique_vals)}
@@ -159,11 +204,11 @@ def load_and_process_data(csv_path=None):
     # On peut aussi mapper le pays si on veut l'utiliser plus tard
     df['dest_country_id'] = create_mapping('dest_country', 'Country')
 
-    print("✅ Données prêtes et IDs générés.")
+    print("[OK] Données prêtes et IDs générés.")
     return df, mappings
 
 
-def build_graph(df):
+def build_graph(df, num_users_override: int = None, num_dests_override: int = None):
     """
     Étape 3 : Conversion du DataFrame propre en HeteroData (PyTorch Geometric).
     """
@@ -175,8 +220,13 @@ def build_graph(df):
     user_cols = ['uid', 'gender_id', 'nationality_id', 'Traveler age']
     user_df = df[user_cols].drop_duplicates('uid').sort_values('uid')
 
-    # Sécurité : Vérifier que les UIDs sont bien 0, 1, 2... sans trou
-    assert len(user_df) == user_df['uid'].max() + 1, "Erreur critique : Les User IDs ne sont pas contigus !"
+    # Sécurité : Vérifier que les UIDs sont soit contigus, or fit within the provided override.
+    if num_users_override is None:
+        assert len(user_df) == user_df['uid'].max() + 1, "Erreur critique : Les User IDs ne sont pas contigus !"
+    else:
+        # Ensure no uid exceeds override range
+        if user_df['uid'].max() >= num_users_override:
+            raise AssertionError("Some user ids are out of range of num_users_override")
 
     # Normalisation de l'âge
     scaler_age = StandardScaler()
@@ -189,13 +239,24 @@ def build_graph(df):
         torch.tensor(user_df['nationality_id'].values, dtype=torch.float).unsqueeze(1),
         torch.tensor(age_scaled, dtype=torch.float)
     ], dim=1)
+    # Expand user_x to num_users_override if requested
+    if num_users_override is not None and user_x.size(0) < num_users_override:
+        pad = torch.zeros((num_users_override - user_x.size(0), user_x.size(1)), dtype=user_x.dtype)
+        user_x = torch.cat([user_x, pad], dim=0)
 
     # 2. NODE DESTINATION
     dest_df = df[['dest_id']].drop_duplicates('dest_id').sort_values('dest_id')
-    assert len(dest_df) == dest_df['dest_id'].max() + 1, "Erreur critique : Les Dest IDs ne sont pas contigus !"
+    if num_dests_override is None:
+        assert len(dest_df) == dest_df['dest_id'].max() + 1, "Erreur critique : Les Dest IDs ne sont pas contigus !"
+    else:
+        if dest_df['dest_id'].max() >= num_dests_override:
+            raise AssertionError("Some dest ids are out of range of num_dests_override")
 
     # Features Destination (Pour l'instant un vecteur de 1, ou embedding identité)
     dest_x = torch.ones((len(dest_df), 1), dtype=torch.float)
+    if num_dests_override is not None and dest_x.size(0) < num_dests_override:
+        pad = torch.zeros((num_dests_override - dest_x.size(0), dest_x.size(1)), dtype=dest_x.dtype)
+        dest_x = torch.cat([dest_x, pad], dim=0)
 
     # 3. EDGES (Les voyages)
     src = torch.tensor(df['uid'].values, dtype=torch.long)
@@ -233,5 +294,5 @@ def build_graph(df):
     # Arêtes inverses (Destination -> Rev_Visits -> User) - Pour le message passing bidirectionnel
     data['destination', 'rev_visits', 'user'].edge_index = torch.stack([dst, src], dim=0)
 
-    print(f"✅ Graphe construit : {data}")
+    print(f"[OK] Graphe construit : {data}")
     return data

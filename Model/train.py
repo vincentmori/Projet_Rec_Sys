@@ -3,12 +3,13 @@ import torch
 import torch.nn.functional as F
 from torch_geometric.transforms import RandomLinkSplit
 import os
+import numpy as np
 import json
 import pickle
 
 # Imports locaux (Modularité)
-from model import HGIB_Context_Model
-from data_loader import load_and_process_data, build_graph
+from Model.model import HGIB_Context_Model
+from Model.data_loader import load_and_process_data, build_graph
 
 # ==========================================
 # HYPERPARAMÈTRES (MLE-Ops Responsibility)
@@ -60,13 +61,77 @@ def evaluate(model, val_data):
     return loss.item()
 
 
+def compute_ndcg_for_split(model, train_data, val_data, k=10):
+    """Compute mean NDCG@k using embeddings trained on train_data and evaluation on val_data.
+
+    Excludes train edges from ranking candidate lists.
+    """
+    model.eval()
+    # Encode on train_data (avoid leakage)
+    x_dict = train_data.x_dict
+    edge_index_dict = train_data.edge_index_dict
+    edge_attr_cat_dict = {('user', 'visits', 'destination'): train_data['user', 'visits', 'destination'].edge_attr_cat}
+    edge_attr_num_dict = {('user', 'visits', 'destination'): train_data['user', 'visits', 'destination'].edge_attr_num}
+    with torch.no_grad():
+        mu, _ = model.encode(x_dict, edge_index_dict, edge_attr_cat_dict, edge_attr_num_dict)
+
+    z_user = mu['user'].cpu().numpy()
+    z_dest = mu['destination'].cpu().numpy()
+    num_dests = z_dest.shape[0]
+
+    # Build train edge set for masking
+    ei_train = train_data['user', 'visits', 'destination'].edge_index
+    src_train = ei_train[0].cpu().numpy()
+    dst_train = ei_train[1].cpu().numpy()
+    train_edges = set(zip(src_train.tolist(), dst_train.tolist()))
+
+    # get validation edges (positive only)
+    ei_val = val_data['user', 'visits', 'destination'].edge_index
+    labels = val_data['user', 'visits', 'destination'].edge_label
+    src_val = ei_val[0].cpu().numpy()
+    dst_val = ei_val[1].cpu().numpy()
+    labels_np = labels.cpu().numpy()
+    # Collect positive val edges per user
+    val_per_user = {}
+    for u, d, lab in zip(src_val.tolist(), dst_val.tolist(), labels_np.tolist()):
+        if lab == 1:
+            val_per_user.setdefault(u, set()).add(d)
+
+    ndcgs = []
+    for uid, test_set in val_per_user.items():
+        # compute scores
+        scores = z_user[uid].dot(z_dest.T)
+        # mask train visited
+        mask = np.zeros(num_dests, dtype=bool)
+        for dest in range(num_dests):
+            if (uid, dest) in train_edges:
+                mask[dest] = True
+        scores_masked = scores.copy()
+        scores_masked[mask] = -np.inf
+        ranked = np.argsort(scores_masked)[::-1]
+        rel = np.array([1 if idx in test_set else 0 for idx in ranked], dtype=int)
+        # compute DCG/IDCG
+        discounts = 1.0 / np.log2(np.arange(2, min(len(rel), k) + 2))
+        dcg = float(np.sum(rel[:k] * discounts)) if rel.size > 0 else 0.0
+        idcg_n = min(len(test_set), k)
+        if idcg_n == 0:
+            ndcg = 0.0
+        else:
+            idcg = float(np.sum(1.0 / np.log2(np.arange(2, idcg_n + 2))))
+            ndcg = dcg / idcg if idcg > 0 else 0.0
+        ndcgs.append(ndcg)
+    if len(ndcgs) == 0:
+        return 0.0
+    return float(np.mean(ndcgs))
+
+
 def main():
     # 1. Configuration
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"--- [MLE-Ops] Training Start on {device} ---")
 
-    if not os.path.exists(ARTIFACTS_DIR):
-        os.makedirs(ARTIFACTS_DIR)
+    if not os.path.exists(artifacts_dir):
+        os.makedirs(artifacts_dir)
 
     df, mappings = load_and_process_data()
     data = build_graph(df)
@@ -105,15 +170,22 @@ def main():
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
     # 5. Boucle d'Entraînement avec Early Stopping
-    print(f"--- Début de l'entraînement pour {EPOCHS} époques ---")
+    print(f"--- Début de l'entraînement pour {epochs} époques ---")
     print(f"--- Critère d'arrêt : Val Loss > Min Val Loss + {EARLY_STOPPING_DELTA} ---")
 
     min_val_loss = float('inf')
     best_model_state = None  # Pour garder le meilleur cerveau en mémoire
 
-    for epoch in range(1, EPOCHS + 1):
+    metrics = []
+    for epoch in range(1, epochs + 1):
         train_loss, recons_loss = train_one_epoch(model, train_data, optimizer)
         val_loss = evaluate(model, val_data)
+        # Compute NDCG@10 using the current model and train/val split
+        try:
+            val_ndcg = compute_ndcg_for_split(model, train_data, val_data, k=10)
+        except Exception as e:
+            print(f"[WARN] NDCG computation failed on epoch {epoch}: {e}")
+            val_ndcg = float('nan')
 
         # --- LOGIQUE EARLY STOPPING ---
 
@@ -132,7 +204,15 @@ def main():
 
         if epoch % 10 == 0:
             print(
-                f"Epoch {epoch:03d} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f} (Min: {min_val_loss:.4f})")
+                f"Epoch {epoch:03d} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f} (Min: {min_val_loss:.4f}) | Val NDCG@10: {val_ndcg:.4f}")
+
+        # Append metrics
+        metrics.append({
+            'epoch': epoch,
+            'train_loss': train_loss,
+            'val_loss': val_loss,
+            'val_ndcg': val_ndcg
+        })
 
     print("--- Entraînement terminé ---")
 
@@ -147,11 +227,11 @@ def main():
     else:
         print("⚠️ Attention : Aucun meilleur modèle trouvé (bizarre).")
 
-    model_path = os.path.join(ARTIFACTS_DIR, "hgib_model.pth")
+    model_path = os.path.join(artifacts_dir, "hgib_model.pth")
     torch.save(model.state_dict(), model_path)
     print(f"Modèle sauvegardé : {model_path}")
 
-    mappings_path = os.path.join(ARTIFACTS_DIR, "mappings.pkl")
+    mappings_path = os.path.join(artifacts_dir, "mappings.pkl")
     with open(mappings_path, 'wb') as f:
         pickle.dump(mappings, f)
     print(f"Mappings sauvegardés : {mappings_path}")
@@ -163,10 +243,22 @@ def main():
         "num_trans": num_trans,
         "num_season": num_season
     }
-    config_path = os.path.join(ARTIFACTS_DIR, "config.json")
+    config_path = os.path.join(artifacts_dir, "config.json")
     with open(config_path, 'w') as f:
         json.dump(config, f)
     print(f"Config sauvegardée : {config_path}")
+    # Save metrics to artifacts
+    metrics_path = os.path.join(artifacts_dir, 'metrics.json')
+    try:
+        with open(metrics_path, 'w') as f:
+            json.dump(metrics, f)
+        print(f"Metrics saved: {metrics_path}")
+    except Exception as e:
+        print(f"Failed to save metrics: {e}")
+
+
+def main():
+    train_main()
 
 
 if __name__ == "__main__":

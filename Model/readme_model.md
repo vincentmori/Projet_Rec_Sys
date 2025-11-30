@@ -23,4 +23,24 @@ Make sure to install dependencies from `requirements.txt` before running:
 
 ```powershell
 pip install -r requirements.txt
+
+Evaluation (NDCG@k)
+--------------------
+You can run an offline NDCG@k evaluation using the saved model artifacts and a local CSV dataset (for instance the synthetic dataset in the project root):
+
+```powershell
+python -m Model.eval --artifacts_dir Model/artifacts --csv_path ..\..\synthetic_travel_data_daily_cost_coherent.csv --k 10
+```
+
+The eval script will align the CSV with the saved mappings, drop rows that cannot be mapped to saved categories, and compute a leave-one-out NDCG@k for the remaining users.
+
+Plotting training metrics
+-------------------------
+If you ran training via `python -m Model.train` and metrics were saved to the artifacts folder, plot them with:
+
+```powershell
+python -m Model.plot_metrics --artifacts_dir Model/artifacts --output Model/artifacts/metrics.png
+```
+
+This will create `metrics.png` under `Model/artifacts/` showing training loss, validation loss, and Val NDCG@10 across epochs.
 ```
