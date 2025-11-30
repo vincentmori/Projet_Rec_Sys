@@ -15,20 +15,18 @@ display_header()
 # CONTENT
 # -------------------------------
 def content_Apropos():
-
-    # Définir la balise HTML pour le logo 
-    logo_html_inline = '<span id="logo-page">TripplyBuddy</span>'
+    logo_html_inline = '<span id="logo-txt">TripplyBuddy</span>'
 
     st.title("About the Project 🎓")
 
     st.markdown(f"""
-    Bienvenue sur {logo_html_inline} ! Ce projet a été réalisé dans le cadre d'un projet étudiant 
-    sur les systèmes de recommandation personnalisée dans le domaine du voyage.
+    Welcome to {logo_html_inline}! This project was developed as part of a **student initiative** focused on **personalized recommendation systems** within the travel industry.
     """, unsafe_allow_html=True) 
 
-    st.markdown('<div class="section-title">Objectif</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">Objective</div>', unsafe_allow_html=True)
     st.write("""
-    Fournir des recommandations de destinations, hôtels et activités adaptées aux préférences des utilisateurs.
+    Our goal is to provide **tailored travel recommendations**, including specific destinations 
+    and accommodation suggestions, based on the unique profile and preferences of each user.
     """)
 
 content_Apropos()

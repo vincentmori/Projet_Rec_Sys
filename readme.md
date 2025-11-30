@@ -140,7 +140,10 @@ then redo:
 After activating the environment, install the required packages:
 pip install -r requirements.txt
 
-### C. Launching the Streamlit Application
+### C. Create .env
+DATABASE_URL="postgresql+psycopg2://ucbkaif701fjf1:pef019c3014489fb0d4b482b664a245b47a18c836273a1e0930491309907a99f8@cet8gijgk7sjl9.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d2i3gudil1qocc"
+
+### D. Launching the Streamlit Application
 To start the Streamlit user interface:
 streamlit run Python/Frontend/app.py
 

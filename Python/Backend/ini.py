@@ -11,7 +11,7 @@ def chargement_df():
 
     df_travel = recup_travel()
 
-    df_destinations = DESTINATIONS
+    df_destinations = pd.DataFrame(DESTINATIONS)
     
     return {
         "df_users": df_users, 

@@ -45,7 +45,8 @@ def content_compte_connecte():
             
 
 def content_compte():
-    st.title("Mon Compte")
+    Titre_html = '<span id="title-page">Mon Compte</span>'
+    st.markdown(Titre_html, unsafe_allow_html=True)
 
 if st.session_state["STATUT_CONNEXION"]:
     content_compte_connecte()
