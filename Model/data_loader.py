@@ -118,6 +118,10 @@ def load_and_process_data(csv_path=None):
     """
     Étape 2 : Chargement, Filtrage des NaN, et Création des IDs (Mapping).
     C'est la fonction principale à appeler.
+    
+    If csv_path is provided and exists, loads from CSV.
+    Otherwise, tries to load from database.
+    If database fails, falls back to local CSV files in Data folder.
     """
     # 1. Chargement
     if csv_path is not None and os.path.exists(csv_path):
@@ -133,8 +137,27 @@ def load_and_process_data(csv_path=None):
             users_df.columns = ['user_id', 'traveler_name']
             df_users = users_df
     else:
+        # Try to load from database first
         df_users = recup_data.recup_users()
         df_travel = recup_data.recup_travel()
+        
+        # If database fails (empty DataFrames), fall back to local CSV files
+        if df_travel.empty or df_users.empty:
+            print("⚠️ Database unavailable, falling back to local CSV files...")
+            # Try to find CSV files in Data folder
+            data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Data'))
+            travel_csv = os.path.join(data_dir, 'travel_generated.csv')
+            users_csv = os.path.join(data_dir, 'users_generated.csv')
+            
+            if os.path.exists(travel_csv) and os.path.exists(users_csv):
+                print(f"📂 Loading from: {travel_csv}")
+                df_travel = pd.read_csv(travel_csv)
+                df_users = pd.read_csv(users_csv)
+            else:
+                raise FileNotFoundError(
+                    f"Neither database nor local CSV files are available. "
+                    f"Expected CSV files at: {travel_csv} and {users_csv}"
+                )
 
     # 2. Pré-traitement (Nettoyage texte/dates)
     df = process_new_data(df_users, df_travel)

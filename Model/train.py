@@ -19,7 +19,7 @@ OUT_CHANNELS = 32
 LEARNING_RATE = 0.0004
 EPOCHS = 2000
 BETA = 0.001
-ARTIFACTS_DIR = "artifacts"
+ARTIFACTS_DIR = os.path.join(os.path.dirname(__file__), "artifacts")
 
 # Seuil de tolérance pour l'arrêt (Delta)
 EARLY_STOPPING_DELTA = 0.01  # Si val_loss > min_val_loss + 0.01, on arrête
@@ -125,13 +125,13 @@ def compute_ndcg_for_split(model, train_data, val_data, k=10):
     return float(np.mean(ndcgs))
 
 
-def main():
+def train_main():
     # 1. Configuration
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"--- [MLE-Ops] Training Start on {device} ---")
 
-    if not os.path.exists(artifacts_dir):
-        os.makedirs(artifacts_dir)
+    if not os.path.exists(ARTIFACTS_DIR):
+        os.makedirs(ARTIFACTS_DIR)
 
     df, mappings = load_and_process_data()
     data = build_graph(df)
@@ -170,14 +170,14 @@ def main():
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
     # 5. Boucle d'Entraînement avec Early Stopping
-    print(f"--- Début de l'entraînement pour {epochs} époques ---")
+    print(f"--- Début de l'entraînement pour {EPOCHS} époques ---")
     print(f"--- Critère d'arrêt : Val Loss > Min Val Loss + {EARLY_STOPPING_DELTA} ---")
 
     min_val_loss = float('inf')
     best_model_state = None  # Pour garder le meilleur cerveau en mémoire
 
     metrics = []
-    for epoch in range(1, epochs + 1):
+    for epoch in range(1, EPOCHS + 1):
         train_loss, recons_loss = train_one_epoch(model, train_data, optimizer)
         val_loss = evaluate(model, val_data)
         # Compute NDCG@10 using the current model and train/val split
@@ -227,11 +227,11 @@ def main():
     else:
         print("⚠️ Attention : Aucun meilleur modèle trouvé (bizarre).")
 
-    model_path = os.path.join(artifacts_dir, "hgib_model.pth")
+    model_path = os.path.join(ARTIFACTS_DIR, "hgib_model.pth")
     torch.save(model.state_dict(), model_path)
     print(f"Modèle sauvegardé : {model_path}")
 
-    mappings_path = os.path.join(artifacts_dir, "mappings.pkl")
+    mappings_path = os.path.join(ARTIFACTS_DIR, "mappings.pkl")
     with open(mappings_path, 'wb') as f:
         pickle.dump(mappings, f)
     print(f"Mappings sauvegardés : {mappings_path}")
@@ -241,14 +241,16 @@ def main():
         "out_channels": OUT_CHANNELS,
         "num_acc": num_acc,
         "num_trans": num_trans,
-        "num_season": num_season
+        "num_season": num_season,
+        "num_users": num_users,
+        "num_dests": num_dests
     }
-    config_path = os.path.join(artifacts_dir, "config.json")
+    config_path = os.path.join(ARTIFACTS_DIR, "config.json")
     with open(config_path, 'w') as f:
         json.dump(config, f)
     print(f"Config sauvegardée : {config_path}")
     # Save metrics to artifacts
-    metrics_path = os.path.join(artifacts_dir, 'metrics.json')
+    metrics_path = os.path.join(ARTIFACTS_DIR, 'metrics.json')
     try:
         with open(metrics_path, 'w') as f:
             json.dump(metrics, f)
@@ -257,9 +259,5 @@ def main():
         print(f"Failed to save metrics: {e}")
 
 
-def main():
-    train_main()
-
-
 if __name__ == "__main__":
-    main()
+    train_main()

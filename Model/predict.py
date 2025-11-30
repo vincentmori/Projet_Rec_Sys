@@ -2,8 +2,8 @@
 Lightweight inference module to provide simple `get_recommendation(user_id)` API
 
 This script loads saved artifacts (config, mappings, model weights), rebuilds the PyG
-HeteroData graph from `Travel_details_ready.csv`, computes deterministic embeddings
-and returns top-K destination names for a given user.
+HeteroData graph from the database (or optionally a CSV file), computes deterministic 
+embeddings and returns top-K destination names for a given user.
 """
 import os
 import json
@@ -19,7 +19,8 @@ from Model.data_loader import load_and_process_data, build_graph
 
 
 DEFAULT_ARTIFACTS_DIR = os.path.join(os.path.dirname(__file__), 'artifacts')
-DEFAULT_CSV = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'Travel_details_ready.csv'))
+# CSV path is now optional - when None, data is loaded from database
+DEFAULT_CSV = None
 
 
 def load_artifacts(artifacts_dir: str = None):
@@ -41,16 +42,21 @@ def load_artifacts(artifacts_dir: str = None):
 
 
 def map_external_id_to_traveler_name(external_user_id: str, csv_path: Optional[str] = None) -> Optional[str]:
-    """Map an external 'User ID' (like 'U0001') to the Traveler name in the CSV.
+    """Map an external 'User ID' (like 'U0001') to the Traveler name.
 
     Returns the traveler name if found, otherwise None.
     This helper is lightweight and doesn't require the model or torch, making it
     suitable for backend integration and unit testing.
+    
+    If csv_path is provided, loads from CSV. Otherwise loads from database.
     """
-    csv_path = csv_path or DEFAULT_CSV
-    if not os.path.exists(csv_path):
-        raise FileNotFoundError(f"CSV dataset not found at {csv_path}")
-    df = pd.read_csv(csv_path)
+    if csv_path is not None and os.path.exists(csv_path):
+        df = pd.read_csv(csv_path)
+    else:
+        # Load from database
+        from Python.Backend import recup_data
+        df = recup_data.recup_travel()
+    
     key_col = 'User ID' if 'User ID' in df.columns else 'user_id'
     name_col = 'Traveler name' if 'Traveler name' in df.columns else 'traveler_name'
     row = df[df[key_col].astype(str) == str(external_user_id)]
@@ -83,9 +89,7 @@ class Predictor:
     def load(self):
         config, mappings, model_path = load_artifacts(self.artifacts_dir)
 
-        if self.csv_path is None or not os.path.exists(self.csv_path):
-            raise FileNotFoundError(f"CSV dataset not found at {self.csv_path}. Provide valid csv_path to Predictor.")
-
+        # Load data from database (csv_path=None) or from CSV if provided
         df, _ = load_and_process_data(self.csv_path)
         maps = mappings
 

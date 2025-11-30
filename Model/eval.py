@@ -2,11 +2,14 @@
 Evaluation harness for offline metrics (NDCG@k).
 
 Usage:
+    python -m Model.eval --artifacts_dir Model/artifacts --k 10
+
+    Or with a CSV file:
     python -m Model.eval --artifacts_dir Model/artifacts --csv_path ../Data/Travel_details_ready.csv --k 10
 
 This script:
  - loads model artifacts (config, mappings, weights)
- - loads CSV and re-applies saved mappings
+ - loads data from database (default) or CSV and re-applies saved mappings
  - samples a per-user test edge (leave-one-out) and keeps the rest as train edges
  - computes embeddings using the model encoded on train-only graph
  - scores all destination candidates per user and computes NDCG@k
@@ -67,11 +70,11 @@ def _idcg_at_k(num_relevant: int, k: int) -> float:
     return float(np.sum(discounts))
 
 
-def compute_ndcg_at_k_for_saved_model(artifacts_dir: str, csv_path: str, k: int = 10, device: str = 'cpu') -> float:
+def compute_ndcg_at_k_for_saved_model(artifacts_dir: str, csv_path: str = None, k: int = 10, device: str = 'cpu') -> float:
     # Load artifacts
     config, maps, model_path = load_artifacts(artifacts_dir)
 
-    # Load and process CSV, then overwrite uids/dest_ids with saved mappings for alignment
+    # Load and process data (from CSV if provided, otherwise from database)
     df, _ = load_and_process_data(csv_path)
     # Apply saved mappings if present
     if 'User' in maps and 'Traveler name' in df.columns:
@@ -236,7 +239,7 @@ def compute_ndcg_at_k_for_saved_model(artifacts_dir: str, csv_path: str, k: int 
 def main():
     parser = argparse.ArgumentParser(description='Evaluate saved model offline (NDCG@k)')
     parser.add_argument('--artifacts_dir', type=str, default=os.path.join(os.path.dirname(__file__), 'artifacts'))
-    parser.add_argument('--csv_path', type=str, default=os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Data', 'Travel_details_ready.csv')))
+    parser.add_argument('--csv_path', type=str, default=None, help='Path to CSV file (optional, uses database if not provided)')
     parser.add_argument('--k', type=int, default=10)
     parser.add_argument('--device', type=str, default='cpu')
     args = parser.parse_args()
