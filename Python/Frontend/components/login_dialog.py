@@ -12,11 +12,19 @@ SESSION_FILE = os.path.join(PROJECT_ROOT, "Data", "rester_connecter.txt")
 @st.dialog("Connexion")
 def login_dialog():   
     # st.dialog utilise des widgets Streamlit normaux à l'intérieur
-    user_id = st.text_input("Identifiant")
-    password = st.text_input("Mot de passe", type='password')
-    remember_me = st.checkbox("Rester connecté")
+    user_id = st.text_input("Id")
+    password = st.text_input("Password", type='password')
+    
+    col1, _, col2 = st.columns([2, 3, 2])
+    with col2:
+        remember_me = st.checkbox("Stay login")
 
-    if st.button("Se connecter", use_container_width=True):
+    with col1:
+        if st.button("Register", key="to_register_btn"):
+            st.session_state.app_mode = 'register' # Changement d'état
+            st.rerun()
+
+    if st.button("Connect", use_container_width=True):
         if not user_id.strip() or not password.strip():
             st.error("Please enter your ID and Password.")
         else:
@@ -26,7 +34,7 @@ def login_dialog():
                 st.error(message_erreur)
             else:
                 init_user(user_id)
-                st.success(f"Connexion Succeeded! Traveler name: {st.session_state['user']['traveler_name'].loc[0]}")
+                st.success(f"Connexion Succeeded! Traveler name: {st.session_state['user']['traveler_name'].iloc[0]}")
                 
                 if remember_me:
                     try:

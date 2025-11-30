@@ -7,10 +7,7 @@ from Python.Backend.genV2 import DESTINATIONS
 def chargement_df():
     # Charger les deux datasets directement depuis le cloud:
     df_users = recup_users()
-    df_connexion_users = pd.DataFrame({
-        "user_id": df_users["user_id"],
-        "mdp": df_users["user_id"]
-    })
+    df_connexion_users = df_users[["traveler_user_id", "mot_de_passe"]]
 
     df_travel = recup_travel()
 
@@ -23,13 +20,15 @@ def chargement_df():
         "df_travel": df_travel
         }
 
-df = chargement_df()
-
 def init_session_state():
+    df = chargement_df()
     
     # Initialisation de l'état de connexion
     if 'STATUT_CONNEXION' not in st.session_state:
         st.session_state['STATUT_CONNEXION'] = False
+    
+    if "app_mode" not in st.session_state:
+        st.session_state.app_mode = None
         
     # Initialisation de l'identifiant utilisateur
     if 'df_users' not in st.session_state:
@@ -54,13 +53,21 @@ def init_session_state():
 def init_user(user_id):
     st.session_state['STATUT_CONNEXION'] = True 
     
-    df_users = df["df_users"]
+    df_users = st.session_state['df_users']
     
-    mask_user = df_users["user_id"] == user_id
+    mask_user = df_users["traveler_user_id"] == user_id
     
     user = df_users[mask_user]
-
+    
     st.session_state["user"] = user
+    
+    df_travel = st.session_state['df_travel']
+    
+    mask_histo_user = df_travel["User ID"] == user_id
+    
+    historique_user = df_travel[mask_histo_user]
+
+    st.session_state["historique_user"] = historique_user
     
     """reco_user = get_recommendation(user_id)
 

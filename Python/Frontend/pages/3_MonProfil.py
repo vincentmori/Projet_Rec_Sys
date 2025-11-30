@@ -3,6 +3,7 @@ from components.header import display_header
 from components.footer import display_footer
 from styles.load_css import load_css
 from components.login_dialog import login_dialog
+from components.register_dialog import register_dialog
 import os 
 
 st.set_page_config(page_title="TripplyBuddy", page_icon="🌍", layout="wide")
@@ -48,6 +49,9 @@ def content_compte():
 
 if st.session_state["STATUT_CONNEXION"]:
     content_compte_connecte()
+elif st.session_state.app_mode == 'register':
+    content_compte()
+    register_dialog()
 else:
     content_compte()
     login_dialog()

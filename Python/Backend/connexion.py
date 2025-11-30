@@ -8,11 +8,11 @@ def check_connexion(user_id, mdp):
     
     check = False
     erreur = None
-    if user_id in list(df_connexion_users["user_id"]):
-        mask_user = df_connexion_users["user_id"] == user_id
-        mdp_valide = df_connexion_users[mask_user]["mdp"]
+    if user_id in list(df_connexion_users["traveler_user_id"]):
+        mask_user = df_connexion_users["traveler_user_id"] == user_id
+        mdp_valide = df_connexion_users[mask_user]["mot_de_passe"]
         
-        if (mdp == mdp_valide.loc[0]):
+        if (mdp == mdp_valide.iloc[0]):
             check = True 
         else:
             erreur = "Connexion Failed: Invalid Password"
@@ -47,7 +47,7 @@ def auto_login():
                     os.remove(SESSION_FILE)
             
         except Exception as e:
-            print(f"Erreur de lecture du fichier de session : {e}")
+            print(f"Error reading file : {e}")
             if os.path.exists(SESSION_FILE):
                 os.remove(SESSION_FILE)
                 
