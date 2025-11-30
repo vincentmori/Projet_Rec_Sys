@@ -16,30 +16,19 @@ load_dotenv(_env_path)
 DB_CONNECTION_STRING = os.environ.get("DATABASE_URL")
 
 def _execute_query_and_get_df(sql_query: str, table_name: str) -> pd.DataFrame:
-    """
-    Se connecte à la base de données PostgreSQL Cloud, exécute une requête SQL,
-    et retourne le résultat en tant que DataFrame Pandas.
-    """
     try:
         engine = create_engine(DB_CONNECTION_STRING)
         df = pd.read_sql(sql_query, engine)
         
-        print(f"✅ Succès : Données de la table '{table_name}' chargées. ({len(df)} lignes)")
+        print(f"Succès : Données de la table '{table_name}' chargées. ({len(df)} lignes)")
         return df
 
     except Exception as e:
-        print(f"❌ Échec de la récupération de la table '{table_name}'. Erreur: {e}")
+        print(f" Échec de la récupération de la table '{table_name}'. Erreur: {e}")
         return pd.DataFrame() 
 
-# =========================================================================
 # FONCTIONS DE RECUPERATION USER ET TRAVEL
-# =========================================================================
-
 def recup_users() -> pd.DataFrame:
-    """
-    Récupère l'intégralité du dataset des utilisateurs ('users_generated')
-    depuis la base de données Heroku et le retourne en DataFrame.
-    """
     table_name = "users_generated"
     query = f"SELECT * FROM {table_name}"
     return _execute_query_and_get_df(query, table_name)
@@ -56,10 +45,6 @@ def recup_travel() -> pd.DataFrame:
 
 # --- EXEMPLE D'UTILISATION ---
 if __name__ == '__main__':
-    print("=========================================================")
-    print("             TEST DES FONCTIONS D'EXTRACTION             ")
-    print("=========================================================")
-
     # 1. Récupération des données utilisateurs
     df_users = recup_users()
     if not df_users.empty:
@@ -76,4 +61,4 @@ if __name__ == '__main__':
         print(df_travel.head())
         print(f"Colonnes: {list(df_travel.columns)}")
         
-    print("=========================================================")
+ 
