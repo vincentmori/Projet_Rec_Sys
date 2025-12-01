@@ -1,7 +1,7 @@
 import streamlit as st
-from styles.load_css import load_css
-from components.header import display_header
-from components.footer import display_footer
+from Python.Frontend.styles.load_css import load_css
+from Python.Frontend.components.header import display_header
+from Python.Frontend.components.footer import display_footer
 
 st.set_page_config(page_title="TripplyBuddy", page_icon="🌍", layout="wide")
 

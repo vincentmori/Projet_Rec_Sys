@@ -1,9 +1,9 @@
 import streamlit as st
-from components.header import display_header
-from components.footer import display_footer
-from styles.load_css import load_css
-from components.login_dialog import login_dialog
-from components.register_dialog import register_dialog
+from Python.Frontend.components.header import display_header
+from Python.Frontend.components.footer import display_footer
+from Python.Frontend.styles.load_css import load_css
+from Python.Frontend.components.login_dialog import login_dialog
+from Python.Frontend.components.register_dialog import register_dialog
 import os 
 
 st.set_page_config(page_title="TripplyBuddy", page_icon="🌍", layout="wide")

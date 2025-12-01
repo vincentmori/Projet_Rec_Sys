@@ -3,8 +3,7 @@ import os
 import torch
 from torch_geometric.data import HeteroData
 from sklearn.preprocessing import StandardScaler
-from Python.Backend import recup_data  # Ton module d'import
-
+from Python.Backend import recup_data  
 
 def process_new_data(df_users, df_travel):
     """

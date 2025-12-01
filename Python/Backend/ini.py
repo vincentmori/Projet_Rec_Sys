@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from Python.Backend.recup_data import recup_travel, recup_users
 from Python.Backend.genV2 import DESTINATIONS
-# from Model.predict import get_recommendation
+from Model.predict import get_recommendation, reset_predictor
 
 def chargement_df():
     # Charger les deux datasets directement depuis le cloud:
@@ -22,6 +22,9 @@ def chargement_df():
 
 def init_session_state():
     df = chargement_df()
+    
+    if 'premier_affichage' not in st.session_state:
+        st.session_state['premier_affichage'] = True
     
     # Initialisation de l'état de connexion
     if 'STATUT_CONNEXION' not in st.session_state:
@@ -50,6 +53,9 @@ def init_session_state():
     if 'user' not in st.session_state:
         st.session_state['user'] = None
         
+    if 'chemin_image' not in st.session_state:
+        st.session_state['chemin_image'] = "https://raw.githubusercontent.com/vincentmori/Image_ville_projet_rec_sys/refs/heads/main/"
+        
 def init_user(user_id):
     st.session_state['STATUT_CONNEXION'] = True 
     
@@ -69,9 +75,11 @@ def init_user(user_id):
 
     st.session_state["historique_user"] = historique_user
     
-    """reco_user = get_recommendation(user_id)
+    reset_predictor()
+    
+    reco_user = get_recommendation(user_id)
 
-    st.session_state["reco_user"] = reco_user"""
+    st.session_state["reco_user"] = reco_user
     
     
     

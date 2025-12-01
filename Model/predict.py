@@ -87,13 +87,17 @@ class Predictor:
         self._loaded = False
 
     def load(self):
-        config, mappings, model_path = load_artifacts(self.artifacts_dir)
+        config, static_mappings, model_path = load_artifacts(self.artifacts_dir)
 
         # Load data from database (csv_path=None) or from CSV if provided
-        df, _ = load_and_process_data(self.csv_path)
-        maps = mappings
+        df, dynamic_maps = load_and_process_data(self.csv_path)
+        maps = static_mappings.copy()
 
         # Overwrite the generated IDs in df using saved mappings to prevent mismatch
+        if 'User' in dynamic_maps:
+            maps['User'] = dynamic_maps['User']
+        if 'Destination' in dynamic_maps:
+            maps['Destination'] = dynamic_maps['Destination']
         if 'Traveler name' in df.columns:
             df['uid'] = df['Traveler name'].map(maps['User'])
         if 'Destination' in df.columns:
@@ -125,6 +129,12 @@ class Predictor:
         if 'travel_season' in maps:
             df['season_id'] = df['travel_season'].map(maps['season'])
 
+        required_ids = ['uid', 'dest_id', 'acc_id', 'trans_id', 'gender_id', 'nationality_id', 'season_id']
+        initial_len = len(df)
+        df.dropna(subset=required_ids, inplace=True)
+        if len(df) < initial_len:
+             print(f"[WARN] {initial_len - len(df)} lignes supprimées car elles contenaient des IDs inconnus (nouvelle catégorie non vue lors de l'entraînement).")
+        
         # Sanity: ensure mapping worked
         if df['uid'].isna().any():
             missing = df[df['uid'].isna()]['Traveler name'].unique()[:5]
@@ -210,6 +220,12 @@ class Predictor:
 
 
 _GLOBAL_PREDICTOR: Optional[Predictor] = None
+
+def reset_predictor():
+    """Forces the global predictor to be reloaded on next call to get_recommendation."""
+    global _GLOBAL_PREDICTOR
+    _GLOBAL_PREDICTOR = None
+    print("[INFO] Predictor has been reset and will reload data on next call.")
 
 
 def get_recommendation(user_identifier: Union[int, str], top_k: int = 5, artifacts_dir: str = None, csv_path: str = None) -> List[str]:

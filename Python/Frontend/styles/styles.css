@@ -37,20 +37,8 @@
 }
 
 /* ========================================
-   TITLE  AND SUBTITLE
+   CARDS
    ======================================== */
-
-#title-page {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 50px;
-    color: #f4f9EF; 
-}
-
-#subtitle-page {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 40px;
-    color: #f4f9EF; 
-}
 
 /* Style de base de la carte (Conteneur principal) */
 .destination-card-v2 {
@@ -60,10 +48,6 @@
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Petite ombre pour l'effet de carte */
 }
-
-/* ========================================
-   CARDS
-   ======================================== */
 .destination-card-v2 {
     display: flex;
     flex-direction: column;

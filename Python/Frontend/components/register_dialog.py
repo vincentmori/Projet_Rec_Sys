@@ -4,6 +4,7 @@ import pandas as pd
 from Python.Backend.connexion import check_connexion
 from Python.Backend.ini import init_user
 from time import sleep
+from Python.Backend.write import update_users_table
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.getcwd(), '..', '..')) 
 
@@ -94,7 +95,9 @@ def register_dialog():
                 st.error("Please enter all values")
             elif new_user_id.strip() in list(df_user["traveler_user_id"]):
                 st.error("ID already used. Please enter another one")
-            else:                
+            else:           
+                st.session_state.app_mode = None
+                
                 new_user = pd.DataFrame({
                     "traveler_user_id": [new_user_id], "traveler_name": [new_username], 
                     "traveler_age": [new_age], "traveler_gender": [new_gender], 
@@ -109,7 +112,14 @@ def register_dialog():
                 st.session_state["df_connexion_users"] = pd.concat([st.session_state["df_connexion_users"], new_user[["traveler_user_id", "mot_de_passe"]]], 
                                                                     ignore_index=True)
                         
-                st.success("Acount created with success.")
+                st.success("Account created with success.")
+                sleep(0.5)
+                
+                ajout_bdd = update_users_table(st.session_state["df_users"])
+                if ajout_bdd:
+                    st.success("Account added with sucess to the database")
+                    
+                sleep(0.5)
                 
                 check_co, message_erreur = check_connexion(new_user_id, new_password)
                 

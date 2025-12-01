@@ -23,7 +23,7 @@ def get_city_card_html(city):
         
     country = info_city["country"].iloc[0]
     
-    image_url = f"https://raw.githubusercontent.com/vincentmori/Image_ville_projet_rec_sys/refs/heads/main/{remove_accents(city)}.jpg"
+    image_url = f"{st.session_state['chemin_image']}{remove_accents(city)}.jpg"
     
     card_html = f"""
     <div class="destination-card-v2">

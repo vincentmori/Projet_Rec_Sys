@@ -1,15 +1,5 @@
 import streamlit as st
-import os
-import sys
-from time import sleep
-
-project_root = os.path.abspath(os.path.join(os.getcwd(), '..', '..'))
-
-# Ajouter le chemin racine à sys.path
-if project_root not in sys.path:
-    sys.path.append(project_root)
-    
-    
+from time import sleep    
 from Python.Frontend.styles.load_css import load_css
 from Python.Backend.ini import init_session_state
 from Python.Backend.connexion import auto_login
