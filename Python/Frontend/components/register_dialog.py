@@ -5,10 +5,9 @@ from Python.Backend.connexion import check_connexion
 from Python.Backend.ini import init_user
 from time import sleep
 from Python.Backend.write import update_users_table
+from Model.predict import reset_predictor
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.getcwd(), '..', '..')) 
-
-SESSION_FILE = os.path.join(PROJECT_ROOT, "Data", "rester_connecter.txt")
+SESSION_FILE = os.path.join("Data", "rester_connecter.txt")
 
 @st.dialog("Register", width='large')
 def register_dialog():
@@ -111,11 +110,13 @@ def register_dialog():
                 
                 st.session_state["df_connexion_users"] = pd.concat([st.session_state["df_connexion_users"], new_user[["traveler_user_id", "mot_de_passe"]]], 
                                                                     ignore_index=True)
-                        
-                st.success("Account created with success.")
+
                 sleep(0.5)
                 
-                ajout_bdd = update_users_table(st.session_state["df_users"])
+                                
+                with st.spinner("⏳ Adding your data to our database..."):
+                    ajout_bdd = update_users_table(st.session_state["df_users"])
+                
                 if ajout_bdd:
                     st.success("Account added with sucess to the database")
                     
@@ -125,9 +126,12 @@ def register_dialog():
                 
                 if not check_co:
                     st.error(message_erreur)
-                else:
-                    init_user(new_user_id)
-                    st.success(f"Connexion Succeeded! Traveler name: {st.session_state['user']['traveler_name'].iloc[0]}")
+                else:    
+                    reset_predictor()
+                    with st.spinner("⏳ Loading data et computing your recommandations..."):
+                        init_user(new_user_id) 
+                
+                    st.success("🎉 Connexion Succeeded ! Your recommandations are ready!.")
                     
                     if remember_me:
                         try:

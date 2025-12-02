@@ -25,9 +25,8 @@ def auto_login():
     """If user already connected."""
     if st.session_state['STATUT_CONNEXION']:
         return
-    
-    PROJECT_ROOT = os.path.abspath(os.path.join(os.getcwd(), '..', '..')) 
-    SESSION_FILE = os.path.join(PROJECT_ROOT, "Data", "rester_connecter.txt")
+
+    SESSION_FILE = os.path.join("Data", "rester_connecter.txt")
 
     if os.path.exists(SESSION_FILE):
         try:

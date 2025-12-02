@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from Python.Backend.recup_data import recup_travel, recup_users
 from Python.Backend.genV2 import DESTINATIONS
-from Model.predict import get_recommendation, reset_predictor
+from Model.predict import get_recommendation
 
 def chargement_df():
     # Charger les deux datasets directement depuis le cloud:
@@ -75,12 +75,6 @@ def init_user(user_id):
 
     st.session_state["historique_user"] = historique_user
     
-    reset_predictor()
-    
     reco_user = get_recommendation(user_id)
 
     st.session_state["reco_user"] = reco_user
-    
-    
-    
-    

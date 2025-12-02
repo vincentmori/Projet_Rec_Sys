@@ -11,7 +11,7 @@ import pickle
 from typing import List, Union, Optional
 
 import pandas as pd
-import numpy as np
+import streamlit as st
 import torch
 
 from Model.model import HGIB_Context_Model
@@ -65,7 +65,7 @@ def map_external_id_to_traveler_name(external_user_id: str, csv_path: Optional[s
     return row.iloc[0][name_col]
 
 
-def recommend_by_external_user_id(external_user_id: str, top_k: int = 5, artifacts_dir: str = None, csv_path: str = None) -> List[str]:
+def recommend_by_external_user_id(external_user_id: str, top_k: int = 3, artifacts_dir: str = None, csv_path: str = None) -> List[str]:
     """Convenience wrapper that resolves an external user id (U0001) to a Traveler name
     then calls the core `get_recommendation` function.
     """
@@ -89,61 +89,26 @@ class Predictor:
     def load(self):
         config, static_mappings, model_path = load_artifacts(self.artifacts_dir)
 
-        # Load data from database (csv_path=None) or from CSV if provided
-        df, dynamic_maps = load_and_process_data(self.csv_path)
+        df_travel_clean, df_users_clean, dynamic_maps = load_and_process_data()
+    
         maps = static_mappings.copy()
 
-        # Overwrite the generated IDs in df using saved mappings to prevent mismatch
+        # 2. Fusion des Mappings (User et Destination doivent être les versions dynamiques)
         if 'User' in dynamic_maps:
             maps['User'] = dynamic_maps['User']
         if 'Destination' in dynamic_maps:
             maps['Destination'] = dynamic_maps['Destination']
-        if 'Traveler name' in df.columns:
-            df['uid'] = df['Traveler name'].map(maps['User'])
-        if 'Destination' in df.columns:
-            df['dest_id'] = df['Destination'].map(maps['Destination'])
-        if 'Accommodation type' in df.columns and 'Accommodation type' in maps:
-            df['acc_id'] = df['Accommodation type'].map(maps['Accommodation type'])
-        if 'Transportation type' in df.columns and 'Transportation type' in maps:
-            df['trans_id'] = df['Transportation type'].map(maps['Transportation type'])
-        if 'Traveler gender' in df.columns and 'Traveler gender' in maps:
-            df['gender_id'] = df['Traveler gender'].map(maps['Traveler gender'])
-        if 'Traveler nationality' in df.columns and 'Traveler nationality' in maps:
-            df['nationality_id'] = df['Traveler nationality'].map(maps['Traveler nationality'])
-        if 'travel_season' in maps and 'travel_season' not in df.columns:
-            df['Start date'] = pd.to_datetime(df['Start date'])
-            def get_season(date):
-                try:
-                    m = date.month
-                    if m in [12, 1, 2]:
-                        return 'Winter'
-                    elif m in [3, 4, 5]:
-                        return 'Spring'
-                    elif m in [6, 7, 8]:
-                        return 'Summer'
-                    else:
-                        return 'Autumn'
-                except:
-                    return 'Autumn'
-            df['travel_season'] = df['Start date'].apply(get_season)
-        if 'travel_season' in maps:
-            df['season_id'] = df['travel_season'].map(maps['season'])
 
-        required_ids = ['uid', 'dest_id', 'acc_id', 'trans_id', 'gender_id', 'nationality_id', 'season_id']
-        initial_len = len(df)
-        df.dropna(subset=required_ids, inplace=True)
-        if len(df) < initial_len:
-             print(f"[WARN] {initial_len - len(df)} lignes supprimées car elles contenaient des IDs inconnus (nouvelle catégorie non vue lors de l'entraînement).")
+        # 3. Nettoyage final des NaNs sur les Arêtes (df_travel_clean)
+        required_ids = ['uid', 'dest_id', 'acc_id', 'trans_id', 'season_id']
+        required_ids = [c for c in required_ids if c in df_travel_clean.columns]
         
-        # Sanity: ensure mapping worked
-        if df['uid'].isna().any():
-            missing = df[df['uid'].isna()]['Traveler name'].unique()[:5]
-            raise ValueError(f"Some traveler names are missing from saved mappings. Examples: {missing}")
-        if df['dest_id'].isna().any():
-            missing = df[df['dest_id'].isna()]['Destination'].unique()[:5]
-            raise ValueError(f"Some Destination names are missing from saved mappings. Examples: {missing}")
+        initial_len = len(df_travel_clean)
+        df_travel_clean.dropna(subset=required_ids, inplace=True)
+        if len(df_travel_clean) < initial_len:
+            print(f"[WARN] {initial_len - len(df_travel_clean)} lignes supprimées car elles contenaient des IDs inconnus (nouvelle catégorie non vue lors de l'entraînement).")
 
-        data = build_graph(df)
+        data = build_graph(df_travel_clean, df_users_clean)
 
         num_users = len(maps['User'])
         num_dests = len(maps['Destination'])
@@ -163,7 +128,36 @@ class Predictor:
             state = torch.load(model_path, map_location=self.device)
         except Exception:
             state = torch.load(model_path, map_location=self.device, weights_only=False)
-        model.load_state_dict(state)
+            
+        # Capture le dictionnaire de poids actuel du modèle (taille complète, initialisée).
+        model_dict = model.state_dict() 
+        
+        # Extrait les embeddings entraînés pour les utilisateurs historiques depuis le checkpoint.
+        user_emb_checkpoint = state['user_emb.weight'] 
+        
+        # Obtient une référence modifiable à la matrice d'embeddings utilisateur actuelle.
+        user_emb_current = model_dict['user_emb.weight'] 
+        
+        # INJECTION CRITIQUE : Copie les poids entraînés dans les premières lignes de la nouvelle matrice.
+        user_emb_current[:user_emb_checkpoint.size(0), :] = user_emb_checkpoint 
+    
+        # Met à jour le dictionnaire de poids du modèle avec la matrice fusionnée.     
+        model_dict['user_emb.weight'] = user_emb_current 
+        
+        # === 2. Gestion de dest_emb (si la taille change) ===
+        if 'dest_emb.weight' in state and state['dest_emb.weight'].shape != model_dict['dest_emb.weight'].shape:
+            dest_emb_checkpoint = state['dest_emb.weight']
+            dest_emb_current = model_dict['dest_emb.weight']
+            
+            # Remplacer les N premières lignes par les poids entraînés
+            dest_emb_current[:dest_emb_checkpoint.size(0), :] = dest_emb_checkpoint
+            model_dict['dest_emb.weight'] = dest_emb_current
+            
+        # === 3. Chargement Final ===
+        # Charger les poids dans le modèle, en utilisant strict=False pour ignorer les autres incohérences 
+        # (par exemple, si la taille des biais a changé)
+        model.load_state_dict(model_dict, strict=False)
+
         model.eval()
 
         self.model = model
@@ -178,7 +172,7 @@ class Predictor:
         # resolve user id
         if isinstance(user_identifier, str):
             if user_identifier not in self.maps['User']:
-                raise ValueError(f"User name '{user_identifier}' not found in mappings")
+                raise ValueError(f"User ID '{user_identifier}' not found in mappings")
             uid = self.maps['User'][user_identifier]
         else:
             uid = int(user_identifier)
@@ -217,7 +211,6 @@ class Predictor:
         top = candidates[:top_k]
         recommended_names = [id_to_dest[d] for d, _ in top]
         return recommended_names
-
 
 _GLOBAL_PREDICTOR: Optional[Predictor] = None
 

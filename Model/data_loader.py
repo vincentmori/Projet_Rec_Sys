@@ -109,11 +109,45 @@ def process_new_data(df_users, df_travel):
 
     if 'Traveler age' not in df.columns:
         df['Traveler age'] = 30  # Age par défaut
+        
+    # Suppression des colonnes présentes également dans df_users qui ne doivent pas être dupliques sur les arêtes 
+    node_features_to_drop = [
+        'Traveler name', 
+        'Traveler age', 
+        'Traveler gender', 
+        'Traveler nationality',
+    ]
+    df.drop(columns=node_features_to_drop, errors='ignore', inplace=True)
+    
+    #------------------------------
+    # Traitement sur df_user
+    # -----------------------------
+    df_users_copy = df_users.copy()  
+    
+    # 1. NETTOYAGE DES TEXTES (Guillemets et Espaces)
+    for col in df_users_copy.columns:
+        if df_users_copy[col].dtype == object:
+            df_users_copy[col] = df_users_copy[col].astype(str).str.replace(r'["\']', '', regex=True).str.strip()
+     
+    rename_map_user = {
+        'traveler_user_id': 'Traveler User ID',
+        'traveler_name': 'Traveler Name',
+        'traveler_age': 'Traveler Age',
+        'traveler_gender': 'Traveler Gender',
+        'traveler_nationality': 'Traveler Nationality',
+        'profile_type': 'Profile Type',
+        'climate_pref': 'Climate Pref',
+        'primary_dest_type': 'Primary Dest Type',
+        'acc_pref': 'Accomodation Pref',
+        'transport_core_modes': 'Transport modes',
+        'traveler_continent': 'Traveler Continent'
+    }
+      
+    df_users_cleaned = df_users_copy.rename(columns=rename_map_user, errors='ignore')
 
-    return df
+    return df, df_users_cleaned
 
-
-def load_and_process_data(csv_path=None):
+def load_and_process_data():
     """
     Étape 2 : Chargement, Filtrage des NaN, et Création des IDs (Mapping).
     C'est la fonction principale à appeler.
@@ -122,187 +156,209 @@ def load_and_process_data(csv_path=None):
     Otherwise, tries to load from database.
     If database fails, falls back to local CSV files in Data folder.
     """
-    # 1. Chargement
-    if csv_path is not None and os.path.exists(csv_path):
-        # Load travel data from CSV file
-        df_travel = pd.read_csv(csv_path)
-        # Users may not be available via CSV; try to extract users from the csv if present
-        df_users = None
-        # Normalize column names like we do in process_new_data so we can find columns consistently
-        cols = {c: c.strip() for c in df_travel.columns}
-        lower_cols = {c.lower().strip().replace(' ', '_'): c for c in df_travel.columns}
-        if 'traveler_name' in lower_cols and 'user_id' in lower_cols:
-            users_df = df_travel[[lower_cols['user_id'], lower_cols['traveler_name']]].drop_duplicates()
-            users_df.columns = ['user_id', 'traveler_name']
-            df_users = users_df
-    else:
-        # Try to load from database first
-        df_users = recup_data.recup_users()
-        df_travel = recup_data.recup_travel()
-        
-        # If database fails (empty DataFrames), fall back to local CSV files
-        if df_travel.empty or df_users.empty:
-            print("⚠️ Database unavailable, falling back to local CSV files...")
-            # Try to find CSV files in Data folder
-            data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Data'))
-            travel_csv = os.path.join(data_dir, 'travel_generated.csv')
-            users_csv = os.path.join(data_dir, 'users_generated.csv')
-            
-            if os.path.exists(travel_csv) and os.path.exists(users_csv):
-                print(f"📂 Loading from: {travel_csv}")
-                df_travel = pd.read_csv(travel_csv)
-                df_users = pd.read_csv(users_csv)
-            else:
-                raise FileNotFoundError(
-                    f"Neither database nor local CSV files are available. "
-                    f"Expected CSV files at: {travel_csv} and {users_csv}"
-                )
+
+    df_users = recup_data.recup_users()
+    df_travel = recup_data.recup_travel()
 
     # 2. Pré-traitement (Nettoyage texte/dates)
-    df = process_new_data(df_users, df_travel)
+    df_travel_cleaned, df_users_cleaned = process_new_data(df_users, df_travel)
 
-    initial_len = len(df)
+    initial_len = len(df_travel_cleaned)
+    initial_len_user = len(df_users_cleaned)
+    
+    def nettoyage_numerique(df_num, col_num, col_imp_nn_num):
+        for col in col_num:
+            col = str(col)
+            # If any expected numeric column is missing, fill with zeros to avoid KeyError
+            if col not in df_num.columns:
+                df_num[col] = 0
+            # If the column exists but maps to a DataFrame slice (rare), reduce to a single Series
+            val = df_num[col]
+            if isinstance(val, pd.DataFrame):
+                if val.shape[1] >= 1:
+                    # Take the first sub-column if multiple; preserve name
+                    val = val.iloc[:, 0]
+                else:
+                    val = val.squeeze()
+                df_num[col] = val
+            # Nettoyage des symboles monétaires si restants
+            if df_num[col].dtype == object:
+                df_num[col] = df_num[col].astype(str).str.replace(r'[$,]', '', regex=True)
+            # Conversion
+            df_num[col] = pd.to_numeric(df_num[col], errors='coerce')
+
+        # Suppression des lignes avec des valeurs manquantes dans les colonnes critiques
+        df_num.dropna(subset=col_num + col_imp_nn_num, inplace=True)
+
+        # Conversion float32 pour PyTorch
+        for col in col_num:
+            df_num[col] = df_num[col].astype('float32')
+            
+        return df_num
 
     # 3. NETTOYAGE NUMÉRIQUE (CRUCIAL AVANT LE MAPPING)
-    num_cols = ['Accommodation cost', 'Transportation cost', 'Duration (days)', 'Traveler age']
-    # Ensure list elements are strings in case of unexpected transformations
-    num_cols = [str(x) for x in num_cols]
+    # df
+    num_cols_travel = ['Accommodation cost', 'Transportation cost', 'Duration (days)']
 
-    for col in num_cols:
-        col = str(col)
-        # If any expected numeric column is missing, fill with zeros to avoid KeyError
-        if col not in df.columns:
-            df[col] = 0
-        # If the column exists but maps to a DataFrame slice (rare), reduce to a single Series
-        val = df[col]
-        if isinstance(val, pd.DataFrame):
-            if val.shape[1] >= 1:
-                # Take the first sub-column if multiple; preserve name
-                val = val.iloc[:, 0]
-            else:
-                val = val.squeeze()
-            df[col] = val
-        # Nettoyage des symboles monétaires si restants
-        if df[col].dtype == object:
-            df[col] = df[col].astype(str).str.replace(r'[$,]', '', regex=True)
-        # Conversion
-        df[col] = pd.to_numeric(df[col], errors='coerce')
+    col_imp_travel = ['Destination', 'User ID']
+    
+    df_travel_cleaned = nettoyage_numerique(df_travel_cleaned, num_cols_travel, col_imp_travel)
 
-    # Suppression des lignes avec des valeurs manquantes dans les colonnes critiques
-    df.dropna(subset=num_cols + ['Destination', 'Traveler name'], inplace=True)
+    print(f"Nettoyage Df_travel: {initial_len_user} -> {len(df_users_cleaned)} lignes de travel conservées pour l'entraînement.")
+    
+    # df_user
+    num_cols_user = ['Traveler Age']
+    
+    col_imp_user = [
+        'Traveler User ID', 'Traveler Gender', 'Traveler Nationality',
+        'Profile Type', 'Climate Pref', 'Primary Dest Type', 
+        'Accomodation Pref', 'Transport modes', 'Traveler Continent'
+        ]
+    
+    df_users_cleaned = nettoyage_numerique(df_users_cleaned, num_cols_user, col_imp_user)
 
-    # Conversion float32 pour PyTorch
-    for col in num_cols:
-        df[col] = df[col].astype('float32')
+    print(f"Nettoyage Df_user: {initial_len} -> {len(df_travel_cleaned)} user conservées pour l'entraînement.")
 
-    print(f"Nettoyage : {initial_len} -> {len(df)} lignes conservées pour l'entraînement.")
-
-    if len(df) == 0:
-        raise ValueError("❌ Erreur : Plus aucune donnée après le nettoyage (dropna). Vérifiez vos données sources.")
+    if len(df_travel_cleaned) == 0:
+        raise ValueError(f"❌ Erreur : Plus aucune donnée travel après le nettoyage. Vérifiez vos données sources.")
+    
+    if len(df_users_cleaned) == 0:
+        raise ValueError(f"❌ Erreur : Plus aucune donnée user après le nettoyage. Vérifiez vos données sources.")
 
     # 4. MAPPING ET CRÉATION DES IDs (0 à N, sans trous)
     mappings = {}
 
     # Helper pour créer un mapping
-    def create_mapping(column_name, mapping_key):
-        # Accept either canonical column names or lowercased keys (e.g., 'Traveler name' or 'traveler_name')
-        if column_name not in df.columns and column_name.lower() in df.columns:
+    def create_mapping(df_map, column_name, mapping_key):
+        if column_name not in df_map.columns and column_name.lower() in df_map.columns:
             column_name = column_name.lower()
-        unique_vals = df[column_name].unique()
-        # Création du dico {Nom: ID}
+        unique_vals = df_map[column_name].unique()
+
         mapp = {name: i for i, name in enumerate(unique_vals)}
         mappings[mapping_key] = mapp
-        return df[column_name].map(mapp)
+        
+        return df_map[column_name].map(mapp)
 
-    # Application des mappings
-    df['uid'] = create_mapping('Traveler name', 'User')
-    df['dest_id'] = create_mapping('Destination', 'Destination')
-    df['acc_id'] = create_mapping('Accommodation type', 'Accommodation type')
-    df['trans_id'] = create_mapping('Transportation type', 'Transportation type')
-    df['gender_id'] = create_mapping('Traveler gender', 'Traveler gender')
-    df['nationality_id'] = create_mapping('Traveler nationality', 'Traveler nationality')
-    df['season_id'] = create_mapping('travel_season', 'season')
+    # Application du mapping et creation du maping Traveler ID ensuite applique au df
+    # Pour la gestion des nouvelles personnes et des personnes sans historique de voyage
+    df_users_cleaned['uid'] = create_mapping(df_users_cleaned, 'Traveler User ID', 'User')
+    
+    # Application des mappings sur df
+    df_travel_cleaned['uid'] = df_travel_cleaned['User ID'].map(mappings['User'])
 
-    # On peut aussi mapper le pays si on veut l'utiliser plus tard
-    df['dest_country_id'] = create_mapping('dest_country', 'Country')
+    
+    df_travel_cleaned['dest_id'] = create_mapping(df_travel_cleaned, 'Destination', 'Destination')
+    df_travel_cleaned['acc_id'] = create_mapping(df_travel_cleaned, 'Accommodation type', 'Accommodation type')
+    df_travel_cleaned['trans_id'] = create_mapping(df_travel_cleaned, 'Transportation type', 'Transportation type')
+    df_travel_cleaned['season_id'] = create_mapping(df_travel_cleaned, 'travel_season', 'season')
+    
+    # Nettoyage des lignes sans uid et dest_id 
+    df_travel_cleaned.dropna(subset=['uid', 'dest_id'], inplace=True) 
+    
+    # Application des mappings sur df_user
+    df_users_cleaned['gender_id'] = create_mapping(df_users_cleaned, 'Traveler Gender', 'Traveler Gender')
+    df_users_cleaned['nationality_id'] = create_mapping(df_users_cleaned, 'Traveler Nationality', 'Traveler Nationality')
+    df_users_cleaned['profile_type_id'] = create_mapping(df_users_cleaned, 'Profile Type', 'Profile Type')
+    df_users_cleaned['climate_pref_id'] = create_mapping(df_users_cleaned, 'Climate Pref', 'Climate Pref')
+    df_users_cleaned['acc_pref_id'] = create_mapping(df_users_cleaned, 'Accomodation Pref', 'Accommodation Pref')
+    df_users_cleaned['transport_modes_id'] = create_mapping(df_users_cleaned, 'Transport modes', 'Transport Core Modes')
+    df_users_cleaned['continent_id'] = create_mapping(df_users_cleaned, 'Traveler Continent', 'Traveler Continent')
 
     print("[OK] Données prêtes et IDs générés.")
-    return df, mappings
+    return df_travel_cleaned, df_users_cleaned, mappings
 
-
-def build_graph(df, num_users_override: int = None, num_dests_override: int = None):
+def build_graph(df_travel, df_users, num_users_override: int = None, num_dests_override: int = None):
     """
     Étape 3 : Conversion du DataFrame propre en HeteroData (PyTorch Geometric).
+    Utilise df_users pour les features des nœuds utilisateurs (user.x).
     """
     print("--- [Data Engineer] Construction du Graphe ---")
 
-    # 1. NODE USER
-    # On récupère les attributs uniques par utilisateur
-    # On trie par uid pour être sûr que l'index 0 correspond à l'utilisateur 0
-    user_cols = ['uid', 'gender_id', 'nationality_id', 'Traveler age']
-    user_df = df[user_cols].drop_duplicates('uid').sort_values('uid')
+    # ----------------------------------------------------
+    # 1. NODE USER (Source : df_users)
+    # ----------------------------------------------------
+    
+    # Préparation du DataFrame utilisateur 
+    # On filtre les colonnes ID et on s'assure de l'alignement par 'uid'
+    user_df = df_users.dropna(subset=['uid']).drop_duplicates('uid').sort_values('uid')
+    
+    num_users_to_check = num_users_override if num_users_override is not None else len(user_df)
 
-    # Sécurité : Vérifier que les UIDs sont soit contigus, or fit within the provided override.
-    if num_users_override is None:
-        assert len(user_df) == user_df['uid'].max() + 1, "Erreur critique : Les User IDs ne sont pas contigus !"
-    else:
-        # Ensure no uid exceeds override range
-        if user_df['uid'].max() >= num_users_override:
-            raise AssertionError("Some user ids are out of range of num_users_override")
-
-    # Normalisation de l'âge
+    # Normalisation de l'âge (Feature Numérique)
     scaler_age = StandardScaler()
-    age_scaled = scaler_age.fit_transform(user_df[['Traveler age']].values)
+    
+    # La colonne 'Traveler Age' a été renommée et nettoyée dans les étapes précédentes.
+    age_scaled = scaler_age.fit_transform(user_df[['Traveler Age']].values)
 
     # Construction du tenseur X (Features User)
-    # On utilise unsqueeze(1) pour avoir des dimensions (N, 1) et pouvoir concaténer
-    user_x = torch.cat([
+    user_x_tensors = [
+        # Features Catégorielles Mappées (IDs numériques)
         torch.tensor(user_df['gender_id'].values, dtype=torch.float).unsqueeze(1),
         torch.tensor(user_df['nationality_id'].values, dtype=torch.float).unsqueeze(1),
+        torch.tensor(user_df['profile_type_id'].values, dtype=torch.float).unsqueeze(1),
+        torch.tensor(user_df['climate_pref_id'].values, dtype=torch.float).unsqueeze(1),
+        torch.tensor(user_df['acc_pref_id'].values, dtype=torch.float).unsqueeze(1),
+        torch.tensor(user_df['transport_modes_id'].values, dtype=torch.float).unsqueeze(1),
+        torch.tensor(user_df['continent_id'].values, dtype=torch.float).unsqueeze(1),
+        
+        # Feature Numérique (Âge normalisé)
         torch.tensor(age_scaled, dtype=torch.float)
-    ], dim=1)
-    # Expand user_x to num_users_override if requested
-    if num_users_override is not None and user_x.size(0) < num_users_override:
-        pad = torch.zeros((num_users_override - user_x.size(0), user_x.size(1)), dtype=user_x.dtype)
+    ]
+    
+    user_x = torch.cat(user_x_tensors, dim=1)
+    
+    # Gestion du padding/override pour s'assurer que la matrice a la taille attendue par l'Embedding Layer
+    if user_x.size(0) < num_users_to_check:
+        pad = torch.zeros((num_users_to_check - user_x.size(0), user_x.size(1)), dtype=user_x.dtype)
         user_x = torch.cat([user_x, pad], dim=0)
 
-    # 2. NODE DESTINATION
-    dest_df = df[['dest_id']].drop_duplicates('dest_id').sort_values('dest_id')
+    # ----------------------------------------------------
+    # 2. NODE DESTINATION (Source : df_travel)
+    # ----------------------------------------------------
+    # Utilise df_travel pour la destination
+    dest_df = df_travel[['dest_id']].drop_duplicates('dest_id').sort_values('dest_id')
+    
     if num_dests_override is None:
         assert len(dest_df) == dest_df['dest_id'].max() + 1, "Erreur critique : Les Dest IDs ne sont pas contigus !"
     else:
         if dest_df['dest_id'].max() >= num_dests_override:
             raise AssertionError("Some dest ids are out of range of num_dests_override")
 
-    # Features Destination (Pour l'instant un vecteur de 1, ou embedding identité)
+    # Features Destination (Vecteur identité)
     dest_x = torch.ones((len(dest_df), 1), dtype=torch.float)
     if num_dests_override is not None and dest_x.size(0) < num_dests_override:
         pad = torch.zeros((num_dests_override - dest_x.size(0), dest_x.size(1)), dtype=dest_x.dtype)
         dest_x = torch.cat([dest_x, pad], dim=0)
 
-    # 3. EDGES (Les voyages)
-    src = torch.tensor(df['uid'].values, dtype=torch.long)
-    dst = torch.tensor(df['dest_id'].values, dtype=torch.long)
+    # ----------------------------------------------------
+    # 3. EDGES & 4. ATTRIBUTES (Source : df_travel)
+    # ----------------------------------------------------
+    # 3. EDGES
+    src = torch.tensor(df_travel['uid'].values, dtype=torch.long)
+    dst = torch.tensor(df_travel['dest_id'].values, dtype=torch.long)
     edge_index = torch.stack([src, dst], dim=0)
 
-    # 4. EDGE ATTRIBUTES (Contexte du voyage)
-    # Catégoriels (Type logement, Transport, Saison)
+    # 4. EDGE ATTRIBUTES
+    # Catégoriels 
     edge_attr_cat = torch.stack([
-        torch.tensor(df['acc_id'].values, dtype=torch.long),
-        torch.tensor(df['trans_id'].values, dtype=torch.long),
-        torch.tensor(df['season_id'].values, dtype=torch.long)
+        torch.tensor(df_travel['acc_id'].values, dtype=torch.long),
+        torch.tensor(df_travel['trans_id'].values, dtype=torch.long),
+        torch.tensor(df_travel['season_id'].values, dtype=torch.long)
     ], dim=1)
 
-    # Numériques (Coûts, Durée) -> Normalisés
+    # Numériques 
     scaler_edges = StandardScaler()
-    edge_nums = df[['Accommodation cost', 'Transportation cost', 'Duration (days)']].values
+    # Utiliser les noms de colonnes dans df_travel après nettoyage
+    edge_nums = df_travel[['Accommodation cost', 'Transportation cost', 'Duration (days)']].values
     edge_attr_num = torch.tensor(scaler_edges.fit_transform(edge_nums), dtype=torch.float)
 
+    # ----------------------------------------------------
     # 5. CRÉATION DE L'OBJET HETERODATA
+    # ----------------------------------------------------
     data = HeteroData()
 
     # Noeuds
-    data['user'].num_nodes = len(user_df)
+    data['user'].num_nodes = len(user_df) 
     data['user'].x = user_x
 
     data['destination'].num_nodes = len(dest_df)
@@ -313,7 +369,7 @@ def build_graph(df, num_users_override: int = None, num_dests_override: int = No
     data['user', 'visits', 'destination'].edge_attr_cat = edge_attr_cat
     data['user', 'visits', 'destination'].edge_attr_num = edge_attr_num
 
-    # Arêtes inverses (Destination -> Rev_Visits -> User) - Pour le message passing bidirectionnel
+    # Arêtes inverses (Destination -> Rev_Visits -> User)
     data['destination', 'rev_visits', 'user'].edge_index = torch.stack([dst, src], dim=0)
 
     print(f"[OK] Graphe construit : {data}")

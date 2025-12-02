@@ -4,6 +4,7 @@ from Python.Frontend.components.footer import display_footer
 from Python.Frontend.styles.load_css import load_css
 from Python.Frontend.components.login_dialog import login_dialog
 from Python.Frontend.components.register_dialog import register_dialog
+from Python.Frontend.components.filtre_destination import affichage_card
 import os 
 
 st.set_page_config(page_title="TripplyBuddy", page_icon="🌍", layout="wide")
@@ -43,10 +44,17 @@ def content_compte_connecte():
             # 3. Appel de la fonction de déconnexion
             logout_user()
             
+    st.header("Your recommandations")
+    
+    affichage_card(st.session_state["reco_user"])
+    
+    if not st.session_state["historique_user"].empty():
+        st.header("Your previous travels")
+        affichage_card(st.session_state["historique_user"])
+            
 
 def content_compte():
-    Titre_html = '<span id="title-page">Mon Compte</span>'
-    st.markdown(Titre_html, unsafe_allow_html=True)
+    st.title("Mon Compte")
 
 if st.session_state["STATUT_CONNEXION"]:
     content_compte_connecte()

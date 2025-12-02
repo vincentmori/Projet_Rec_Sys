@@ -2,7 +2,7 @@ import streamlit as st
 from Python.Frontend.components.header import display_header
 from Python.Frontend.components.footer import display_footer
 from Python.Frontend.styles.load_css import load_css
-from Python.Frontend.components.filtre_destination import affichage_destination
+from Python.Frontend.components.filtre_destination import affichage_card
 
 st.set_page_config(page_title="TripplyBuddy", page_icon="🌍", layout="wide")
 
@@ -20,7 +20,7 @@ def content_accueil():
     
     st.header("Our destinations")
     
-    affichage_destination()
+    affichage_card(st.session_state["df_destinations"])
     
   
     

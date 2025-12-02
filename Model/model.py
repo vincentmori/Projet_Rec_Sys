@@ -37,7 +37,7 @@ class HGIB_Context_Model(nn.Module):
 
         # Projection des features existantes (Age, Genre...) pour qu'elles aient la bonne taille
         # User features: 3 colonnes (Genre, Nat, Age) -> vers hidden_channels
-        self.lin_user_feat = Linear(3, hidden_channels)
+        self.lin_user_feat = Linear(8, hidden_channels)
         # Dest features: 1 colonne (le "ones") -> vers hidden_channels
         self.lin_dest_feat = Linear(1, hidden_channels)
         # ================================================

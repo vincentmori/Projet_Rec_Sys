@@ -37,12 +37,15 @@ def get_city_card_html(city):
     """
     return card_html
     
-def get_all_cards_html(df_city):
-    
+def get_all_cards_html(df_city, historique_user = False):
     all_cards_html = []
     
-    for ville in df_city["city"]:
-        card_html = get_city_card_html(ville)
-        all_cards_html.append(card_html)
-            
+    if not historique_user:
+        
+        for ville in df_city["city"]:
+            card_html = get_city_card_html(ville)
+            all_cards_html.append(card_html)
+    else:
+        
+        
     return "".join(all_cards_html)

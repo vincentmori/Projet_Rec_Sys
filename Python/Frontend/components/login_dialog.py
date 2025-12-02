@@ -5,9 +5,7 @@ from Python.Backend.connexion import check_connexion
 from Python.Backend.ini import init_user
 from time import sleep
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.getcwd(), '..', '..')) 
-
-SESSION_FILE = os.path.join(PROJECT_ROOT, "Data", "rester_connecter.txt")
+SESSION_FILE = os.path.join("Data", "rester_connecter.txt")
 
 @st.dialog("Connexion")
 def login_dialog():   
@@ -32,10 +30,7 @@ def login_dialog():
             
             if not check_co:
                 st.error(message_erreur)
-            else:
-                init_user(user_id)
-                st.success(f"Connexion Succeeded! Traveler name: {st.session_state['user']['traveler_name'].iloc[0]}")
-                
+            else:                
                 if remember_me:
                     try:
                         with open(SESSION_FILE, "w") as f:
@@ -47,5 +42,11 @@ def login_dialog():
                         os.remove(SESSION_FILE)
                 
                 sleep(0.5)
+                
+                with st.spinner("⏳ Loading data and computing your recommandations..."):
+                    init_user(user_id) 
+                
+                st.success("🎉 Connection Successful! Your recommandations are ready!")
+                
                 
                 st.rerun()
