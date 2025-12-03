@@ -6,6 +6,7 @@ from Python.Frontend.components.login_dialog import login_dialog
 from Python.Frontend.components.register_dialog import register_dialog
 from Python.Frontend.components.filtre_destination import affichage_card
 import os 
+import pandas as pd
 
 st.set_page_config(page_title="TripplyBuddy", page_icon="🌍", layout="wide")
 
@@ -21,6 +22,33 @@ def logout_user():
         os.remove(SESSION_FILE)
 
     st.rerun() 
+
+# -------------------------------
+# MISE EN FROME RECOMMANDATION
+# -------------------------------    
+def mise_en_forme_df(data):
+    structured_data = []
+
+    for i, item in enumerate(data):
+        # 2. split ',' pour avoir la ville puis le pays
+        parts = item.split(",")
+
+        # Assurez-vous d'avoir au moins deux parties (Ville et Pays)
+        if len(parts) == 2:
+            city = parts[0].strip()
+            country = parts[1].strip()
+        else:
+            city = parts[0].strip()
+            country = None
+
+        structured_data.append({
+            "index": i,
+            "city": city,
+            "country": country
+        })
+        
+    return pd.DataFrame(structured_data)
+
 # -------------------------------
 # CHARGEMENT DU CSS & HEADER
 # -------------------------------
@@ -45,12 +73,17 @@ def content_compte_connecte():
             logout_user()
             
     st.header("Your recommandations")
+    df_reco_user = st.session_state["reco_user"]
+    df_reco_affiche = mise_en_forme_df(st.session_state["reco_user"])
+    affichage_card(df_reco_affiche)
     
-    affichage_card(st.session_state["reco_user"])
-    
-    if not st.session_state["historique_user"].empty():
+    if not st.session_state["historique_user"].empty:
         st.header("Your previous travels")
-        affichage_card(st.session_state["historique_user"])
+        df_histo_user = st.session_state["historique_user"]
+        df_city_histo = mise_en_forme_df(df_histo_user["Destination"])
+        affichage_card(df_city_histo)
+    else:
+        st.header("No previous travels")
             
 
 def content_compte():

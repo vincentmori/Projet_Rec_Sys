@@ -78,3 +78,4 @@ def init_user(user_id):
     reco_user = get_recommendation(user_id)
 
     st.session_state["reco_user"] = reco_user
+    
