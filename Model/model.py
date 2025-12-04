@@ -5,7 +5,7 @@ from torch_geometric.nn import GATConv, Linear
 
 class EdgeBehaviorEncoder(nn.Module):
     """
-    (Inchangé) Encode le contexte du voyage (Saison, Coûts...)
+    Encodes the travel context (Season, Costs...)
     """
 
     def __init__(self, num_acc, num_trans, num_season, num_numerical, hidden_dim):
@@ -30,17 +30,15 @@ class HGIB_Context_Model(nn.Module):
     def __init__(self, hidden_channels, out_channels, metadata, num_acc, num_trans, num_season, num_users, num_dests):
         super().__init__()
 
-        # === CORRECTION MAJEURE : IDENTITÉ DES NOEUDS ===
-        # On ajoute des embeddings pour que chaque ID soit unique
+        # Add embeddings so that each ID is unique
         self.user_emb = nn.Embedding(num_users, hidden_channels)
         self.dest_emb = nn.Embedding(num_dests, hidden_channels)
 
-        # Projection des features existantes (Age, Genre...) pour qu'elles aient la bonne taille
-        # User features: 3 colonnes (Genre, Nat, Age) -> vers hidden_channels
+        # Projection of existing features (Age, Gender...) so they have the correct size
+        # User features: 3 columns (Gender, Nat, Age) -> to hidden_channels
         self.lin_user_feat = Linear(8, hidden_channels)
-        # Dest features: 1 colonne (le "ones") -> vers hidden_channels
+        # Dest features: 1 column (the "ones") -> to hidden_channels
         self.lin_dest_feat = Linear(1, hidden_channels)
-        # ================================================
 
         # 1. Innovation (Edge Encoder)
         self.edge_encoder = EdgeBehaviorEncoder(num_acc, num_trans, num_season, 3, hidden_channels)
@@ -57,11 +55,11 @@ class HGIB_Context_Model(nn.Module):
         self.lin_logstd = Linear(hidden_channels, out_channels)
 
     def encode(self, x_dict, edge_index_dict, edge_attr_cat_dict, edge_attr_num_dict):
-        # === PRÉPARATION DES FEATURES (Identité + Caractéristiques) ===
+        # === FEATURE PREPARATION (Identity + Characteristics) ===
 
-        # 1. On récupère les IDs (ce sont les indices de 0 à N)
-        # On suppose que x_dict['user'] contient les features.
-        # On va générer les IDs à la volée : 0, 1, 2... jusqu'à N_users
+        # 1. Get IDs (these are indices from 0 to N)
+        # We assume x_dict['user'] contains the features.
+        # We will generate IDs on the fly: 0, 1, 2... up to N_users
         device = x_dict['user'].device
         num_users_batch = x_dict['user'].size(0)
         num_dests_batch = x_dict['destination'].size(0)
@@ -69,23 +67,23 @@ class HGIB_Context_Model(nn.Module):
         user_ids = torch.arange(num_users_batch, device=device)
         dest_ids = torch.arange(num_dests_batch, device=device)
 
-        # 2. On combine : Embedding d'ID + Projection des Features
-        # User = Qui je suis (ID) + Comment je suis (Age/Genre)
+        # 2. Combine: ID Embedding + Feature Projection
+        # User = Who I am (ID) + How I am (Age/Gender)
         h_user = self.user_emb(user_ids) + self.lin_user_feat(x_dict['user'])
 
-        # Dest = Qui je suis (ID) + Features (ici vides)
+        # Dest = Who I am (ID) + Features (empty here)
         h_dest = self.dest_emb(dest_ids) + self.lin_dest_feat(x_dict['destination'])
 
         # ==============================================================
 
-        # A. Encodage Comportement Arête
+        # A. Edge Behavior Encoding
         edge_feat = self.edge_encoder(
             edge_attr_cat_dict[('user', 'visits', 'destination')],
             edge_attr_num_dict[('user', 'visits', 'destination')]
         )
 
-        # B. GNN Couche 1
-        # Attention : on passe h_user et h_dest maintenant, plus x_dict brut
+        # B. GNN Layer 1
+        # Note: we pass h_user and h_dest now, no longer raw x_dict
         out_dest_1 = self.conv1_visits(
             (h_user, h_dest),
             edge_index_dict[('user', 'visits', 'destination')],
@@ -100,7 +98,7 @@ class HGIB_Context_Model(nn.Module):
         h_user = out_user_1.relu()
         h_dest = out_dest_1.relu()
 
-        # C. GNN Couche 2
+        # C. GNN Layer 2
         out_dest_2 = self.conv2_visits(
             (h_user, h_dest),
             edge_index_dict[('user', 'visits', 'destination')],
@@ -111,7 +109,7 @@ class HGIB_Context_Model(nn.Module):
             edge_index_dict[('destination', 'rev_visits', 'user')]
         )
 
-        # Mise à jour du dictionnaire pour le Bottleneck
+        # Update dictionary for the Bottleneck
         x_dict_out = {'user': out_user_2.relu(), 'destination': out_dest_2.relu()}
 
         # D. Bottleneck
@@ -120,7 +118,7 @@ class HGIB_Context_Model(nn.Module):
 
         return mu, logstd
 
-    # (Le reste : reparameterize, decode, forward... reste inchangé)
+    # (The rest: reparameterize, decode, forward... remains unchanged)
     def reparameterize(self, mu, logstd):
         if self.training:
             z_dict = {}
