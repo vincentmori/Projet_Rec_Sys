@@ -87,11 +87,16 @@ def register_dialog():
         new_user_id = st.text_input("ID")
         
     """Connect button"""
-    button, _, col_remember_me = st.columns([3, 7, 2])
-    with col_remember_me:
-        remember_me = False
+    button_connection, _, button_register = st.columns([10, 5, 5])
+    remember_me = False
+    with button_connection:    
+        if st.button("Already registered ? Go back to connection", key="back_to_login_btn"):
+            st.session_state["STATUT_CONNEXION"] = False
+            st.session_state.app_mode = None
+            st.rerun()
+    
         
-    with button:
+    with button_register:
         if st.button("Register and login", key="create_account_btn"):
             if new_username.strip() == '' or new_age.strip() == '' or new_password.strip() == '' or new_user_id.strip() == '':
                 st.error("Please enter all values")
@@ -149,9 +154,3 @@ def register_dialog():
                     sleep(0.5)
                     
                     st.rerun()
-    
-    if st.button("Already registered ? Go back to connection", key="back_to_login_btn"):
-        st.session_state["STATUT_CONNEXION"] = False
-        st.session_state.app_mode = None
-        st.rerun()
-    
