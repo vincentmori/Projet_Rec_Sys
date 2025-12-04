@@ -33,30 +33,29 @@ def get_city_card_html(city, Start_date=None, End_date=None, Histo=False):
     
     image_url = f"{st.session_state['chemin_image']}{remove_accents(city)}.jpg"
     
-    date_display = f"From {Start_date} to {End_date}" if Histo else ""
-    
     if not Histo: 
         card_html = f"""
-        <div class="destination-card-v2">
-            <img src="{image_url}" class="card-v2-image" alt="{city}, {country}">
-            <div class="card-v2-info">
-                <p class="card-v2-city-country">
-                    {city}, {country}
-                </p>
-            </div>
-        </div>
-        """
+<div class="destination-card-v2">
+    <img src="{image_url}" class="card-v2-image" alt="{city}, {country}">
+    <div class="card-v2-info">
+        <p class="card-v2-city-country">
+            {city}, {country}
+        </p>
+    </div>
+</div>
+"""
     else: 
+        date_histo = f"From {Start_date} to {End_date}"
         card_html = f"""
-        <div class="destination-card-v2">
-            <img src="{image_url}" class="card-v2-image" alt="{city}, {country}">
-            <div class="card-v2-info">
-                <p class="card-v2-city-country">
-                    {city}, {country}
-                </p>
-                {f'<p style="color: black;">{date_display}</p>' if Histo else ''}<p>
-            </div>
-        </div>
+<div class="destination-card-v2">
+    <img src="{image_url}" class="card-v2-image" alt="{city}, {country}">
+    <div class="card-v2-info">
+        <p class="card-v2-city-country">
+            {city}, {country}
+        </p>
+        <p class="card-v2-dates">{date_histo}</p> 
+    </div>
+</div>
         """
     
     return card_html

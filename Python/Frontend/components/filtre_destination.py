@@ -11,9 +11,9 @@ def affichage_card(df, histo=False):
         cards_html = get_all_cards_histo_html(df)
     
     final_html = f"""
-    <div class="scrollable-container">
-        {cards_html}
-    </div>
-    """
+<div class="scrollable-container">
+    {cards_html}
+</div>
+"""
     
     st.markdown(final_html, unsafe_allow_html=True)  

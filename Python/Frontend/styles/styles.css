@@ -81,6 +81,14 @@
 
 }
 
+.card-v2-dates {
+    margin:0 !important;
+    font-size: 1rem !important;
+    font-weight: bold;
+    color: #333333; 
+
+}
+
 .destination-card-v2:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);

@@ -8,11 +8,8 @@ def load_css():
     """
     Load and inject the content of the css file
     """
-    #  Obtenir le chemin du répertoire du script Python en cours d'exécution
-    current_dir = Path(__file__).parent 
-    
     # Construire le chemin complet vers styles.css
-    css_file_path = current_dir / "styles.css"
+    css_file_path = Path("Python/Frontend/styles/styles.css")
     
     try:
         # Ouvrir le fichier et injecter le contenu
