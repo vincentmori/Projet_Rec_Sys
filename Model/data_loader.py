@@ -4,6 +4,9 @@ import torch
 from torch_geometric.data import HeteroData
 from sklearn.preprocessing import StandardScaler
 from Python.Backend import recup_data  
+from Python.Backend.genV2 import TRANSPORT_MODES
+
+from typing import Optional
 
 def process_new_data(df_users, df_travel):
     """
@@ -147,7 +150,7 @@ def process_new_data(df_users, df_travel):
 
     return df, df_users_cleaned
 
-def load_and_process_data():
+def load_and_process_data(static_mappings: Optional[dict] = None):
     """
     Étape 2 : Chargement, Filtrage des NaN, et Création des IDs (Mapping).
     C'est la fonction principale à appeler.
@@ -239,6 +242,7 @@ def load_and_process_data():
         
         return df_map[column_name].map(mapp)
 
+
     # Application du mapping et creation du maping Traveler ID ensuite applique au df
     # Pour la gestion des nouvelles personnes et des personnes sans historique de voyage
     df_users_cleaned['uid'] = create_mapping(df_users_cleaned, 'Traveler User ID', 'User')
@@ -248,9 +252,33 @@ def load_and_process_data():
 
     
     df_travel_cleaned['dest_id'] = create_mapping(df_travel_cleaned, 'Destination', 'Destination')
-    df_travel_cleaned['acc_id'] = create_mapping(df_travel_cleaned, 'Accommodation type', 'Accommodation type')
-    df_travel_cleaned['trans_id'] = create_mapping(df_travel_cleaned, 'Transportation type', 'Transportation type')
-    df_travel_cleaned['season_id'] = create_mapping(df_travel_cleaned, 'travel_season', 'season')
+    
+    # Helper pour appliquer un mapping EXISTANT    
+    def apply_mapping(df_map, column_name, mapping_dict):
+        # Gestion des noms de colonnes et application du mapping
+        if column_name not in df_map.columns and column_name.lower() in df_map.columns:
+            column_name = column_name.lower()
+            
+        # Le .map() va remplacer les chaînes non trouvées (nouveaux modes) par NaN.
+        return df_map[column_name].map(mapping_dict)
+
+    # Application des mappings statiques pour les attributs d'arête
+    if static_mappings:
+        # 1. Hébergement (Statique)
+        df_travel_cleaned['acc_id'] = apply_mapping(df_travel_cleaned, 'Accommodation type', static_mappings['Accommodation type'])
+        
+        # 2. Transport (Statique)
+        df_travel_cleaned['trans_id'] = apply_mapping(df_travel_cleaned, 'Transportation type', static_mappings['Transportation type'])
+        
+        # 3. Saison (Statique)
+        df_travel_cleaned['season_id'] = apply_mapping(df_travel_cleaned, 'travel_season', static_mappings['season'])
+
+        df_travel_cleaned['trans_id'] = pd.to_numeric(df_travel_cleaned['trans_id'], errors='coerce')
+        df_travel_cleaned['trans_id'] = df_travel_cleaned['trans_id'].fillna(-1).astype(int) 
+
+        # Correction d'index > 12
+        df_travel_cleaned.loc[df_travel_cleaned['trans_id'] > 12, 'trans_id'] = 0 
+        df_travel_cleaned.loc[df_travel_cleaned['trans_id'] < 0, 'trans_id'] = 0 # Corrige les NaN mappés à -1
     
     # Nettoyage des lignes sans uid et dest_id 
     df_travel_cleaned.dropna(subset=['uid', 'dest_id'], inplace=True) 

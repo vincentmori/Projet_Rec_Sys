@@ -1,8 +1,11 @@
 import streamlit as st
-from Python.Frontend.components.card import get_all_cards_html
+from Python.Frontend.components.card import get_all_cards_html, get_all_cards_histo_html
 
-def affichage_card(df):    
-    cards_html = get_all_cards_html(df)
+def affichage_card(df, histo=False):  
+    if not histo:  
+        cards_html = get_all_cards_html(df)
+    else:
+        cards_html = get_all_cards_histo_html(df)
     
     final_html = f"""
     <div class="scrollable-container">

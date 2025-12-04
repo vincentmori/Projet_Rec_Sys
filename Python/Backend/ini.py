@@ -72,9 +72,20 @@ def init_user(user_id):
     mask_histo_user = df_travel["User ID"] == user_id
     
     historique_user = df_travel[mask_histo_user]
-
-    st.session_state["historique_user"] = historique_user
     
+    historique_user = historique_user.reset_index(drop=True)
+    
+    historique_user["Start date"] = pd.to_datetime(historique_user["Start date"])
+    
+    st.session_state["historique_user"] =  historique_user.sort_values(
+        by="Start date",
+        ascending=False
+    ).reset_index(drop=True)
+
+    
+    reco_user(user_id)
+    
+def reco_user(user_id):
     reco_user = get_recommendation(user_id)
 
     st.session_state["reco_user"] = reco_user

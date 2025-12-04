@@ -89,7 +89,7 @@ class Predictor:
     def load(self):
         config, static_mappings, model_path = load_artifacts(self.artifacts_dir)
 
-        df_travel_clean, df_users_clean, dynamic_maps = load_and_process_data()
+        df_travel_clean, df_users_clean, dynamic_maps = load_and_process_data(static_mappings=static_mappings)
     
         maps = static_mappings.copy()
 
